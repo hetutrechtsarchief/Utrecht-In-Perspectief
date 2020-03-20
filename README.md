@@ -10,7 +10,7 @@ Voor de beelden uit de '3e laag' met de afbeeldingen van objecten kunnen Wikimed
 http://commons.wikimedia.org/wiki/Special:FilePath/18297-Pieterskerk.JPG?width=200px
 
 ### Wikidata query 
-Query op 25 van de 36 bekende [data/Gebouwen.md] uit het Saftleven uit 1684. 
+Query op 25 van de 36 bekende [Gebouwen.md](data/Gebouwen.md) uit het Saftleven uit 1684. 
 https://w.wiki/GaT
 
 ### geojsonlint.com
