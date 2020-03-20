@@ -16,8 +16,8 @@ De TIFF is evt ook beschikbaar via Marco.
 <img src="thumbs/Blaeu (1649).jpg" width="300"/>
 
 ## Raven (1778)
-* [Blaeu (1649) Georeferencer](http://uu.georeferencer.com/maps/fb84bfc9-0956-5d2c-8c70-9da257a62589/)
-* [Blaeu (1649) Weblink UU](http://objects.library.uu.nl/reader/index.php?obj=1874-348831&lan=en#page//15/12/51/151251960807504984483818404817156250719.jpg/mode/1up)
-* [Blaeu (1649) ImageProperties.xml](http://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?zoomify=/manifestation/viewer/15/12/51/151251960807504984483818404817156250719.jp2/ImageProperties.xml)
+* [Raven (1778) Georeferencer](http://uu.georeferencer.com/maps/fb84bfc9-0956-5d2c-8c70-9da257a62589/)
+* [Raven (1778) Weblink UU](http://objects.library.uu.nl/reader/index.php?obj=1874-348831&lan=en#page//15/12/51/151251960807504984483818404817156250719.jpg/mode/1up)
+* [Raven (1778) ImageProperties.xml](http://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?zoomify=/manifestation/viewer/15/12/51/151251960807504984483818404817156250719.jp2/ImageProperties.xml)
 
 <img src="thumbs/Raven (1778).jpg" width="300"/>
