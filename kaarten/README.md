@@ -4,7 +4,7 @@
 * [Specht (1695) Georeferencer](http://uu.georeferencer.com/maps/331aaaf3-72d2-52ab-8cc3-fe44fc7abcf6/) (Als je op deze pagina (gratis) inlogt, krijg je toegang tot de GIS-links en de GEO-Tiff.)
 * [Specht (1695) Weblink UU](http://objects.library.uu.nl/reader/index.php?obj=1874-348748&lan=en#page//11/87/40/118740207246035919625727383986846718971.jpg/mode/1up)
 * [Specht (1695) ImageProperties.xml](http://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?zoomify=/manifestation/viewer/11/87/40/118740207246035919625727383986846718971.jp2/ImageProperties.xml)
-De TIFF is evt ook beschikbaar via Marco.
+* De TIFF is evt ook beschikbaar via Marco.
 
 <img src="thumbs/Specht (1695).jpg" width="300"/>
 
