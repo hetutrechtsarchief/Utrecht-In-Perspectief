@@ -1,7 +1,7 @@
 # Utrecht Skyline project
 
 ## Concept afbeelding
-<img src="diversen/screenshot-concept.png" width=500/>
+<img src="diversen/screenshot-concept.png" width="500"/>
 
 ## Tips
 
@@ -15,5 +15,5 @@ https://w.wiki/GaT
 
 ### geojsonlint.com
 Via http://geojsonlint.com/ kun de GeoJSON valideren ([saftleven.geojson](data/GeoJSON/saftleven.geojson)) en ook visualiseren op een kaart. Github kan het ook zelf visualiseren: ([saftleven.geojson](data/GeoJSON/saftleven.geojson))
-<img src="diversen/geojsonlint.jpg" width=500"/>
+<img src="diversen/geojsonlint.jpg" width="500"/>
 
