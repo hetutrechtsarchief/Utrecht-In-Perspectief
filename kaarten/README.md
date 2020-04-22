@@ -21,5 +21,6 @@
 * [Raven (1778) Georeferencer](http://uu.georeferencer.com/maps/fb84bfc9-0956-5d2c-8c70-9da257a62589/)
 * [Raven (1778) Weblink UU](http://objects.library.uu.nl/reader/index.php?obj=1874-348831&lan=en#page//15/12/51/151251960807504984483818404817156250719.jpg/mode/1up)
 * [Raven (1778) ImageProperties.xml](http://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?zoomify=/manifestation/viewer/15/12/51/151251960807504984483818404817156250719.jp2/ImageProperties.xml)
+* [Zoombare view met IIPMooView](http://objects.library.uu.nl/reader/viewer.php?obj=1874-348831&pagenum=1&lan=en)
 
 <img src="thumbs/Raven (1778).jpg" width="300"/>
