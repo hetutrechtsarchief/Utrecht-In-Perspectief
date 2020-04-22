@@ -13,7 +13,8 @@
 * [Blaeu (1649) Georeferencer](http://uu.georeferencer.com/maps/7dd2ec0b-2897-55a5-a385-b19cfe268257/)
 * [Blaeu (1649) Weblink UU](http://objects.library.uu.nl/reader/index.php?obj=1874-351073&lan=en#page//72/46/38/72463859667832144848804572952047205750.jpg/mode/1up)
 * [Blaeu (1649) ImageProperties.xml](http://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?zoomify=/manifestation/viewer/72/46/38/72463859667832144848804572952047205750.jp2/ImageProperties.xml)
- 
+* [Zoombare view met IIPMooView](http://objects.library.uu.nl/reader/viewer.php?obj=1874-351073&pagenum=1&lan=en)
+
 <img src="thumbs/Blaeu (1649).jpg" width="300"/>
 
 ## Raven (1778)
