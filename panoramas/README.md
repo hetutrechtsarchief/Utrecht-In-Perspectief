@@ -16,4 +16,6 @@
 * HUA Catalogusnummers 13501 t/m 135033
 * [J.Bos-1859-13501-tm-135033.jpg](J.Bos-1859-13501-tm-135033.jpg) (65500 × 1000 pixels, 19.4 MB)
 
+<img src="thumbs/J.Bos-1859.jpg" width="400">
+
 <img src="thumbs/J.Bos-1859-wide.jpg" width="800">
