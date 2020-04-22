@@ -9,7 +9,7 @@
 # Saftleven (1684)
 * HUA Catalogusnummers 28386 t/m 28389
 * [Saftleven-1684-28386-tm-28389.jpg](Saftleven-1684-28386-tm-28389.jpg) (61.9 MB)
-
+* [Panorama view with Zoomify](https://hualab.nl/skyline/panoramas/Zoomify-Saftleven-1684/)
 <img src="thumbs/Saftleven-1684.jpg" width="400">
 
 # J.Bos (1859)
