@@ -27,5 +27,5 @@
 
 ## Van der Monde (1838)
 * [Zoombare kaart met Zoomify](https://hualab.nl/skyline/kaarten/Zoomify-vanderMonde-1838/)
-* [Plattegrond_stad_Utrecht_door_Van_der_Monde_in_1838.jpg](Plattegrond_stad_Utrecht_door_Van_der_Monde_in_1838.jpg) (2933 × 2232, 790KB)
+* [Plattegrond_stad_Utrecht_door_Van_der_Monde_in_1838.jpg](large/Plattegrond_stad_Utrecht_door_Van_der_Monde_in_1838.jpg) (2933 × 2232, 790KB)
 <img src="thumbs/vanderMonde (1838).jpg" width="300"/>
