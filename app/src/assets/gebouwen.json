@@ -1,0 +1,153 @@
+{
+    "Dom van Utrecht": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                5.121393,
+                52.090657
+            ]
+        },
+        "bounds": [
+            [
+                1239,
+                3080
+            ],
+            [
+                608,
+                3222
+            ]
+        ],
+        "style": {
+            "stroke": false,
+            "fillColor": "#E84B37",
+            "fillOpacity": 0.5
+        },
+        "properties": {
+            "wdid": "Q936545",
+            "label": "Dom van Utrecht",
+            "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Dom_van_Utrecht",
+            "types": [
+                "kerkgebouw"
+            ],
+            "users": {
+                "Q18286356": {
+                    "label": "Nederduitse Gereformeerde Kerk",
+                    "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Nederduitse_Gereformeerde_Kerk_(later_Nederlandse_Hervormde_Kerk)",
+                    "start": "1581",
+                    "start_precision": "year",
+                    "end": "1816",
+                    "end_precision": "year"
+                },
+                "Q515880": {
+                    "label": "Nederlandse Hervormde Kerk",
+                    "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Nederlandse_Hervormde_Kerk",
+                    "start": "1816",
+                    "start_precision": "year",
+                    "end": "2004",
+                    "end_precision": "year"
+                },
+                "Q391951": {
+                    "label": "Protestantse Kerk in Nederland",
+                    "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Protestantse_Kerk_in_Nederland",
+                    "start": "2004",
+                    "start_precision": "year",
+                    "end": "",
+                    "end_precision": null
+                },
+                "Q261716": {
+                    "label": "Aartsbisdom Utrecht",
+                    "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Aartsbisdom_Utrecht_(rooms-katholiek)",
+                    "start": "1254",
+                    "start_precision": "year",
+                    "end": "1580",
+                    "end_precision": "year"
+                }
+            },
+            "uses": [],
+            "built_in": "1254",
+            "built_in_precision": "year",
+            "demolished_in": "",
+            "demolished_in_precision": "",
+            "image": "http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/DomTorenUtrechtNederland.jpg"
+        }
+    },
+    "Pieterskerk": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                5.124444,
+                52.091389
+            ]
+        },
+        "bounds": [
+            [
+                851,
+                3322
+            ],
+            [
+                616,
+                3584
+            ]
+        ],
+        "style": {
+            "stroke": false,
+            "fillColor": "#455DC7",
+            "fillOpacity": 0.5
+        },
+        "properties": {
+            "wdid": "Q2094317",
+            "label": "Pieterskerk",
+            "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Pieterskerk_(Utrecht)",
+            "types": [
+                "kerkgebouw"
+            ],
+            "users": [],
+            "uses": [],
+            "built_in": "1001",
+            "built_in_precision": "century",
+            "demolished_in": "",
+            "demolished_in_precision": "",
+            "image": "http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/18297-Pieterskerk.JPG"
+        }
+    },
+    "Bijlhouwerstoren": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                5.12272,
+                52.08148
+            ]
+        },
+        "bounds": [
+            [
+                850,
+                8727
+            ],
+            [
+                609,
+                8822
+            ]
+        ],
+        "style": {
+            "stroke": false,
+            "fillColor": "#455DC7",
+            "fillOpacity": 0.5
+        },
+        "properties": {
+            "wdid": "Q13439353",
+            "label": "Bijlhouwerstoren",
+            "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Bijlhouwerstoren",
+            "types": [
+                "molen",
+                "waltoren"
+            ],
+            "users": [],
+            "uses": [],
+            "built_in": "1350",
+            "built_in_precision": "century",
+            "demolished_in": "1872",
+            "demolished_in_precision": "year",
+            "image": "http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Utrecht%201670%20met%20Tolsteegpoort%20Manenburg%20Sterrenburg%20en%20Tolsteegpoort.jpg"
+        }
+    }
+}
