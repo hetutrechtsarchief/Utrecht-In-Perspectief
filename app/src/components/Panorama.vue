@@ -11,6 +11,9 @@
       :options="mapOptions"
       @ready="onLoad"
     >
+      <l-control-zoom 
+      position="topright">
+      </l-control-zoom>
       <LImageOverlay :url="url" :bounds="bounds" />
       <l-rectangle
         v-for="(building, name) in buildings"
@@ -26,18 +29,19 @@
 
 <script>
 import { CRS } from "leaflet";
-import { LMap, LImageOverlay, LRectangle } from "vue2-leaflet";
+import { LMap, LImageOverlay, LRectangle, LControlZoom } from "vue2-leaflet";
 
 export default {
   name: "Panorama",
   components: {
     LMap,
     LImageOverlay,
-    LRectangle
+    LRectangle,
+    LControlZoom
   },
   data() {
     return {
-      mapOptions: { attributionControl: false },
+      mapOptions: { attributionControl: false, zoomControl: false },
       url:
         "https://raw.githubusercontent.com/hetutrechtsarchief/Utrecht-Skyline/master/panoramas/Saftleven-1669-27570.jpg",
       bounds: [
