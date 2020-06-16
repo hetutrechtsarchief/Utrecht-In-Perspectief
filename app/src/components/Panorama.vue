@@ -30,6 +30,8 @@
 <script>
 import { CRS } from "leaflet";
 import { LMap, LImageOverlay, LRectangle, LControlZoom } from "vue2-leaflet";
+import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
+import 'leaflet-fullscreen/dist/Leaflet.fullscreen';
 
 export default {
   name: "Panorama",
@@ -78,7 +80,11 @@ export default {
     gebouw() {
       this.$refs.map.fitBounds(this.gebouw.bounds);
     }
-  }
+  },
+  mounted() {
+  const map = this.$refs.map.mapObject;
+  map.addControl(new window.L.Control.Fullscreen({position:'topright'}));
+  },
 };
 </script>
 
