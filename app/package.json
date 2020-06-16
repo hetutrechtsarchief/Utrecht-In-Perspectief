@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "leaflet": "^1.6.0",
+    "leaflet-fullscreen": "^1.0.2",
     "mapbox-gl": "^1.10.0",
     "vue": "^2.6.11",
     "vue-mapbox": "^0.4.1",
