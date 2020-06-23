@@ -63,7 +63,11 @@ export default {
         type: "circle",
         source: "gebouwen",
         paint: {
-          "circle-radius": 20,
+          "circle-radius": [
+            "interpolate", ["linear"], ["zoom"],
+            12, 7,
+            20, 15
+            ],
           "circle-color": [
             "case",
             ["boolean", ["feature-state", "hover"], false],
