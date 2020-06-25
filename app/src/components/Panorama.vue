@@ -51,8 +51,8 @@ export default {
         [1597, 9449]
       ],
       maxBounds: [
-        [150, 89],
-        [1500, 9300]
+        [0, 0],
+        [1597, 9449]
       ],
       crs: CRS.Simple
     };
