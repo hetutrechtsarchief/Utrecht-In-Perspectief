@@ -7,13 +7,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            1052,
+            100
+            ],
+            [
+            865,
+            360  
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84356543",
@@ -46,13 +52,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            960,
+            370
+            ],
+            [
+            900,
+            380
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84710192",
@@ -84,13 +96,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            966,
+            574
+            ],
+            [
+            922,
+            616
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q14518084",
@@ -122,13 +140,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            960,
+            688
+            ],
+            [
+            718,
+            921
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1878995",
@@ -167,13 +191,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            962,
+            1057
+            ],
+            [
+            925,
+            1078
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2593115",
@@ -205,13 +235,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            1043,
+            1127
+            ],
+            [
+            923,
+            1205
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1904062",
@@ -243,13 +279,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            972,
+            1440
+            ],
+            [
+            899,
+            1460
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1900284",
@@ -296,13 +338,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            965,
+            1552
+            ],
+            [
+            916,
+            1605
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1955870",
@@ -335,17 +383,18 @@
         },
         "bounds": [
             [
-            600,
-            1010],
+            960,
+            1752
+            ],
             [
-            750,
-            1095
+            886,
+            1808
             ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#E84B37",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1820630",
@@ -376,13 +425,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            965,
+            1872
+            ],
+            [
+            913,
+            1917
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2340974",
@@ -415,13 +470,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            955,
+            1928
+            ],
+            [
+            907,
+            1983
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2459211",
@@ -453,13 +514,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            954,
+            2040
+            ],
+            [
+            917,
+            2081
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q7477626",
@@ -492,13 +559,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            944,
+            2087
+            ],
+            [
+            878,
+            2142
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1682982",
@@ -537,13 +610,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            948,
+            2141
+            ],
+            [
+            921,
+            2172
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2347538",
@@ -575,13 +654,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            953,
+            2174
+            ],
+            [
+            921,
+            2236
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84357528",
@@ -613,13 +698,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            956,
+            2277
+            ],
+            [
+            900,
+            2375
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1988915",
@@ -651,13 +742,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            946,
+            2380
+            ],
+            [
+            922,
+            2406
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2003640",
@@ -690,13 +787,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            954,
+            2442
+            ],
+            [
+            863,
+            2470
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84750926",
@@ -749,13 +852,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            942,
+            2507
+            ],
+            [
+            900,
+            2540
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q85090947",
@@ -823,13 +932,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            938,
+            2585
+            ],
+            [
+            886,
+            2673
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2094317",
@@ -861,13 +976,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            970,
+            2678
+            ],
+            [
+            703,
+            2893
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2150534",
@@ -926,7 +1047,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#E84B37",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties": {
             "wdid": "Q936545",
@@ -987,13 +1108,19 @@
             ]
         },
         "bounds": [
-            [],
-            []
+            [
+            908,
+            3281
+            ],
+            [
+            859,
+            3301
+            ]
         ],
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84595778",
@@ -1044,7 +1171,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1896594",
@@ -1082,7 +1209,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2269681",
@@ -1153,7 +1280,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q7476534",
@@ -1206,7 +1333,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84475989",
@@ -1244,7 +1371,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84549114",
@@ -1297,7 +1424,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q1627233",
@@ -1335,7 +1462,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2174025",
@@ -1373,7 +1500,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q5347090",
@@ -1425,7 +1552,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84543792",
@@ -1470,7 +1597,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q7476228",
@@ -1537,7 +1664,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q84509500",
@@ -1582,7 +1709,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties":{
             "wdid":"Q2372424",
@@ -1657,7 +1784,7 @@
         "style": {
             "stroke": false,
             "fillColor": "#455DC7",
-            "fillOpacity": 0.5
+            "fillOpacity": 0.4
         },
         "properties": {
             "wdid": "Q13439353",
