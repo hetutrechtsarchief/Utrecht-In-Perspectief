@@ -65,7 +65,7 @@ h1 {
 #right {
   grid-row: 1;
   grid-column: 2;
-  background-color: #e84b37;
+  background-color: #3B3F54;
   margin: 10px;
   align-self: stretch;
   background-repeat: no-repeat;
