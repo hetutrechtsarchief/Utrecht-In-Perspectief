@@ -45,14 +45,14 @@ export default {
     return {
       mapOptions: { attributionControl: false, zoomControl: false },
       url:
-        "https://raw.githubusercontent.com/hetutrechtsarchief/Utrecht-Skyline/master/panoramas/Saftleven-1669-27570.jpg",
+        "./saftleven_1684_app.jpg",
       bounds: [
         [0, 0],
-        [1597, 9449]
+        [1597, 9468]
       ],
       maxBounds: [
         [0, 0],
-        [1597, 9449]
+        [1597, 9468]
       ],
       crs: CRS.Simple
     };
