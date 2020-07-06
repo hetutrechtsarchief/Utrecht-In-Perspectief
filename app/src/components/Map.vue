@@ -104,7 +104,6 @@ export default {
           event.map.flyTo({ center: item.geometry.coordinates });
         }
       });
-      this.on()
     },
     onMapClick(event) {
       let e = event.mapboxEvent;
