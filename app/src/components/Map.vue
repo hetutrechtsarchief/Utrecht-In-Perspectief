@@ -22,6 +22,18 @@
         layerId="gebouwen"
         :layer="geojsonLayer"
       ></MglGeojsonLayer>
+      <MglMarker 
+        v-for="(marker, index) in gebouwen"
+        :key="marker.id"
+        :coordinates="[ marker.lng , marker.lat]"
+        @click="onIconClick($event, marker, index)"
+        >
+        <div
+          class="svgicon mapboxgl-marker mapboxgl-marker-anchor-center"
+          slot="marker"
+          :class="{ selected : isActive(index) }"
+        ></div> 
+      </MglMarker>
     </MglMap>
   </div>
 </template>
@@ -36,7 +48,8 @@ import {
   MglAttributionControl,
   MglNavigationControl,
   MglFullscreenControl,
-  MglGeojsonLayer
+  MglGeojsonLayer,
+  MglMarker
 } from "vue-mapbox";
 export default {
   name: "Map",
@@ -45,7 +58,8 @@ export default {
     MglAttributionControl,
     MglNavigationControl,
     MglFullscreenControl,
-    MglGeojsonLayer
+    MglGeojsonLayer,
+    MglMarker
   },
 
   data() {
@@ -136,7 +150,15 @@ export default {
         });
         event.map.getCanvas().style.cursor = features.length ? "pointer" : "";
       }
-    }
+    },
+    async onMapLoad() {
+      this.loadProvince();
+    },
+    async loadProvince() {
+      let req = await fetch("./gebouwen.geojson");
+      let data = await req.json();
+      this.geojson.data.features = data.features;
+    },
   },
   computed: {
     gekozenGebouw() {
