@@ -19,17 +19,23 @@
         v-for="(building, name) in buildings"
         :interactive="true"
         :bounds="building.bounds"
+        :fillColor=building.style.fillColor
+        :fillOpacity=building.style.fillOpacity
+        :stroke=building.style.stroke
         :key="name"
-        :l-style="building.style"
         @click="doRouting(name)"
-      ></l-rectangle>
+        @mouseover="doHighlight(building)"
+        @mouseout="doReset(building)"
+      >
+      <l-tooltip :content="name" :options="{sticky: true}"/>
+      </l-rectangle>
     </LMap>
   </div>
 </template>
 
 <script>
 import { CRS } from "leaflet";
-import { LMap, LImageOverlay, LRectangle, LControlZoom } from "vue2-leaflet";
+import { LMap, LImageOverlay, LRectangle, LControlZoom, LTooltip } from "vue2-leaflet";
 import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
 import 'leaflet-fullscreen/dist/Leaflet.fullscreen';
 
@@ -39,11 +45,12 @@ export default {
     LMap,
     LImageOverlay,
     LRectangle,
+    LTooltip,
     LControlZoom
   },
   data() {
     return {
-      mapOptions: { attributionControl: false, zoomControl: false },
+      mapOptions: {attributionControl: false, zoomControl: false },
       url:
         "./saftleven_1684_app.jpg",
       bounds: [
@@ -54,7 +61,8 @@ export default {
         [0, 0],
         [1597, 9468]
       ],
-      crs: CRS.Simple
+      crs: CRS.Simple,
+      opacity: 0.8
     };
   },
   methods: {
@@ -66,6 +74,14 @@ export default {
       this.$store.commit("data/setGekozenGebouw", name);
       this.$router.push(`/Drieluik/${name}`);
       this.$store.dispatch("data/setGekozenGebouwWiki");
+    },
+    doHighlight(building) {
+      building.style.fillOpacity = 0.6,
+      building.style.fillColor = "rgb(48, 152, 138)"
+    },
+    doReset(building) {
+      building.style.fillOpacity = 0.4,
+      building.style.fillColor = "#455DC7"
     }
   },
   created() {
@@ -74,6 +90,9 @@ export default {
   computed: {
     gebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
+    },
+    fillOpacity () {
+      return this.opacity / 2
     }
   },
   watch: {
