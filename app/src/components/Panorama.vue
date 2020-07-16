@@ -90,9 +90,6 @@ export default {
   computed: {
     gebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
-    },
-    fillOpacity () {
-      return this.opacity / 2
     }
   },
   watch: {
