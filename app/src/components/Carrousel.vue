@@ -2,11 +2,12 @@
   <div class="Carrousel">
     <div id="left">
       <h1>{{gebouw.properties.label}}</h1>
+      <p>{{gebouw.properties.types[0]}}</p>
       <p>Gebouwd in {{gebouw.properties.built_in}}</p>
       <p v-if="gebouw.properties.demolished_in">Verdwenen in {{gebouw.properties.demolished_in}}</p>
-      <p>
-        <span v-html="wiki.extract"></span>
-      </p>
+      <p v-if="gebouw.properties.users"> Gebruikt door {{gebouw.properties.users}}</p>
+      <p v-if="gebouw.properties.uses">Gebruikt voor {{gebouw.properties.uses}}</p>
+      
       <router-link :to="{name: 'Detail', params:{ id:$route.params.id}}">
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link>
