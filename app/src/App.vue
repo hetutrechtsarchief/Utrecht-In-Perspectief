@@ -63,7 +63,7 @@ a {
     height: 39px !important;
 }
 .leaflet-bar a:hover {
-    background: #455DC7;
+    background: #30988A;
 }
 
 .leaflet-control-fullscreen a {
@@ -85,6 +85,10 @@ a {
   visibility: hidden;
 }
 
+.home .Header button {
+  visibility: hidden;
+}
+
 /* RESPONSIVENESS */
 
 @media (min-width: 3000px) {
@@ -97,12 +101,12 @@ a {
   
   .leaflet-control-zoom-in {
     font-size: 60px !important;
-    line-height: 65px;
+    line-height: 65px !important;
   }
 
   .leaflet-control-zoom-out {
     font-size: 60px !important;
-    line-height: 65px;
+    line-height: 65px !important;
   }
 
   .leaflet-control-fullscreen a {
