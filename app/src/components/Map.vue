@@ -4,6 +4,8 @@
       :mapStyle="mapStyle"
       :center="center"
       :zoom="16"
+      :maxZoom="17"
+      :minZoom="14"
       :pitchWithRotate="false"
       :dragRotate="false"
       :accessToken="accessToken"
