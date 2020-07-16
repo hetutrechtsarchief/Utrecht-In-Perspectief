@@ -34,6 +34,9 @@ export default {
 }
 
 .button {
-  background-color: #30988a;
+  background-color: #3B3F54;
+}
+.button:hover {
+  background-color: #30988A;
 }
 </style>
