@@ -14,7 +14,7 @@
 <img src="thumbs/Saftleven-1684.jpg" width="400">
 
 ## J.Bos (1859)
-* HUA Catalogusnummers 13501 t/m 135033
+* HUA Catalogusnummers 135001 t/m 135033
 * [J.Bos-1859-13501-tm-135033.jpg](J.Bos-1859-13501-tm-135033.jpg) (65500 × 1000 pixels, 19.4 MB)
 * [Panorama view with Zoomify](https://hualab.nl/skyline/panoramas/Zoomify-J.Bos-1859/)
 
