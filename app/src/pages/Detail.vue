@@ -1,10 +1,12 @@
 <template>
   <div class="Detail">
     <Header></Header>
-    <div class="Afb"></div>
+    <div class="Afb" v-bind:style="{backgroundImage: 'url(' + gebouw.properties.image+')'}"></div>
     <div class="info">
-      <h1>Detail over gebouw {{this.$route.params.id}}</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus impedit vero sunt hic deleniti accusantium libero fugit eum labore, excepturi doloremque asperiores consequuntur. Nemo ea perspiciatis voluptas sapiente est alias.</p>
+      <h1>{{this.$route.params.id}}</h1>
+      <p>
+        <span v-html="wiki.extract"></span>
+      </p>
       <button
         class="button"
         id="wiki"
@@ -28,6 +30,18 @@ export default {
   name: "Detail",
   components: {
     Header
+  },
+  state: {
+    wiki: {},
+    gebouw: {}
+  },
+  computed: {
+    gebouw() {
+      return this.$store.getters["data/getGekozenGebouw"];
+    },
+    wiki() {
+      return this.$store.getters["data/getGekozenGebouwWiki"];
+    }
   }
 };
 </script>
@@ -48,6 +62,9 @@ export default {
   grid-row: 2 / 2;
   grid-column: 1 / span 1;
   background-color: white;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
 }
 .info {
   grid-row: 2 / 2;
@@ -58,6 +75,14 @@ export default {
 }
 .button {
   display: block;
+}
+
+h1 {
+  color: #30988A;
+}
+
+span {
+  line-height: normal;
 }
 
 #wiki {
