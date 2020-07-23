@@ -61,6 +61,7 @@ a {
     box-shadow: none;
     width: 39px !important;
     height: 39px !important;
+    line-height: 35px !important;
 }
 .leaflet-bar a:hover {
     background: #30988A;
