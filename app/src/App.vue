@@ -1,9 +1,10 @@
 <template>
   <div class="App">
-    <footer>
-      <cookie-law theme="base" message="This website uses cookies to ensure you get the best experience on our website.">
+    <cookie-law theme="utrechtSkyline">
+      <div 
+      slot="message"> We plaatsen cookies om het gebruik van de website te analyseren en het gebruiksgemak te verbeteren. Door deze melding te sluiten of ergens op de website te klikken, gaat u hiermee akkoord. <router-link to="legal-notes">Cookievoorwaarden</router-link>
+      </div>
     </cookie-law>
-    </footer>
     
     <router-view />
     
@@ -96,6 +97,31 @@ a {
 .home .Header button {
   visibility: hidden;
 }
+
+/* COOKIE STYLING */
+.Cookie--utrechtSkyline {
+    background:#f1f1f1;
+    color:#3B3F54;
+    text-align: left;
+    padding:1.25em
+}
+.Cookie--utrechtSkyline .Cookie__button {
+    background:#30988A;;
+    padding:.625em 3.125em;
+    color:#fff;
+    border-radius:0;
+    border:0;
+    font-size:1em
+}
+.Cookie--utrechtSkyline .Cookie__button:hover {
+    background:#3B3F54;
+}
+
+.Cookie--utrechtSkyline a {
+  color: #30988A;
+  text-decoration: underline;
+}
+
 
 /* RESPONSIVENESS */
 
