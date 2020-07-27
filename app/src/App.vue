@@ -1,13 +1,20 @@
 <template>
   <div class="App">
+    <footer>
+      <cookie-law theme="base" message="This website uses cookies to ensure you get the best experience on our website.">
+    </cookie-law>
+    </footer>
+    
     <router-view />
-  </div>
+    
+  </div>    
 </template>
 
 <script>
-
+import CookieLaw from "vue-cookie-law";
 export default {
-  name: "App"
+  name: "App",
+  components: { CookieLaw }
 };
 </script>
 
