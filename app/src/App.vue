@@ -122,6 +122,9 @@ a {
   text-decoration: underline;
 }
 
+.Cookie--utrechtSkyline a:hover {
+  color: #3B3F54;
+}
 
 /* RESPONSIVENESS */
 
