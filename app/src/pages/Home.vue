@@ -1,6 +1,12 @@
 <template>
   <div class="home">
     <Header></Header>
+    <div class="colofonbutton">
+      <router-link :to="{name: 'Colofon', params:{ id: this.$route.params.id}}">
+        <button v-if="this.$route.name !== 'Colofon'" class="button">Colofon</button>
+      </router-link>
+    </div>
+    
     <div class="stylingBalk" id="stylingBalk1"></div>
     <Panorama></Panorama>
     <div class="stylingBalk" id="stylingBalk2"></div>
@@ -61,6 +67,23 @@ export default {
   z-index: 2;
   grid-row: 4 / 4;
   grid-column: 2 / 2;
+}
+
+.colofonbutton {
+  grid-row: 1 / 1;
+  grid-column: 3 / 3;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: #3B3F54;
+  margin: 0 5px 5px 5px;
+}
+
+.button:hover {
+  background-color: #30988A 
 }
 
 
