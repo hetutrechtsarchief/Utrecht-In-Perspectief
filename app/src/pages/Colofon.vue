@@ -26,17 +26,17 @@
             </tr>
             <tr>
               <td>_ga</td>
-              <td>.scp.nl</td>
+              <td>.-.nl</td>
               <td>2 jaar</td>
             </tr>
             <tr>
               <td>_gid</td>
-              <td>.scp.nl</td>
+              <td>.-.nl</td>
               <td>1 dag</td>
             </tr>
             <tr>
               <td>_gat_UA-26882017-1</td>
-              <td>.scp.nl</td>
+              <td>.-.nl</td>
               <td>sessie</td>
             </tr>
           </table>
