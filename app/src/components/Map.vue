@@ -189,11 +189,14 @@ export default {
   background: #3B3F54 !important;
 }
 
- .mapboxgl-ctrl > button:not(:disabled):hover {
-  background-color: #30988A;
+.mapboxgl-ctrl > button {
   box-sizing: content-box !important;
   margin: 0 !important;
   padding: 5px !important;
+ }
+
+.mapboxgl-ctrl > button:not(:disabled):hover {
+  background-color: #30988A;
  }
 
 .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon {
