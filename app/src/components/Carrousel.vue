@@ -16,7 +16,7 @@
     <img
       v-for="(image) in wiki.images"
       :key="image.title"
-      :src="'http://upload.wikimedia.org/wikipedia/commons/'+ image.title.substr(8).replace(/\s+/g, '_')"
+      :src="'http://commons.wikimedia.org/wiki/Special:FilePath/'+ image.title.substr(8).replace(/\s+/g, '_')"
       :alt="image.title.substr(8)"
     />
   </div>
