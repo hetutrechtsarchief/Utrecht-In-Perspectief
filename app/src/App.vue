@@ -118,6 +118,12 @@ a {
 .home .Header .role-selector {
   visibility: hidden;
 }
+.Colofon .Header .role-selector {
+  visibility: hidden;
+}
+.Detail .Header .role-selector {
+  visibility: hidden;
+}
 
 /* COOKIE STYLING */
 .Cookie--utrechtSkyline {
