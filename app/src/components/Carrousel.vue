@@ -68,6 +68,10 @@ h1 {
   color: #30988A;
 }
 
+p {
+  margin-bottom: 10px;
+}
+
 ul#gebouwfuncties {
   display: inline-block;
   margin: 10px 0;
