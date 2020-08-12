@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router.js'
 import store from './store'
-import VueMapbox from "vue-mapbox";
+import VueMapbox from "v-mapbox";
 import Mapbox from "mapbox-gl";
 
 window.Vue = Vue;

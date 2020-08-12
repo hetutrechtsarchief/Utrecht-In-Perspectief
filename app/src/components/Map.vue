@@ -39,7 +39,7 @@ import {
   MglNavigationControl,
   MglFullscreenControl,
   MglGeojsonLayer,
-} from "vue-mapbox";
+} from "v-mapbox";
 export default {
   name: "Map",
   components: {
