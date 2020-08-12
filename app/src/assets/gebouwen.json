@@ -1,4 +1,5 @@
 {   "Sint Jobsgasthuis": {
+        "id": "84356543",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -44,6 +45,7 @@
     },
 
     "St. Maartensgasthuis": {
+        "id": "84710192",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -88,6 +90,7 @@
     },
 
     "Weerdpoort": {
+        "id": "14518084",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -132,6 +135,7 @@
     },
 
     "Jacobikerk": {
+        "id": "1878995",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -183,6 +187,7 @@
     },
 
     "Plompetoren": {
+        "id": "2593115",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -227,6 +232,7 @@
     },
 
     "Catharijnepoort": {
+        "id": "1904062",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -271,6 +277,7 @@
     },
 
     "Wittevrouwenklooster": {
+        "id": "1900284",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -330,6 +337,7 @@
     },
 
     "Ten Hert": {
+        "id": "1955870",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -374,6 +382,7 @@
     },
 
     "Oudaen": {
+        "id": "1820630",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -417,6 +426,7 @@
         }
     },
     "Drakenburg": {
+        "id": "2340974",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -462,6 +472,7 @@
     },
 
     "Fresenburch": {
+        "id": "2459211",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -506,6 +517,7 @@
     },
 
     "Groot Blankenburgh": {
+        "id": "7477626",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -551,6 +563,7 @@
     },
 
     "Janskerk": {
+        "id": "1682982",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -602,6 +615,7 @@
     },
 
     "Putruwiel": {
+        "id": "2347538",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -646,6 +660,7 @@
     },
 
     "Keyserrijk": {
+        "id": "84357528",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -690,6 +705,7 @@
     },
 
     "Groenewoude": {
+        "id": "1988915",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -734,6 +750,7 @@
     },
 
     "Lichtenberg": {
+        "id": "2003640",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -779,6 +796,7 @@
     },
 
     "Hasenberg": {
+        "id": "84750926",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -844,6 +862,7 @@
     },
 
     "Hieronymuskerk": {
+        "id": "85090947",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -924,6 +943,7 @@
     },
 
     "Pieterskerk": {
+        "id": "2094317",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -968,6 +988,7 @@
     },
 
     "Buurkerk": {
+        "id": "2150534",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1027,6 +1048,7 @@
     },
 
     "Dom van Utrecht": {
+        "id": "936545",
         "geometry": {
             "type": "Point",
             "coordinates": [
@@ -1100,6 +1122,7 @@
     },
 
     "Bisschopshof": {
+        "id": "84595778",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1151,6 +1174,7 @@
     },
 
     "Mariakerk": {
+        "id": "1896594",
         "geometry": {
             "type": "Point",
             "coordinates": [
@@ -1195,6 +1219,7 @@
     },
 
     "Paulusabdij": {
+        "id": "2269681",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1270,8 +1295,8 @@
             "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Hamburgerstraat%2028.JPG"
         }
     },
-
     "Lutherse Kerk": {
+        "id": "7476534",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1331,6 +1356,7 @@
     },
 
     "Kapel Duitse Huis": {
+        "id": "84475989",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1375,6 +1401,7 @@
     },
 
     "Regulierenkerk": {
+        "id": "84549114",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1434,6 +1461,7 @@
     },
 
     "Sint-Catharinakathedraal": {
+        "id": "1627233",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1478,6 +1506,7 @@
     },
 
     "Bartholomeigasthuis": {
+        "id": "2174025",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1522,6 +1551,7 @@
     },
 
     "Smeetoren": {
+        "id": "5347090",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1580,6 +1610,7 @@
     },
 
     "Sint-Servaaskerk": {
+        "id": "84543792",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1631,6 +1662,7 @@
     },
 
     "Geertekerk": {
+        "id": "7476228",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1704,6 +1736,7 @@
     },
 
     "Kapel van het Agnietenklooster": {
+        "id": "84509500",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1755,6 +1788,7 @@
     },
 
     "Nicolaikerk": {
+        "id": "2372424",
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1830,6 +1864,7 @@
     },
 
     "Bijlhouwerstoren": {
+        "id": "13439353",
         "geometry": {
             "type": "Point",
             "coordinates": [
