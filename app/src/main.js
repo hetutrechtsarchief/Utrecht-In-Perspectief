@@ -4,6 +4,7 @@ import router from './router.js'
 import store from './store'
 import VueMapbox from "v-mapbox";
 import Mapbox from "mapbox-gl";
+import "leaflet/dist/leaflet.css";
 
 window.Vue = Vue;
 Vue.router = router;
