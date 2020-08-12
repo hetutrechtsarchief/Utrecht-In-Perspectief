@@ -36,8 +36,9 @@
 <script>
 import { CRS } from "leaflet";
 import { LMap, LImageOverlay, LRectangle, LControlZoom, LTooltip } from "vue2-leaflet";
-import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
-import 'leaflet-fullscreen/dist/Leaflet.fullscreen';
+import "leaflet/dist/leaflet.css";
+import "leaflet-fullscreen/dist/leaflet.fullscreen.css";
+import "leaflet-fullscreen/dist/Leaflet.fullscreen";
 
 export default {
   name: "Panorama",
