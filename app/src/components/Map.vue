@@ -39,9 +39,9 @@ import {
   MglNavigationControl,
   MglFullscreenControl,
   MglGeojsonLayer,
-} from "v-mapbox";
+} from "vue-mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
-import "v-mapbox/dist/v-mapbox.css";
+import "vue-mapbox/dist/vue-mapbox.css";
 
 export default {
   name: "Map",
