@@ -8,6 +8,7 @@
       :minZoom="14"
       :pitchWithRotate="false"
       :dragRotate="false"
+      :attributionControl="false"
       :accessToken="accessToken"
       @load="onLoad"
       @click="onMapClick"
@@ -15,9 +16,9 @@
       :pitch="0"
       :bearing="71"
     >
-      <MglAttributionControl position="bottom-right" />
-      <MglNavigationControl :showCompass="false" position="top-right" />
+      <MglAttributionControl position="bottom-left" :compact="false"/>
       <MglFullscreenControl position="top-right" />
+      <MglNavigationControl :showCompass="false" position="top-right" />
       <MglGeojsonLayer
         sourceId="gebouwen"
         :source="geojsonSource"
@@ -97,7 +98,7 @@ export default {
           pitch: 60,
           minpitchzoom: null,
         })
-      );
+      ,"top-left");
       this.geojsonSource = this.geojsonSource = { data: geojson };
       geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
