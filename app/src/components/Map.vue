@@ -41,6 +41,7 @@ import {
   MglGeojsonLayer,
 } from "v-mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
+import "v-mapbox/dist/v-mapbox.css";
 
 export default {
   name: "Map",
