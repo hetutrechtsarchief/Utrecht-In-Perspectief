@@ -25,6 +25,11 @@
         layerId="gebouwen"
         :layer="geojsonLayer"
       ></MglGeojsonLayer>
+      <MglPopup
+        :coordinates="popup.coordinates"
+        :showed="popup.showed"
+        onlyText="true"
+        ><slot>{{ popup.content }}</slot></MglPopup>
     </MglMap>
   </div>
 </template>
@@ -40,6 +45,7 @@ import {
   MglNavigationControl,
   MglFullscreenControl,
   MglGeojsonLayer,
+  MglPopup,
 } from "vue-mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "vue-mapbox/dist/vue-mapbox.css";
@@ -52,6 +58,7 @@ export default {
     MglNavigationControl,
     MglFullscreenControl,
     MglGeojsonLayer,
+    MglPopup,
   },
 
   data() {
@@ -79,6 +86,11 @@ export default {
           "circle-opacity": 0.8,
           "circle-pitch-alignment": "map",
         },
+      },
+      popup: {
+        coordinates: [5.121393, 52.090657],
+        showed: false,
+        content: "Title will go here."
       },
       mapStyle: style, // your map style,
       accessToken: "mpUE8UJCeHr5LXgVR1cW",
@@ -108,7 +120,6 @@ export default {
     },
     onMapClick(event) {
       let e = event.mapboxEvent;
-      this.coordinatesPopup = [e.lngLat.lng, e.lngLat.lat];
       var bbox = [
         [e.point.x - 2, e.point.y - 2],
         [e.point.x + 2, e.point.y + 2],
@@ -132,6 +143,12 @@ export default {
           layers: ["gebouwen"],
         });
         if (features[0]) {
+          this.popup.coordinates = [
+            e.lngLat.lng,
+            e.lngLat.lat
+          ];
+          this.popup.showed = true;
+          this.popup.content = features[0].properties.label;
           event.map.setFeatureState(
             { source: "gebouwen", id: features[0].id },
             { hover: true }
@@ -149,6 +166,7 @@ export default {
             id: hoveredFeature,
           });
           event.map.getCanvas().style.cursor = "";
+          this.popup.showed = false;
           hoveredFeature = null;
         }
       }
