@@ -3,18 +3,20 @@
     <LMap
       ref="map"
       :maxBounds="maxBounds"
-      :minZoom="this.$route.name === 'DrieLuik' ? -2: 0"
-      :maxZoom="2"
-      :zoom="this.$route.name === 'DrieLuik' ? -2: 0"
+      :minZoom="this.$route.name === 'DrieLuik' ? 2: 4"
+      :maxZoom="6"
+      :zoom="this.$route.name === 'DrieLuik' ? 2: 4"
       :crs="crs"
-      :center="[900, 3080]"
+      :center="[-37, 165]"
       :options="mapOptions"
       @ready="onLoad"
     >
+          <l-iiif
+        :url="iiifUrl"
+        :options="iiifOpts"/>
       <l-control-zoom 
       position="topright">
       </l-control-zoom>
-      <LImageOverlay :url="url" :bounds="bounds" />
       <l-rectangle
         v-for="(building, name) in buildings"
         :interactive="true"
@@ -35,7 +37,8 @@
 
 <script>
 import { CRS } from "leaflet";
-import { LMap, LImageOverlay, LRectangle, LControlZoom, LTooltip } from "vue2-leaflet";
+import { LMap, LRectangle, LControlZoom, LTooltip } from "vue2-leaflet";
+import LIiif from "vue2-leaflet-iiif";
 import "leaflet/dist/leaflet.css";
 import "leaflet-fullscreen/dist/leaflet.fullscreen.css";
 import "leaflet-fullscreen/dist/Leaflet.fullscreen";
@@ -44,26 +47,24 @@ export default {
   name: "Panorama",
   components: {
     LMap,
-    LImageOverlay,
     LRectangle,
     LTooltip,
-    LControlZoom
+    LControlZoom,
+    LIiif
   },
   data() {
     return {
-      mapOptions: {attributionControl: false, zoomControl: false },
-      url:
-        "./saftleven_1684_app.jpg",
-      bounds: [
-        [0, 0],
-        [1597, 9468]
-      ],
-      maxBounds: [
-        [0, 0],
-        [1597, 9468]
-      ],
+      mapOptions: {
+	attributionControl: false,
+	zoomControl: false
+      },
       crs: CRS.Simple,
-      opacity: 0.8
+      opacity: 0.8,
+      iiifOpts: {
+        tileFormat: 'jpg',
+        tileSize: 512
+      },
+      iiifUrl: "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json"
     };
   },
   methods: {
