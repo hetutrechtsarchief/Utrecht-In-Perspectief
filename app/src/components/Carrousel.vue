@@ -15,9 +15,16 @@
       </router-link>
     </div>
 
-    <carousel id="right" :per-page="1" paginationActiveColor="#30988A">
+    <carousel 
+    id="right" 
+    :per-page="3" 
+    paginationActiveColor="#30988A"
+    :atuoplay="true"
+    >
       <slide v-for="item in images" :key="item">
-        <img :src="item" />
+        <img :src="item.img.value" :alt="item.description.value" />
+        <p>{{item.description.value}}</p>
+        <p>{{item.rights.value}}</p>
       </slide>
     </carousel>
   </div>

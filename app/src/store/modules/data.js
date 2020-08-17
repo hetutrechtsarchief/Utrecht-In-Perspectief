@@ -12,7 +12,7 @@ export default {
     gekozenGebouwWiki: {
       "images": []
     },
-    imageList: []
+    imageList: {}
   },
   mutations: {
     setGekozenGebouw(state, gekozen) {
@@ -43,7 +43,6 @@ export default {
   actions: {
 
     setGekozenGebouwImages({ commit, state }) {
-      let list = [];
       fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
       PREFIX dct: <http://purl.org/dc/terms/> \
       PREFIX wd: <http://www.wikidata.org/entity/> \
@@ -60,19 +59,16 @@ export default {
         ?bb dc:identifier ?catnr . \
       } \
       ORDER BY ?begin \
-      LIMIT 5 ` ,
+      LIMIT 15 ` ,
         {
           "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
         })
         .then(response => response.json())
         .then(json => {
           if (json.results) {
-            json.results.bindings.forEach(element => {
-              list.push(element.img.value)
-            });
+            commit('fillImageList', json.results.bindings)
           }
         })
-      commit('fillImageList', list)
     },
     setGekozenGebouwWiki({ commit, state }) {
       // Get wikipedia page from wikidata id
