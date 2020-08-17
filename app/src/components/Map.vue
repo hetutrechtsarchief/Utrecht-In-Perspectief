@@ -28,7 +28,7 @@
       <MglPopup
         :coordinates="popup.coordinates"
         :showed="popup.showed"
-        onlyText="true"
+        :onlyText="true"
         ><slot>{{ popup.content }}</slot></MglPopup>
     </MglMap>
   </div>
