@@ -15,8 +15,13 @@
       </router-link>
     </div>
 
-    <carousel id="right" :per-page="3" paginationActiveColor="#30988A" :atuoplay="true">
-      <slide v-for="item in images" :key="item.catnr.value">
+    <carousel 
+    id="right" 
+    :per-page="3" 
+    paginationActiveColor="#30988A"
+    :atuoplay="true"
+    >
+      <slide v-for="item in images" :key="item">
         <img :src="item.img.value" :alt="item.description.value" />
         <p>{{item.description.value}}</p>
         <p>{{item.rights.value}}</p>
@@ -34,17 +39,17 @@ export default {
     Slide,
   },
   state: {
-    wiki: {},
     gebouw: {},
   },
   computed: {
     gebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
     },
-    wiki() {
-      return this.$store.getters["data/getGekozenGebouwWiki"];
+    images() {
+      return this.$store.getters["data/getImages"];
     },
   },
+  watch: {},
 };
 </script>
 

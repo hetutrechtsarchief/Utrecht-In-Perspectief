@@ -75,6 +75,7 @@ export default {
         this.$store.commit("data/setGekozenGebouw", name);
         this.$router.push(`/Drieluik/${name}`);
         this.$store.dispatch("data/setGekozenGebouwWiki");
+        this.$store.dispatch("data/setGekozenGebouwImages");
       }
     },
     mouseover: function (e) {
