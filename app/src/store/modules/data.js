@@ -60,7 +60,7 @@ export default {
         ?bb dc:identifier ?catnr . \
       } \
       ORDER BY ?begin \
-      LIMIT 2 ` ,
+      LIMIT 5 ` ,
         {
           "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
         })
