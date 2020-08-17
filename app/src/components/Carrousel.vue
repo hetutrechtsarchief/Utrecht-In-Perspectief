@@ -3,47 +3,39 @@
     <div id="left">
       <h1>{{gebouw.properties.label}}</h1>
       <ul id="gebouwfuncties">
-        <li v-for="type in gebouw.properties.types" :key="type">{{ type }} </li>
+        <li v-for="type in gebouw.properties.types" :key="type">{{ type }}</li>
       </ul>
       <p>Gebouwd in {{gebouw.properties.built_in}}</p>
-      <p v-if="gebouw.properties.demolished_in">Verdwenen in {{gebouw.properties.demolished_in}}</p>
-      <p v-if="gebouw.properties.users"> Gebruikt door {{gebouw.properties.users}}</p>
-      <p v-if="gebouw.properties.uses">Gebruikt voor {{gebouw.properties.uses}}</p>
-      
+      <!-- <p v-if="gebouw.properties.demolished_in">Verdwenen in {{gebouw.properties.demolished_in}}</p>
+      <p v-if="gebouw.properties.users">Gebruikt door {{gebouw.properties.users}}</p>
+      <p v-if="gebouw.properties.uses">Gebruikt voor {{gebouw.properties.uses}}</p>-->
+
       <router-link :to="{name: 'Detail', params:{ id:$route.params.id}}">
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link>
     </div>
-    
-     <carousel id="right" :per-page="1" paginationActiveColor="#30988A">
-      <slide>
-        Slide 1 Content
-      </slide>
-      <slide>
-        Slide 2 Content
-      </slide>
-      <slide>
-        Slide 3 Content
-      </slide>
-      <slide>
-        Slide 4 Content
+
+    <carousel id="right" :per-page="3" paginationActiveColor="#30988A" :atuoplay="true">
+      <slide v-for="item in images" :key="item.catnr.value">
+        <img :src="item.img.value" :alt="item.description.value" />
+        <p>{{item.description.value}}</p>
+        <p>{{item.rights.value}}</p>
       </slide>
     </carousel>
-    
   </div>
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel';
+import { Carousel, Slide } from "vue-carousel";
 export default {
   name: "Carrousel",
   components: {
     Carousel,
-    Slide
+    Slide,
   },
   state: {
     wiki: {},
-    gebouw: {}
+    gebouw: {},
   },
   computed: {
     gebouw() {
@@ -51,8 +43,8 @@ export default {
     },
     wiki() {
       return this.$store.getters["data/getGekozenGebouwWiki"];
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -60,12 +52,12 @@ export default {
 .Carrousel {
   display: grid;
   grid-template-columns: 35vw 65vw;
-  color: #3B3F54;
-  background-color: #DACBB2;
+  color: #3b3f54;
+  background-color: #dacbb2;
 }
 
 h1 {
-  color: #30988A;
+  color: #30988a;
 }
 
 p {
@@ -79,10 +71,10 @@ ul#gebouwfuncties {
 }
 
 ul#gebouwfuncties li {
-  display:inline-block;
+  display: inline-block;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE0IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQgNEw3LjM3OTUxIDBMNi42MDg0IDEuNDI2NzlMOS41MDc0NSAzLjE3ODM0SDBWNC44MjE2NUg5LjUwNzQ2TDYuNjA4NCA2LjU3MzIxTDcuMzc5NTEgOEwxNCA0WiIgZmlsbD0iIzNCM0Y1NCIvPgo8L3N2Zz4K");
   background-repeat: no-repeat;
-  background-position: 0 .4em;
+  background-position: 0 0.4em;
   padding-left: 20px;
   margin-left: 10px; /* Also needed for space (tweak if needed) */
 }
@@ -93,7 +85,7 @@ ul#gebouwfuncties li:first-child {
 }
 
 #meer {
-  background-color: #30988A;
+  background-color: #30988a;
 }
 
 #left {
@@ -106,22 +98,22 @@ ul#gebouwfuncties li:first-child {
 #right {
   grid-row: 1;
   grid-column: 2;
-  background-color: #3B3F54;
+  background-color: #3b3f54;
   margin: 0px;
   align-self: stretch;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  color: #30988A;
+  color: #30988a;
 }
 
 .example-slide {
-    align-items: center;
-    background-color: #666;
-    color: #999;
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: center;
-    min-height: 10rem;
-  }
+  align-items: center;
+  background-color: #666;
+  color: #999;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  min-height: 10rem;
+}
 </style>
