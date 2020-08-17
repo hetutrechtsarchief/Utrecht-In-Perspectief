@@ -39,15 +39,11 @@ export default {
     Slide,
   },
   state: {
-    wiki: {},
     gebouw: {},
   },
   computed: {
     gebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
-    },
-    wiki() {
-      return this.$store.getters["data/getGekozenGebouwWiki"];
     },
     images() {
       return this.$store.getters["data/getImages"];
