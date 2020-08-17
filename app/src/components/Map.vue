@@ -25,9 +25,11 @@
         layerId="gebouwen"
         :layer="geojsonLayer"
       ></MglGeojsonLayer>
-      <MglPopup :coordinates="popup.coordinates" :showed="popup.showed" onlyText="true">
-        <slot>{{ popup.content }}</slot>
-      </MglPopup>
+      <MglPopup
+        :coordinates="popup.coordinates"
+        :showed="popup.showed"
+        :onlyText="true"
+        ><slot>{{ popup.content }}</slot></MglPopup>
     </MglMap>
   </div>
 </template>

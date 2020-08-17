@@ -16,7 +16,9 @@
     </div>
     
      <carousel id="right" :per-page="1" paginationActiveColor="#30988A">
-      <slide>
+      <slide
+        :v-for="(img) in images"
+        :url="img">
         Slide 1 Content
       </slide>
       <slide>
@@ -51,7 +53,13 @@ export default {
     },
     wiki() {
       return this.$store.getters["data/getGekozenGebouwWiki"];
+    },
+    images(){
+      return this.$store.getters["data/getImages"]
     }
+  },
+  watch:{
+    
   }
 };
 </script>

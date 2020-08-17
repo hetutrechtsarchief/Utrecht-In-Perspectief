@@ -11,7 +11,8 @@ export default {
     ,
     gekozenGebouwWiki: {
       "images": []
-    }
+    },
+    imageList: []
   },
   mutations: {
     setGekozenGebouw(state, gekozen) {
@@ -19,7 +20,11 @@ export default {
     },
     GET_WIKI(state, opgehaald) {
       state.gekozenGebouwWiki = opgehaald
+    },
+    fillImageList(state, list) {
+      state.imageList = list
     }
+
   },
   getters: {
     getGebouwen: state => {
@@ -30,18 +35,22 @@ export default {
     },
     getGekozenGebouwWiki: state => {
       return state.gekozenGebouwWiki
+    },
+    getImages: state => {
+      return state.imageList
     }
   },
   actions: {
 
-    setGekozenGebouwImages() {
-      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + 'PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
+    setGekozenGebouwImages({ commit, state }) {
+      let list = [];
+      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
       PREFIX dct: <http://purl.org/dc/terms/> \
       PREFIX wd: <http://www.wikidata.org/entity/> \
       PREFIX edm: <http://www.europeana.eu/schemas/edm/> \
       PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> \
       SELECT * WHERE { \
-        ?bb dct:spatial wd:Q12013358 . \
+        ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} . \
         ?bb edm:isShownBy ?img . \
         ?bb dc:description ?description . \
         ?bb dc:rights ?rights . \
@@ -51,19 +60,19 @@ export default {
         ?bb dc:identifier ?catnr . \
       } \
       ORDER BY ?begin \
-      LIMIT 2 ' , {
-        "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
-      })
+      LIMIT 2 ` ,
+        {
+          "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
+        })
         .then(response => response.json())
         .then(json => {
-
-          if (json.results.length >= 1) {
+          if (json.results) {
             json.results.bindings.forEach(element => {
-              console.log(element.img)
+              list.push(element.img.value)
             });
           }
-
         })
+      commit('fillImageList', list)
     },
     setGekozenGebouwWiki({ commit, state }) {
       // Get wikipedia page from wikidata id
