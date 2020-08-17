@@ -16,7 +16,7 @@
       :pitch="0"
       :bearing="71"
     >
-      <MglAttributionControl position="bottom-left" :compact="false"/>
+      <MglAttributionControl position="bottom-left" :compact="false" />
       <MglFullscreenControl position="top-right" />
       <MglNavigationControl :showCompass="false" position="top-right" />
       <MglGeojsonLayer
@@ -25,11 +25,9 @@
         layerId="gebouwen"
         :layer="geojsonLayer"
       ></MglGeojsonLayer>
-      <MglPopup
-        :coordinates="popup.coordinates"
-        :showed="popup.showed"
-        :onlyText="true"
-        ><slot>{{ popup.content }}</slot></MglPopup>
+      <MglPopup :coordinates="popup.coordinates" :showed="popup.showed" :onlyText="false">
+        <p>{{popup.content}}</p>
+      </MglPopup>
     </MglMap>
   </div>
 </template>
@@ -63,7 +61,6 @@ export default {
 
   data() {
     return {
-      // gekozenGebouw: "",
       geojsonSource: {
         data: {
           id: "gebouwen",
@@ -77,12 +74,7 @@ export default {
         source: "gebouwen",
         paint: {
           "circle-radius": ["interpolate", ["linear"], ["zoom"], 12, 7, 20, 15],
-          "circle-color": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            "rgba(48,152,138,0.6)",
-            "rgba(69,93,199,0.4)",
-          ],
+          "circle-color": "rgba(69,93,199,0.4)",
           "circle-opacity": 1,
           "circle-stroke-color": "rgb(218, 203, 178)",
           "circle-stroke-width": 2,
@@ -92,7 +84,7 @@ export default {
       popup: {
         coordinates: [5.121393, 52.090657],
         showed: false,
-        content: "Title will go here."
+        content: "Title will go here.",
       },
       mapStyle: style, // your map style,
       accessToken: "mpUE8UJCeHr5LXgVR1cW",
@@ -111,8 +103,9 @@ export default {
           bearing: 71,
           pitch: 60,
           minpitchzoom: null,
-        })
-      ,"top-left");
+        }),
+        "top-left"
+      );
       this.geojsonSource = this.geojsonSource = { data: geojson };
       geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
@@ -135,41 +128,23 @@ export default {
         this.$store.commit("data/setGekozenGebouw", geb.label);
         this.$router.push(`/Drieluik/${geb.label}`);
         this.$store.dispatch("data/setGekozenGebouwWiki");
+        this.$store.dispatch("data/setGekozenGebouwImages");
       }
     },
     onMapMoveMouse(event) {
       let e = event.mapboxEvent;
-      let hoveredFeature;
       if (event.map.isStyleLoaded()) {
         let features = event.map.queryRenderedFeatures(e.point, {
           layers: ["gebouwen"],
         });
         if (features[0]) {
-          this.popup.coordinates = [
-            e.lngLat.lng,
-            e.lngLat.lat
-          ];
+          this.popup.coordinates = [e.lngLat.lng, e.lngLat.lat];
           this.popup.showed = true;
           this.popup.content = features[0].properties.label;
-          event.map.setFeatureState(
-            { source: "gebouwen", id: features[0].id },
-            { hover: true }
-          );
           event.map.getCanvas().style.cursor = "pointer";
-          if (hoveredFeature && hoveredFeature != features[0].id)
-            event.map.removeFeatureState({
-              source: "gebouwen",
-              id: hoveredFeature,
-            });
-          hoveredFeature = features[0].id;
         } else {
-          event.map.removeFeatureState({
-            source: "gebouwen",
-            id: hoveredFeature,
-          });
           event.map.getCanvas().style.cursor = "";
           this.popup.showed = false;
-          hoveredFeature = null;
         }
       }
     },
@@ -181,6 +156,33 @@ export default {
   },
   watch: {
     gekozenGebouw() {
+      this.map.setPaintProperty("gebouwen", "circle-color", [
+        "case",
+        ["==", ["get", "label"], this.gekozenGebouw.properties.label],
+        "rgba(48,152,138,0.6)",
+        "rgba(69,93,199,0.4)",
+      ]);
+      this.map.setPaintProperty("gebouwen", "circle-radius", [
+        "interpolate",
+        ["linear"],
+        ["zoom"],
+        12,
+
+        [
+          "case",
+          ["==", ["get", "label"], this.gekozenGebouw.properties.label],
+          30,
+          17,
+        ],
+        20,
+        [
+          "case",
+          ["==", ["get", "label"], this.gekozenGebouw.properties.label],
+          35,
+          15,
+        ],
+      ]);
+
       geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
           this.map.flyTo({ center: item.geometry.coordinates, curve: 1 });
@@ -237,14 +239,14 @@ export default {
 }
 
 .mapboxgl-ctrl-pitchtoggle-3d {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAxNHB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4zRDwvdGV4dD4NCjwvc3ZnPg==")
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAxNHB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4zRDwvdGV4dD4NCjwvc3ZnPg==");
 }
 .mapboxgl-ctrl-pitchtoggle-2d {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAxNHB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4yRDwvdGV4dD4NCjwvc3ZnPg==")
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAxNHB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4yRDwvdGV4dD4NCjwvc3ZnPg==");
 }
 
 /* RESPONSIVENESS */
@@ -263,12 +265,11 @@ export default {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMiAxNkgxNlYyMlYzNEgyMlYyMkgzNFYxNkgyMloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjIgNDZIMTZWNThWNjRIMjJIMzRWNThIMjJWNDZaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTY0IDQ2SDU4VjU4SDQ2VjY0SDU4SDY0VjU4VjQ2WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00NiAxNlYyMkg1OFYzNEg2NFYyMlYxNkg1OEg0NloiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjMxIiB5PSIzMSIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiByeD0iMiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==") !important;
   }
 
-  .mapboxgl-ctrl-pitchtoggle-3d {     
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAzNnB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4zRDwvdGV4dD4NCjwvc3ZnPg==")
-  }  
-  .mapboxgl-ctrl-pitchtoggle-2d {     
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAzNnB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4yRDwvdGV4dD4NCjwvc3ZnPg==")
+  .mapboxgl-ctrl-pitchtoggle-3d {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAzNnB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4zRDwvdGV4dD4NCjwvc3ZnPg==");
   }
-
+  .mapboxgl-ctrl-pitchtoggle-2d {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+DQo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZHk9Ii4zNWVtIiBmaWxsPSIjZmZmIiBzdHlsZT0iZm9udC1zaXplOiAzNnB4OyBmb250LWZhbWlseTogJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYW5jaG9yOiBtaWRkbGU7Ij4yRDwvdGV4dD4NCjwvc3ZnPg==");
+  }
 }
 </style>
