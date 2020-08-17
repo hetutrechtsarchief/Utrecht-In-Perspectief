@@ -16,13 +16,14 @@
         v-for="(building, name) in buildings"
         :interactive="true"
         :bounds="building.bounds"
-        :fillColor="building.style.fillColor"
-        :fillOpacity="building.style.fillOpacity"
+        v-bind:fillColor=" name === gebouw.properties.label ?  'rgb(48, 152, 138)'  : building.style.fillColor "
+        v-bind:fillOpacity=" name === gebouw.properties.label ?  0.6  : building.style.fillOpacity "
         :stroke="building.style.stroke"
         :key="name"
         @click="doRouting(name)"
         @mouseover="mouseover"
         @mouseout="mouseout"
+        :attribution="building.properties.label"
       >
         <l-tooltip :content="name" :options="{sticky: true}" />
       </l-rectangle>
@@ -70,27 +71,33 @@ export default {
         this.$refs.map.fitBounds(this.gebouw.bounds);
     },
     doRouting(name) {
-      this.$store.commit("data/setGekozenGebouw", name);
-      this.$router.push(`/Drieluik/${name}`);
-      this.$store.dispatch("data/setGekozenGebouwWiki");
+      if (name) {
+        this.$store.commit("data/setGekozenGebouw", name);
+        this.$router.push(`/Drieluik/${name}`);
+        this.$store.dispatch("data/setGekozenGebouwWiki");
+      }
     },
     mouseover: function (e) {
       this.doHighlight(e.target);
     },
-    mouseout: function(e){
-      this.doReset(e.target)
+    mouseout: function (e) {
+      this.doReset(e.target);
     },
     doHighlight(layer) {
-      layer.setStyle({
-        fillColor: "rgb(48, 152, 138)",
-        fillOpacity: 0.6,
-      });
+      if (layer.options.attribution !== this.gebouw.properties.label) {
+        layer.setStyle({
+          fillColor: "rgb(48, 152, 138)",
+          fillOpacity: 0.6,
+        });
+      }
     },
     doReset(layer) {
-      layer.setStyle({
-        fillColor: "#455DC7",
-        fillOpacity: 0.4,
-      });
+      if (layer.options.attribution !== this.gebouw.properties.label) {
+        layer.setStyle({
+          fillColor: "#455DC7",
+          fillOpacity: 0.4,
+        });
+      }
     },
   },
   created() {
@@ -103,7 +110,22 @@ export default {
   },
   watch: {
     gebouw() {
+      // const map = this.$refs.map.mapObject;
+
       this.$refs.map.fitBounds(this.gebouw.bounds);
+      // map.
+      // buildings.onEachFeature(function (layer) {
+      //   console.log(layer)
+      //   if (layer.feature.properties.name === this.gebouw.name) {
+      //     console.log(layer);
+      //     this.doHighlight(layer);
+      //   }
+      // });
+      // var match = featureGroup.eachLayer(function (layer) {
+      //   if (layer.feature.properties.ID == uniqueID) {
+      //     return layer;
+      //   }
+      // });
     },
   },
   mounted() {
