@@ -73,9 +73,12 @@ export default {
       if(this.gebouw.bounds && this.$route.name !== "HomePage")this.$refs.map.fitBounds(this.gebouw.bounds);
     },
     doRouting(name) {
-      this.$store.commit("data/setGekozenGebouw", name);
-      this.$router.push(`/Drieluik/${name}`);
-      this.$store.dispatch("data/setGekozenGebouwWiki");
+      if (name) {
+        this.$store.commit("data/setGekozenGebouw", name);
+        this.$router.push(`/Drieluik/${name}`);
+        this.$store.dispatch("data/setGekozenGebouwWiki");
+        this.$store.dispatch("data/setGekozenGebouwImages");
+      }
     },
     doHighlight(building) {
       building.style.fillOpacity = 0.6,
