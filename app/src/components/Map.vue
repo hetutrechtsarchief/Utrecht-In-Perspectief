@@ -64,13 +64,6 @@ export default {
 
   data() {
     return {
-      geojsonSource: {
-        data: {
-          id: "gebouwen",
-          type: "FeatureCollection",
-          features: [],
-        },
-      },
       popup: {
         coordinates: [5.121393, 52.090657],
         showed: false,
@@ -96,7 +89,7 @@ export default {
         }),
         "top-left"
       );
-      // this.geojsonSource = this.geojsonSource = { data: geojson };
+
       geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
           event.map.flyTo({ center: item.geometry.coordinates });
@@ -104,20 +97,15 @@ export default {
       });
     },
     onStyleChange(event) {
+      // Add geojson again after map style change
       this.map = event.map;
-      console.log("cahnge map");
-      this.geojsonSource = this.geojsonSource = { data: geojson };
-
-      // this.map.on("load", function () {
-      //   console.log("loaded")
-      //   this.map.addSource(this.geojsonSource);
-      //   this.map.addLayer(this.geojsonLayer);
-      // });
-      geojson.features.forEach((item) => {
-        if (item.properties.label === this.gekozenGebouw.properties.label) {
-          event.map.flyTo({ center: item.geometry.coordinates });
-        }
-      });
+      if (!this.map.getLayer("gebouwen")) {
+        this.map.addLayer({
+          ...this.geojsonLayer,
+          id: "gebouwen",
+          source: this.geojsonSource,
+        });
+      }
     },
     onMapClick(event) {
       let e = event.mapboxEvent;
@@ -163,6 +151,12 @@ export default {
     },
     gekozenGebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
+    },
+    geojsonSource() {
+      return {
+        type: "geojson",
+        data: geojson,
+      };
     },
     geojsonLayer() {
       return {
