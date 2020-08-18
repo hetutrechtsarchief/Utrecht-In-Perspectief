@@ -1,22 +1,25 @@
-
 import lijst from '../../assets/gebouwen.json';
 
 export default {
   namespaced: true,
   state: {
     gebouwen: lijst,
+    gekozenGebouwId: "",
     gekozenGebouw: {
       properties: ""
-    }
-    ,
+    },
     gekozenGebouwWiki: {
       "images": []
     },
     imageList: {}
   },
+
   mutations: {
     setGekozenGebouw(state, gekozen) {
-      state.gekozenGebouw = state.gebouwen[gekozen]
+      state.gekozenGebouw = state.gebouwen[gekozen];
+    },
+    setGekozenGebouwId(state, gekozen) {
+      state.gekozenGebouwId = gekozen;
     },
     GET_WIKI(state, opgehaald) {
       state.gekozenGebouwWiki = opgehaald
@@ -30,6 +33,9 @@ export default {
     getGebouwen: state => {
       return state.gebouwen
     },
+    getGekozenGebouwId: state => {
+      return state.gekozenGebouwId
+    },
     getGekozenGebouw: state => {
       return state.gekozenGebouw
     },
@@ -41,8 +47,7 @@ export default {
     }
   },
   actions: {
-
-    setGekozenGebouwImages({ commit, state }) {
+    getGekozenGebouwImages({ commit, state }) {
       fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
       PREFIX dct: <http://purl.org/dc/terms/> \
       PREFIX wd: <http://www.wikidata.org/entity/> \
@@ -70,7 +75,7 @@ export default {
           }
         })
     },
-    setGekozenGebouwWiki({ commit, state }) {
+    getGekozenGebouwWiki({ commit, state }) {
       // Get wikipedia page from wikidata id
       fetch(
         `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${state.gekozenGebouw.properties.wdid}&sitefilter=nlwiki&props=sitelinks/urls&origin=*&format=json`,

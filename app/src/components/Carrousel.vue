@@ -21,7 +21,7 @@
     paginationActiveColor="#30988A"
     :atuoplay="true"
     >
-      <slide v-for="item in images" :key="item">
+      <slide v-for="item in images" :key="item.catnr.value">
         <img :src="item.img.value" :alt="item.description.value" />
         <p>{{item.description.value}}</p>
         <p>{{item.rights.value}}</p>

@@ -23,7 +23,7 @@
         sourceId="gebouwen"
         :source="geojsonSource"
         layerId="gebouwen"
-        :layer="geojsonLayer"
+        :layer="this.geojsonLayer"
       ></MglGeojsonLayer>
       <MglPopup :coordinates="popup.coordinates" :showed="popup.showed" :onlyText="false">
         <p>{{popup.content}}</p>
@@ -68,19 +68,7 @@ export default {
           features: [],
         },
       },
-      geojsonLayer: {
-        id: "gebouwen",
-        type: "circle",
-        source: "gebouwen",
-        paint: {
-          "circle-radius": ["interpolate", ["linear"], ["zoom"], 12, 7, 20, 15],
-          "circle-color": "rgba(69,93,199,0.4)",
-          "circle-opacity": 1,
-          "circle-stroke-color": "rgb(218, 203, 178)",
-          "circle-stroke-width": 2,
-          "circle-pitch-alignment": "map",
-        },
-      },
+
       popup: {
         coordinates: [5.121393, 52.090657],
         showed: false,
@@ -125,10 +113,9 @@ export default {
       event.map.flyTo({ center: [e.lngLat.lng, e.lngLat.lat] });
       if (layercontent && layercontent[0] && layercontent[0].layer) {
         let geb = layercontent[0].properties;
+
+        this.$store.commit("data/setGekozenGebouwId", geb.label);
         this.$store.commit("data/setGekozenGebouw", geb.label);
-        this.$router.push(`/Drieluik/${geb.label}`);
-        this.$store.dispatch("data/setGekozenGebouwWiki");
-        this.$store.dispatch("data/setGekozenGebouwImages");
       }
     },
     onMapMoveMouse(event) {
@@ -150,41 +137,46 @@ export default {
     },
   },
   computed: {
+    gekozenGebouwId() {
+      return this.$store.getters["data/getGekozenGebouwId"];
+    },
     gekozenGebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
     },
+    geojsonLayer() {
+      return {
+        id: "gebouwen",
+        type: "circle",
+        source: "gebouwen",
+        paint: {
+          "circle-radius": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+
+            ["case", ["==", ["get", "label"], this.gekozenGebouwId], 30, 17],
+            20,
+            ["case", ["==", ["get", "label"], this.gekozenGebouwId], 35, 15],
+          ],
+          "circle-color": [
+            "case",
+            ["==", ["get", "label"], this.gekozenGebouwId],
+            "rgba(48,152,138,0.6)",
+            "rgba(69,93,199,0.4)",
+          ],
+          "circle-opacity": 1,
+          "circle-stroke-color": "rgb(218, 203, 178)",
+          "circle-stroke-width": 2,
+          "circle-pitch-alignment": "map",
+        },
+      };
+    },
   },
   watch: {
-    gekozenGebouw() {
-      this.map.setPaintProperty("gebouwen", "circle-color", [
-        "case",
-        ["==", ["get", "label"], this.gekozenGebouw.properties.label],
-        "rgba(48,152,138,0.6)",
-        "rgba(69,93,199,0.4)",
-      ]);
-      this.map.setPaintProperty("gebouwen", "circle-radius", [
-        "interpolate",
-        ["linear"],
-        ["zoom"],
-        12,
-
-        [
-          "case",
-          ["==", ["get", "label"], this.gekozenGebouw.properties.label],
-          30,
-          17,
-        ],
-        20,
-        [
-          "case",
-          ["==", ["get", "label"], this.gekozenGebouw.properties.label],
-          35,
-          15,
-        ],
-      ]);
-
+    gekozenGebouwId() {
       geojson.features.forEach((item) => {
-        if (item.properties.label === this.gekozenGebouw.properties.label) {
+        if (item.properties.label === this.gekozenGebouwId) {
           this.map.flyTo({ center: item.geometry.coordinates, curve: 1 });
         }
       });

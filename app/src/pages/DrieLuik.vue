@@ -21,8 +21,41 @@ export default {
     Header,
     Panorama,
     Map,
-    Carrousel
-  }
+    Carrousel,
+  },
+
+  watch: {
+    gekozenGebouwId() {
+      if (this.gekozenGebouwId) {
+        this.$router.push({
+          name: "DrieLuik",
+          params: { gebouw: `${this.gekozenGebouwId}` },
+        });
+      }
+    },
+    $route(to, from) {
+      if (to !== from) {
+        this.$store.dispatch("data/getGekozenGebouwWiki");
+        this.$store.dispatch("data/getGekozenGebouwImages");
+      }
+    },
+  },
+  created() {
+    if (this.$route.params.gebouw) {
+      this.$store.commit("data/setGekozenGebouwId", this.$route.params.gebouw);
+    } else {
+      this.$store.commit("data/setGekozenGebouwId", "");
+    }
+  },
+  computed: {
+    gekozenGebouwId() {
+      if (this.$store.getters["data/getGekozenGebouwId"]) {
+        return this.$store.getters["data/getGekozenGebouwId"];
+      } else {
+        return "";
+      }
+    },
+  },
 };
 </script>
 
@@ -35,11 +68,11 @@ export default {
   grid-template-rows: 56px repeat(2, 8px) 1fr repeat(2, 8px) 1fr repeat(2, 8px) 1fr;
 }
 .paarseBalk {
-  background: #DACBB2;
+  background: #dacbb2;
   z-index: 10;
 }
 #paarseBalk1 {
-  background: #455DC7;
+  background: #455dc7;
   grid-row: 2 / span 2;
   grid-column: 2 / span 2;
 }
