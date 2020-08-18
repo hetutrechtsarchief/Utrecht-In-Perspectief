@@ -1,8 +1,15 @@
 import lijst from '../../assets/gebouwen.json';
+import Bleau from "../../assets/mapStyle.json";
+import Specht from "../../assets/mapStyleSpecht.json";
 
+let styles = {
+  "Bleau": Bleau,
+  "Specht": Specht
+}
 export default {
   namespaced: true,
   state: {
+    mapStyle: styles["Bleau"],
     gebouwen: lijst,
     gekozenGebouwId: "",
     gekozenGebouw: {
@@ -15,6 +22,7 @@ export default {
   },
 
   mutations: {
+
     setGekozenGebouw(state, gekozen) {
       state.gekozenGebouw = state.gebouwen[gekozen];
     },
@@ -27,9 +35,15 @@ export default {
     fillImageList(state, list) {
       state.imageList = list
     }
-
+    ,
+    setMapStyle(state, mapStyle) {
+      state.mapStyle = mapStyle
+    }
   },
   getters: {
+    getMapStyle: state => {
+      return state.mapStyle
+    },
     getGebouwen: state => {
       return state.gebouwen
     },
@@ -47,6 +61,13 @@ export default {
     }
   },
   actions: {
+    toggleMapStyle({ state, commit }) {
+      if (state.mapStyle === styles["Bleau"]) {
+        commit("setMapStyle", styles["Specht"])
+      } else if (state.mapStyle === styles["Specht"]) {
+        commit("setMapStyle", styles["Bleau"])
+      }
+    },
     getGekozenGebouwImages({ commit, state }) {
       fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
       PREFIX dct: <http://purl.org/dc/terms/> \

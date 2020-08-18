@@ -33,7 +33,6 @@
 </template>
 
 <script>
-import style from "../assets/mapStyle.json";
 import geojson from "../assets/saftleven.json";
 import Mapbox from "mapbox-gl";
 import PitchToggle from "./../pitchtogglecontrol";
@@ -74,7 +73,6 @@ export default {
         showed: false,
         content: "Title will go here.",
       },
-      mapStyle: style, // your map style,
       accessToken: "mpUE8UJCeHr5LXgVR1cW",
       center: [5.121044, 52.09031],
     };
@@ -137,6 +135,9 @@ export default {
     },
   },
   computed: {
+    mapStyle(){
+      return this.$store.getters["data/getMapStyle"];
+    },
     gekozenGebouwId() {
       return this.$store.getters["data/getGekozenGebouwId"];
     },

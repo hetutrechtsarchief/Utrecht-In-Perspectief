@@ -11,7 +11,7 @@
 
     <div class="role-selector">
       <!-- Move input outside of .switch label -->
-      <input type="checkbox" checked id="role-checkbox" />
+      <input v-on:change="toggle()" type="checkbox" checked id="role-checkbox" />
       <span class="toggle-text">1669</span>
       <!-- Add for attribute that matches id of check input -->
       <label class="switch" for="role-checkbox">
@@ -34,6 +34,10 @@ export default {
       this.$router.go(-1);
       // window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
     },
+    toggle(){
+      this.$store.dispatch("data/toggleMapStyle")
+
+}
   },
 };
 </script>
