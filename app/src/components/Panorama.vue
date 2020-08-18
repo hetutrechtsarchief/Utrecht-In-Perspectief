@@ -72,10 +72,18 @@ export default {
   },
   computed: {
     gekozenGebouwId() {
-      return this.$store.getters["data/getGekozenGebouwId"];
+       if (this.$store.getters["data/getGekozenGebouwId"]) {
+        return this.$store.getters["data/getGekozenGebouwId"];
+      } else {
+        return "";
+      }
     },
     gekozenGebouw() {
-      return this.$store.getters["data/getGekozenGebouw"];
+       if (this.$store.getters["data/getGekozenGebouw"]) {
+        return this.$store.getters["data/getGekozenGebouw"];
+      } else {
+        return "";
+      }
     },
   },
   watch: {

@@ -88,20 +88,26 @@ export default {
       )
         .then(response => response.json())
         .then(data => {
-          let url = data.entities[Object.keys(data.entities)[0]].sitelinks;
-          fetch(
-            `https://nl.wikipedia.org/w/api.php?action=query&format=json&uselang=nl&prop=extracts|description|images&titles=${url.title}&redirects=1&origin=*`,
-            {
-              referrerPolicy: "origin-when-cross-origin",
-              method: "GET",
-              mode: "cors",
-              cache: "default"
-            }
-          )
-            .then(response => response.json())
-            .then(data => {
-              commit('GET_WIKI', data.query.pages[Object.keys(data.query.pages)[0]])
-            });
+          let url = data.entities[Object.keys(data.entities)[0]].sitelinks.nlwiki;
+          if (url) {
+            fetch(
+              `https://nl.wikipedia.org/w/api.php?action=query&format=json&uselang=nl&prop=extracts|description|images&titles=${url.title}&redirects=1&origin=*`,
+              {
+                referrerPolicy: "origin-when-cross-origin",
+                method: "GET",
+                mode: "cors",
+                cache: "default"
+              }
+            )
+              .then(response => response.json())
+              .then(data => {
+                commit('GET_WIKI', data.query.pages[Object.keys(data.query.pages)[0]])
+              });
+          } else {
+            commit('GET_WIKI', "")
+
+          }
+
         });
     }
   }

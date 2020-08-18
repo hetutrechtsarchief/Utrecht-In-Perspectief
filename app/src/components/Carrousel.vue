@@ -10,7 +10,7 @@
       <p v-if="gebouw.properties.users">Gebruikt door {{gebouw.properties.users}}</p>
       <p v-if="gebouw.properties.uses">Gebruikt voor {{gebouw.properties.uses}}</p>-->
 
-      <router-link :to="{name: 'Detail', params:{ id:$route.params.id}}">
+      <router-link v-if="wiki" :to="{name: 'Detail', params:{ id:$route.params.id}}">
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link>
     </div>
@@ -47,6 +47,9 @@ export default {
     },
     images() {
       return this.$store.getters["data/getImages"];
+    },
+     wiki() {
+      return this.$store.getters["data/getGekozenGebouwWiki"];
     },
   },
   watch: {},
