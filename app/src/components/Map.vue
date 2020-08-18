@@ -11,6 +11,7 @@
       :attributionControl="false"
       :accessToken="accessToken"
       @load="onLoad"
+      @styledata="onStyleChange"
       @click="onMapClick"
       @mousemove="onMapMoveMouse"
       :pitch="0"
@@ -24,6 +25,9 @@
         :source="geojsonSource"
         layerId="gebouwen"
         :layer="this.geojsonLayer"
+        :clearSource="false"
+        :replaceSource="false"
+        :replace="false"
       ></MglGeojsonLayer>
       <MglPopup :coordinates="popup.coordinates" :showed="popup.showed" :onlyText="false">
         <p>{{popup.content}}</p>
@@ -67,7 +71,6 @@ export default {
           features: [],
         },
       },
-
       popup: {
         coordinates: [5.121393, 52.090657],
         showed: false,
@@ -83,6 +86,7 @@ export default {
   },
   methods: {
     onLoad(event) {
+      console.log("load");
       this.map = event.map;
       this.map.addControl(
         new PitchToggle({
@@ -92,7 +96,23 @@ export default {
         }),
         "top-left"
       );
+      // this.geojsonSource = this.geojsonSource = { data: geojson };
+      geojson.features.forEach((item) => {
+        if (item.properties.label === this.gekozenGebouw.properties.label) {
+          event.map.flyTo({ center: item.geometry.coordinates });
+        }
+      });
+    },
+    onStyleChange(event) {
+      this.map = event.map;
+      console.log("cahnge map");
       this.geojsonSource = this.geojsonSource = { data: geojson };
+
+      // this.map.on("load", function () {
+      //   console.log("loaded")
+      //   this.map.addSource(this.geojsonSource);
+      //   this.map.addLayer(this.geojsonLayer);
+      // });
       geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
           event.map.flyTo({ center: item.geometry.coordinates });
@@ -135,7 +155,7 @@ export default {
     },
   },
   computed: {
-    mapStyle(){
+    mapStyle() {
       return this.$store.getters["data/getMapStyle"];
     },
     gekozenGebouwId() {
