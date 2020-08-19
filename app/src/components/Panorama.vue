@@ -16,7 +16,7 @@
       <l-iiif :url="iiifUrl" :options="iiifOpts" />
       <l-control-zoom position="topright"></l-control-zoom>
       <l-rectangle
-        v-for="(gebouw, name) in gebouwen"
+        v-for="(gebouw, name) in this.gebouwen"
         :interactive="true"
         :bounds="gebouw.bounds"
         v-bind:fillColor=" name === gekozenGebouwId ?  'rgb(48, 152, 138)'  : gebouw.style.fillColor "

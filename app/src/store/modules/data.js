@@ -35,7 +35,7 @@ export default {
   mutations: {
 
     setGekozenGebouw(state, gekozen) {
-      state.gekozenGebouw = state.gebouwen[gekozen];
+      state.gekozenGebouw = state.data[gekozen];
     },
     setGekozenGebouwId(state, gekozen) {
       state.gekozenGebouwId = gekozen;
