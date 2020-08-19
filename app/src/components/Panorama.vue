@@ -59,8 +59,7 @@ export default {
         tileFormat: "jpg",
         tileSize: 512,
       },
-      iiifUrl:
-        "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json",
+      
     };
   },
   mounted() {
@@ -71,6 +70,9 @@ export default {
     this.gebouwen = this.$store.getters["data/getGebouwen"];
   },
   computed: {
+    iiifUrl(){
+        return this.$store.getters["data/getPanormaUrl"] 
+    },
     gekozenGebouwId() {
        if (this.$store.getters["data/getGekozenGebouwId"]) {
         return this.$store.getters["data/getGekozenGebouwId"];
@@ -87,6 +89,10 @@ export default {
     },
   },
   watch: {
+    iiifUrl(){
+      // this.$refs.map.s
+      console.log(this.iiifUrl)
+    },
     gekozenGebouw() {
       this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
     },

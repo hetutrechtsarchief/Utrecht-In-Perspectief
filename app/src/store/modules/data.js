@@ -1,16 +1,26 @@
 import lijst from '../../assets/gebouwen_1684.json';
-// import lijst2 from '../../assets/gebouwen_1669.json';
+import lijst2 from '../../assets/gebouwen_1684.json';
 
 import Bleau from "../../assets/mapStyleBleau_1669.json";
 import Specht from "../../assets/mapStyleSpecht_1684.json";
 
+let datas = {
+  "Bleau": lijst2,
+  "Specht": lijst
+}
 let styles = {
   "Bleau": Bleau,
   "Specht": Specht
 }
+let panoramas = {
+  "Bleau": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1669.jpg/info.json",
+  "Specht": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json"
+}
 export default {
   namespaced: true,
   state: {
+    data: datas["Bleau"],
+    panorama:  panoramas["Bleau"],
     mapStyle: styles["Bleau"],
     gebouwen: lijst,
     gekozenGebouwId: "",
@@ -40,9 +50,15 @@ export default {
     ,
     setMapStyle(state, mapStyle) {
       state.mapStyle = mapStyle
+    },
+    setPanorama(state,panorama){
+      state.panorama = panorama
     }
   },
   getters: {
+    getPanormaUrl: state =>{
+      return state.panorama
+    },
     getMapStyle: state => {
       return state.mapStyle
     },
@@ -66,8 +82,10 @@ export default {
     toggleMapStyle({ state, commit }) {
       if (state.mapStyle === styles["Bleau"]) {
         commit("setMapStyle", styles["Specht"])
+        commit("setPanorama", panoramas["Specht"])
       } else if (state.mapStyle === styles["Specht"]) {
         commit("setMapStyle", styles["Bleau"])
+        commit("setPanorama", panoramas["Bleau"])
       }
     },
     getGekozenGebouwImages({ commit, state }) {
