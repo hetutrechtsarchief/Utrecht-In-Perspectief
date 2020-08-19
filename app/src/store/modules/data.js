@@ -50,9 +50,15 @@ export default {
     ,
     setMapStyle(state, mapStyle) {
       state.mapStyle = mapStyle
+    },
+    setPanorama(state,panorama){
+      state.panorama = panorama
     }
   },
   getters: {
+    getPanormaUrl: state =>{
+      return state.panorama
+    },
     getMapStyle: state => {
       return state.mapStyle
     },
@@ -76,8 +82,10 @@ export default {
     toggleMapStyle({ state, commit }) {
       if (state.mapStyle === styles["Bleau"]) {
         commit("setMapStyle", styles["Specht"])
+        commit("setPanorama", panoramas["Specht"])
       } else if (state.mapStyle === styles["Specht"]) {
         commit("setMapStyle", styles["Bleau"])
+        commit("setPanorama", panoramas["Bleau"])
       }
     },
     getGekozenGebouwImages({ commit, state }) {
