@@ -4,18 +4,23 @@
     "sources": {
         "ua": {
             "type": "raster",
-            "url": "http://maps.georeferencer.com/georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2019-09-30T09:58:16.234097Z/map.json?key=mpUE8UJCeHr5LXgVR1cW",
-            "tileSize": 256
-        },
-        "3dbag": {
-            "type": "vector",
+            "scheme": "xyz",
             "tiles": [
-                "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}",
-                "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}",
-                "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}"
+                "http://maps-0.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2019-09-30T09:58:16.234097Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+                "http://maps-1.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2019-09-30T09:58:16.234097Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+                "http://maps-2.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2019-09-30T09:58:16.234097Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+                "http://maps-3.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2019-09-30T09:58:16.234097Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW"
             ],
-            "minzoom": 8,
-            "maxzoom": 17
+            "minzoom": 0,
+            "maxzoom": 17,
+            "bounds": [
+                5.091304,
+                52.069404,
+                5.152974,
+                52.112726
+            ],
+            "attribution": "Utrecht University Library, Special Collections",
+            "attribution_link": "http://uu.georeferencer.com/"
         }
     },
     "light": {

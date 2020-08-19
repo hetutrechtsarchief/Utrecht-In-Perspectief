@@ -1,5 +1,5 @@
 import lijst from '../../assets/gebouwen_1684.json';
-import lijst2 from '../../assets/gebouwen_1669.json';
+// import lijst2 from '../../assets/gebouwen_1669.json';
 
 import Bleau from "../../assets/mapStyleBleau_1669.json";
 import Specht from "../../assets/mapStyleSpecht_1684.json";
