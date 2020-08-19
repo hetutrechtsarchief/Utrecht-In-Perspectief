@@ -14,19 +14,22 @@
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link>
     </div>
+    <div id="right">
+      <Carousel
+        :scrollPerPage="true"
+        :perPageCustom="[[480, 2], [768, 3]]"
+        :per-page="3"
+        paginationActiveColor="#30988A"
+        :atuoplay="true"
+      >
+        <Slide v-for="item in images" :key="item.catnr.value">
+          <img :src="item.img.value" :alt="item.description.value" />
+          <span class="label">{{item.description.value.substring(0,100) + "... "}}</span>
 
-    <carousel 
-    id="right" 
-    :per-page="3" 
-    paginationActiveColor="#30988A"
-    :atuoplay="true"
-    >
-      <slide v-for="item in images" :key="item.catnr.value">
-        <img :src="item.img.value" :alt="item.description.value" />
-        <p>{{item.description.value}}</p>
-        <p>{{item.rights.value}}</p>
-      </slide>
-    </carousel>
+          <p>{{item.rights.value}}</p>
+        </Slide>
+      </Carousel>
+    </div>
   </div>
 </template>
 
@@ -48,7 +51,7 @@ export default {
     images() {
       return this.$store.getters["data/getImages"];
     },
-     wiki() {
+    wiki() {
       return this.$store.getters["data/getGekozenGebouwWiki"];
     },
   },
@@ -60,8 +63,28 @@ export default {
 .Carrousel {
   display: grid;
   grid-template-columns: 35vw 65vw;
+  grid-template-rows: 1fr;
   color: #3b3f54;
   background-color: #dacbb2;
+  /* overflow: hidden; */
+}
+
+#left {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  justify-self: center;
+  align-self: center;
+  margin: 50px;
+  text-align: left;
+}
+
+#right {
+  background-color: #3b3f54;
+  color: #30988a;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  justify-self: stretch;
+  align-self: stretch;
 }
 
 h1 {
@@ -92,36 +115,35 @@ ul#gebouwfuncties li:first-child {
   padding-left: 0px;
 }
 
+
+.VueCarousel-wrapper{
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+
+}
+
+.VueCarousel-pagination{
+    grid-row: 2;
+
+}
+.VueCarousel-inner{
+    grid-row: 1;
+
+}
+
+.VueCarousel-slide {
+  text-align: center;
+  height: 20vh;
+}
+
+
 #meer {
   background-color: #30988a;
 }
 
-#left {
-  grid-row: 1;
-  grid-column: 1;
-  margin: 50px;
-  text-align: left;
-  overflow: scroll;
-}
-#right {
-  grid-row: 1;
-  grid-column: 2;
-  background-color: #3b3f54;
-  margin: 0px;
-  align-self: stretch;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  color: #30988a;
-}
-
-.example-slide {
-  align-items: center;
-  background-color: #666;
-  color: #999;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  min-height: 10rem;
+img {
+  margin: 6px;
+  /* height: 20vh; */
+  max-width: 10vw;
 }
 </style>

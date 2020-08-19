@@ -70,12 +70,12 @@ export default {
 }
 .Header {
   grid-row: 1 / 1;
-  grid-column: 2 / 2;
+  grid-column: 2 / span 1;
   z-index: 2;
 }
 .Footer {
   grid-row: 5 / 5;
-  grid-column: 2 / 2;
+  grid-column: 2 / span 1;
   z-index: 2;
 }
 
@@ -83,8 +83,8 @@ export default {
   background: #3b3f54;
   mix-blend-mode: overlay;
   z-index: 2;
-  grid-row: 2 / 2;
-  grid-column: 2 / 2;
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
 }
 #stylingBalk2 {
   background: #30988a;
