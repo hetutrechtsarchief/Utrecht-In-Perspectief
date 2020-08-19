@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import geojson from "../assets/saftleven.json";
 import Mapbox from "mapbox-gl";
 import PitchToggle from "./../pitchtogglecontrol";
 import {
@@ -86,7 +85,7 @@ export default {
         }),
         "top-left"
       );
-      geojson.features.forEach((item) => {
+      this.geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
           event.map.flyTo({ center: item.geometry.coordinates });
         }
@@ -148,15 +147,14 @@ export default {
     gekozenGebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
     },
-    geojsonSource() {
+    geojson() {
       let json = this.$store.getters["data/getDataSet"];
-      console.log(json);
+      // Create valid geojson from json file
       let geojson = {
         type: "FeatureCollection",
         features: [],
       };
-
-      Object.keys(json).forEach(key => {
+      Object.keys(json).forEach((key) => {
         let build = json[key];
         geojson.features.push({
           type: "Feature",
@@ -165,12 +163,14 @@ export default {
           properties: build.properties,
         });
       });
+      return geojson;
+    },
+    geojsonSource() {
       return {
         type: "geojson",
-        data: geojson,
+        data: this.geojson,
       };
     },
-
     geojsonLayer() {
       return {
         id: "gebouwen",
@@ -203,7 +203,7 @@ export default {
   },
   watch: {
     gekozenGebouwId() {
-      geojson.features.forEach((item) => {
+      this.geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouwId) {
           this.map.flyTo({ center: item.geometry.coordinates, curve: 1 });
         }
