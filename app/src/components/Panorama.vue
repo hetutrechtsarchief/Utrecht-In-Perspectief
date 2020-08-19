@@ -6,13 +6,13 @@
       :maxZoom="6"
       :zoom="this.$route.name === 'DrieLuik' ? 2: 4"
       :crs="crs"
-      :center="[0, 0]"
+      :center="center"
       :options="{
         attributionControl: false,
         zoomControl: false,
       }"
       @ready="onLoad"
-      @mousemove="showCoordinates"
+      @click="showCoordinates"
     >
       <l-iiif :url="iiifUrl" :options="iiifOpts" />
       <l-control-zoom position="topright"></l-control-zoom>
@@ -54,12 +54,13 @@ export default {
   },
   data() {
     return {
+      center: [-30, 156.3],
       crs: CRS.Simple,
       opacity: 0.8,
       iiifOpts: {
         tileFormat: "jpg",
         tileSize: 512,
-        fitBounds: true,
+        fitBounds: false,
         setMaxBounds: true,
       },
     };
@@ -92,6 +93,9 @@ export default {
     },
   },
   watch: {
+    iiifUrl(){
+      this.center = [-22,98]
+    },
     gekozenGebouw() {
       this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
     },
