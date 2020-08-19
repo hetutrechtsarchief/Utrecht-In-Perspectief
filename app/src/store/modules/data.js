@@ -22,7 +22,6 @@ export default {
     data: datas["Specht"],
     panorama:  panoramas["Specht"],
     mapStyle: styles["Specht"],
-    gebouwen: datas["Specht"],
     gekozenGebouwId: "",
     gekozenGebouw: {
       properties: ""
@@ -67,9 +66,6 @@ export default {
     },
     getMapStyle: state => {
       return state.mapStyle
-    },
-    getGebouwen: state => {
-      return state.gebouwen
     },
     getGekozenGebouwId: state => {
       return state.gekozenGebouwId

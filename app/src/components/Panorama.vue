@@ -59,29 +59,29 @@ export default {
         tileFormat: "jpg",
         tileSize: 512,
       },
-      
     };
   },
   mounted() {
     const map = this.$refs.map.mapObject;
     map.addControl(new window.L.Control.Fullscreen({ position: "topright" }));
   },
-  created() {
-    this.gebouwen = this.$store.getters["data/getGebouwen"];
-  },
+  created() {},
   computed: {
-    iiifUrl(){
-        return this.$store.getters["data/getPanormaUrl"] 
+    gebouwen() {
+      return this.$store.getters["data/getDataSet"];
+    },
+    iiifUrl() {
+      return this.$store.getters["data/getPanormaUrl"];
     },
     gekozenGebouwId() {
-       if (this.$store.getters["data/getGekozenGebouwId"]) {
+      if (this.$store.getters["data/getGekozenGebouwId"]) {
         return this.$store.getters["data/getGekozenGebouwId"];
       } else {
         return "";
       }
     },
     gekozenGebouw() {
-       if (this.$store.getters["data/getGekozenGebouw"]) {
+      if (this.$store.getters["data/getGekozenGebouw"]) {
         return this.$store.getters["data/getGekozenGebouw"];
       } else {
         return "";
