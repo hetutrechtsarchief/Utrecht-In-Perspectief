@@ -9,7 +9,6 @@
       :pitchWithRotate="false"
       :dragRotate="false"
       :attributionControl="false"
-      :accessToken="accessToken"
       @load="onLoad"
       @styledata="onStyleChange"
       @click="onMapClick"
@@ -69,7 +68,6 @@ export default {
         showed: false,
         content: "Title will go here.",
       },
-      accessToken: "mpUE8UJCeHr5LXgVR1cW",
       center: [5.121044, 52.09031],
     };
   },
@@ -79,7 +77,6 @@ export default {
   },
   methods: {
     onLoad(event) {
-      console.log("load");
       this.map = event.map;
       this.map.addControl(
         new PitchToggle({
@@ -89,7 +86,6 @@ export default {
         }),
         "top-left"
       );
-
       geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
           event.map.flyTo({ center: item.geometry.coordinates });

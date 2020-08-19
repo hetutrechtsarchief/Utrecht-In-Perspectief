@@ -1,4 +1,4 @@
-import lijst from '../../assets/gebouwen.json';
+import lijst from '../../assets/gebouwen_1684.json';
 import Bleau from "../../assets/mapStyle.json";
 import Specht from "../../assets/mapStyleSpecht.json";
 
