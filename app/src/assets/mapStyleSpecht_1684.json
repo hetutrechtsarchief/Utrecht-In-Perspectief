@@ -20,7 +20,8 @@
                 52.112726
             ],
             "attribution": "Utrecht University Library, Special Collections",
-            "attribution_link": "http://uu.georeferencer.com/"
+            "attribution_link": "http://uu.georeferencer.com/",
+            "tileSize": 256
         }
     },
     "light": {
