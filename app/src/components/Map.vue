@@ -149,11 +149,28 @@ export default {
       return this.$store.getters["data/getGekozenGebouw"];
     },
     geojsonSource() {
+      let json = this.$store.getters["data/getDataSet"];
+      console.log(json);
+      let geojson = {
+        type: "FeatureCollection",
+        features: [],
+      };
+
+      Object.keys(json).forEach(key => {
+        let build = json[key];
+        geojson.features.push({
+          type: "Feature",
+          id: build.id,
+          geometry: build.geometry,
+          properties: build.properties,
+        });
+      });
       return {
         type: "geojson",
         data: geojson,
       };
     },
+
     geojsonLayer() {
       return {
         id: "gebouwen",

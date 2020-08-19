@@ -89,10 +89,6 @@ export default {
     },
   },
   watch: {
-    iiifUrl(){
-      // this.$refs.map.s
-      console.log(this.iiifUrl)
-    },
     gekozenGebouw() {
       this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
     },
