@@ -1,171 +1,4 @@
-{   "Sint Jobsgasthuis": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-            5.109007,
-            52.093185
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [ 
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q84356543",
-            "label":"Sint Jobsgasthuis",
-            "wikipedia":null,
-            "types":[
-            "medische faciliteit",
-            "voormalig ziekenhuis"
-            ],
-            "users":[
-
-            ],
-            "uses":[
-
-            ],
-            "built_in":"1530",
-            "built_in_precision":"year",
-            "demolished_in":"1818",
-            "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Het%20Jobs-gasthuis%20te%20Utrecht%2C%20RP-T-1895-A-3055.jpg"
-        }
-    },
-
-    "St. Maartensgasthuis": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.113352,
-               52.098211
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q84710192",
-            "label":"St. Maartensgasthuis",
-            "wikipedia":null,
-            "types":[
-               "gasthuis"
-            ],
-            "users":[
-
-            ],
-            "uses":[
-
-            ],
-            "built_in":"1473",
-            "built_in_precision":"year",
-            "demolished_in":"1850",
-            "demolished_in_precision":"century",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Sint-maartensgasthuis-utrecht.jpg"
-        }
-    },
-
-    "Weerdpoort": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.11611,
-               52.09639
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q14518084",
-            "label":"Weerdpoort",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Weerdpoort",
-            "types":[
-               "stadspoort"
-            ],
-            "users":[
-
-            ],
-            "uses":[
-
-            ],
-            "built_in":"1500",
-            "built_in_precision":"century",
-            "demolished_in":"1862",
-            "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Gezicht%20op%20de%20Weerdpoort%20in%20Utrecht%20Centraal%20Museum%2030427.jpg"
-        }
-    },
-
-    "Jacobikerk": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.115278,
-               52.095
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q1878995",
-            "label":"Jacobikerk",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Jacobikerk_(Utrecht)",
-            "types":[
-               "kerkgebouw"
-            ],
-            "users":{
-               "Q84401103":{
-                  "label":"Alyt Ponciaens",
-                  "wikipedia":null,
-                  "start":"1460",
-                  "start_precision":"decade",
-                  "end":"1490",
-                  "end_precision":"decade"
-               }
-            },
-            "uses":[
-
-            ],
-            "built_in":"1290",
-            "built_in_precision":"century",
-            "demolished_in":"",
-            "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Jacobikerk%20Utrecht.JPG"
-        }
-    },
-
+{   
     "Plompetoren": {
         "geometry":{
             "type":"Point",
@@ -176,12 +9,12 @@
         },
         "bounds": [
             [
-            659,
-            265
+            -29.5,
+            7.7
             ],
             [
-            726,
-            305
+            -27.3,
+            8.9
             ]
         ],
         "style": {
@@ -210,101 +43,6 @@
         }
     },
 
-    "Catharijnepoort": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.11167,
-               52.09278
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q1904062",
-            "label":"Catharijnepoort",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Catharijnepoort_(Utrecht)",
-            "types":[
-               "stadspoort"
-            ],
-            "users":[
-
-            ],
-            "uses":[
-
-            ],
-            "built_in":"1621",
-            "built_in_precision":"year",
-            "demolished_in":"1845",
-            "demolished_in_precision":"decade",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Catharijnepoort-Hardenbergh.jpg"
-        }
-    },
-
-    "Wittevrouwenklooster": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.12438,
-               52.09584
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q1900284",
-            "label":"Wittevrouwenklooster",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Wittevrouwenklooster_(Utrecht)",
-            "types":[
-               "klooster"
-            ],
-            "users":{
-               "Q15143715":{
-                  "label":"Magdalenazusters",
-                  "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Magdalenazusters",
-                  "start":"1250",
-                  "start_precision":"century",
-                  "end":"1350",
-                  "end_precision":"century"
-               },
-               "Q339332":{
-                  "label":"Norbertijnen",
-                  "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Premonstratenzers",
-                  "start":"1350",
-                  "start_precision":"century",
-                  "end":"1581",
-                  "end_precision":"year"
-               }
-            },
-            "uses":[
-
-            ],
-            "built_in":"1250",
-            "built_in_precision":"century",
-            "demolished_in":"1820",
-            "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Wittevrouwenklooster%20te%20Utrecht.jpg"
-        }
-    },
-
     "Ten Hert": {
         "geometry":{
             "type":"Point",
@@ -315,12 +53,12 @@
         },
         "bounds": [
             [
-            652,
-            806
+            -29.6,
+            24.4
             ],
             [
-            720,
-            876
+            -27.4,
+            27
             ]
         ],
         "style": {
@@ -359,12 +97,12 @@
         },
         "bounds": [
             [
-            637,
-            1029
+            -30.1,
+            31.5
             ],
             [
-            753,
-            1112
+            -26.3,
+            34
             ]
         ],
         "style": {
@@ -402,12 +140,12 @@
         },
         "bounds": [
             [
-            668,
-            1194
+            -29,
+            36.6
             ],
             [
-            717,
-            1234
+            -27.6,
+            37.75
             ]
         ],
         "style": {
@@ -447,12 +185,12 @@
         },
         "bounds": [
             [
-            647,
-            1232
+            -29.4,
+            37.8
             ],
             [
-            739,
-            1332
+            -26.9,
+            41.1
             ]
         ],
         "style": {
@@ -491,12 +229,12 @@
         },
         "bounds": [
             [
-            664,
-            1441
+            -29.5,
+            46.9
             ],
             [
-            721,
-            1500
+            -28.3,
+            47.9
             ]
         ],
         "style": {
@@ -536,12 +274,12 @@
         },
         "bounds": [
             [
-            651,
-            1552
+            -29.5,
+            48
             ],
             [
-            809,
-            1590
+            -24.6,
+            49.2
             ]
         ],
         "style": {
@@ -577,46 +315,6 @@
         }
     },
 
-    "Putruwiel": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.117294,
-               52.092156
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q2347538",
-            "label":"Putruwiel",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Putruwiel_(Utrecht)",
-            "types":[
-               "stadskasteel"
-            ],
-            "users":[
-
-            ],
-            "uses":[
-
-            ],
-            "built_in":"1250",
-            "built_in_precision":"century",
-            "demolished_in":"",
-            "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20134.JPG"
-        }
-    },
-
     "Keyserrijk": {
         "geometry":{
             "type":"Point",
@@ -627,12 +325,12 @@
         },
         "bounds": [
             [
-            636,
-            1744
+            -30.6,
+            53.8
             ],
             [
-            697,
-            1824
+            -28,
+            56.5
             ]
         ],
         "style": {
@@ -661,45 +359,6 @@
         }
     },
 
-    "Groenewoude": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.118289,
-               52.09145
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q1988915",
-            "label":"Groenewoude",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Groenewoude_(Utrecht)",
-            "types":[
-               "stadskasteel"
-            ],
-            "users":[
-
-            ],
-            "uses":[
-
-            ],
-            "built_in":"1250",
-            "built_in_precision":"century",
-            "demolished_in":"",
-            "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20151.JPG"
-        }
-    },
 
     "Lichtenberg": {
         "geometry":{
@@ -711,12 +370,12 @@
         },
         "bounds": [
             [
-            636,
-            1869
+            -30.2,
+            57.7
             ],
             [
-            697,
-            1922
+            -28,
+            59.6
             ]
         ],
         "style": {
@@ -756,12 +415,12 @@
         },
         "bounds": [
             [
-            643,
-            1949
+            -29.7,
+            60.1
             ],
             [
-            800,
-            1984
+            -24.6,
+            61.4
             ]
         ],
         "style": {
@@ -821,12 +480,12 @@
         },
         "bounds": [
             [
-            688,
-            2442
+            -30.2,
+            76.7
             ],
             [
-            676,
-            2516
+            -28.7,
+            78.0
             ]
         ],
         "style": {
@@ -891,46 +550,6 @@
         }
     },
 
-    "Pieterskerk": {
-        "geometry":{
-            "type":"Point",
-            "coordinates":[
-               5.124444,
-               52.091389
-            ]
-        },
-        "bounds": [
-            [
-            ],
-            [
-            ]
-        ],
-        "style": {
-            "stroke": false,
-            "fillColor": "#455DC7",
-            "fillOpacity": 0.4
-        },
-        "properties":{
-            "wdid":"Q2094317",
-            "label":"Pieterskerk",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Pieterskerk_(Utrecht)",
-            "types":[
-               "kerkgebouw"
-            ],
-            "users":[
-
-            ],
-            "uses":[
-
-            ],
-            "built_in":"1001",
-            "built_in_precision":"century",
-            "demolished_in":"",
-            "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/18297-Pieterskerk.JPG"
-        }
-    },
-
     "Buurkerk": {
         "geometry":{
             "type":"Point",
@@ -941,12 +560,12 @@
         },
         "bounds": [
             [
-            604,
-            2620
+            -31.5,
+            81.5
             ],
             [
-            687,
-            2916
+            -20.7,
+            90.3
             ]
         ],
         "style": {
@@ -1000,12 +619,12 @@
         },
         "bounds": [
             [
-                806,
-                2638
+                -31,
+                95
             ],
             [
-                1247,
-                3232
+                -11,
+                101
             ]
         ],
         "style": {
@@ -1073,12 +692,12 @@
         },
         "bounds": [
             [
-            663,
-            3220
+            -29.9,
+            103
             ],
             [
-            745,
-            3345
+            -26.6,
+            104
             ]
         ],
         "style": {
@@ -1124,12 +743,12 @@
         },
         "bounds": [
             [
-            641,
-            3347
+            -30.3,
+            104.2
             ],
             [
-            866,
-            3590
+            -23,
+            112
             ]
         ],
         "style": {
@@ -1168,12 +787,12 @@
         },
         "bounds": [
             [
-            669,
-            4018
+            -29.3,
+            124.8
             ],
             [
-            885,
-            4109
+            -22.2,
+            128
             ]
         ],
         "style": {
@@ -1245,8 +864,12 @@
         },
         "bounds": [
             [
+            -28.8,
+            118.3
             ],
             [
+            -25.1,
+            119.4
             ]
         ],
         "style": {
@@ -1300,12 +923,12 @@
         },
         "bounds": [
             [
-            910,
-            4251
+            -29,
+            132.1
             ],
             [
-            939,
-            4389
+            -20.3,
+            136.9
             ]
         ],
         "style": {
@@ -1344,12 +967,12 @@
         },
         "bounds": [
             [
-            661,
-            5120
+            -29.8,
+            159.3
             ],
             [
-            815,
-            5219
+            -24.3,
+            162.8
             ]
         ],
         "style": {
@@ -1403,12 +1026,12 @@
         },
         "bounds": [
             [
-            656,
-            5334
+            -30.2,
+            165.8
             ],
             [
-            807,
-            5474
+            -24.5,
+            170.8
             ]
         ],
         "style": {
@@ -1447,12 +1070,12 @@
         },
         "bounds": [
             [
-            613,
-            6118
+            -30.9,
+            190.5
             ],
             [
-            698,
-            6380
+            -28,
+            193
             ]
         ],
         "style": {
@@ -1491,12 +1114,12 @@
         },
         "bounds": [
             [
-            517,
-            6198
+            -33.6,
+            193.1
             ],
             [
-            887,
-            6302
+            -22.9,
+            196.5
             ]
         ],
         "style": {
@@ -1549,12 +1172,12 @@
         },
         "bounds": [
             [
-            924,
-            6330
+            -29,
+            197.1
             ],
             [
-            773,
-            6354
+            -25.7,
+            198
             ]
         ],
         "style": {
@@ -1600,13 +1223,13 @@
         },
         "bounds": [
             [
-            649,
-            6768
+            -29.8,
+            210.7
             ],
             [
-            995,
-            6984
-            ]
+            -18.7,
+            218.1
+        ]
         ],
         "style": {
             "stroke": false,
@@ -1673,12 +1296,12 @@
         },
         "bounds": [
             [
-            673,
-            7184
+            -29,
+            223.9
             ],
             [
-            813,
-            7279
+            -24.6,
+            227
             ]
         ],
         "style": {
@@ -1724,12 +1347,12 @@
         },
         "bounds": [
             [
-            655,
-            8007
+            -29.8,
+            249.3
             ],
             [
-            875,
-            8121
+            -22.5,
+            253.5
             ]
         ],
         "style": {
@@ -1799,12 +1422,12 @@
         },
         "bounds": [
             [
-            624,
-            8746
+            -30.6,
+            272.6
             ],
             [
-            841,
-            8842
+            -23.4,
+            275.8
             ]
         ],
         "style": {
