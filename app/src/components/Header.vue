@@ -3,18 +3,15 @@
     <router-link to="/">
       <h1>Utrecht in Perspectief</h1>
     </router-link>
+    <button
+      v-if="this.$route.name === 'Detail' ||this.$route.name === 'Colofon' "
+      class="button"
+      v-on:click="goBack()"
+    >terug</button>
 
-    <router-link :to="{name: 'DrieLuik', params:{ id: this.$route.params.id}}">
-      <button v-if="this.$route.name === 'Detail'" class="button">terug</button>
-    </router-link>
-
-    <router-link :to="{name: 'DrieLuik', params:{ id: this.$route.params.id}}">
-      <button v-if="this.$route.name === 'Colofon'" class="button">terug</button>
-    </router-link>
-  
-   <div class="role-selector">
+    <div class="role-selector">
       <!-- Move input outside of .switch label -->
-      <input type="checkbox" checked id="role-checkbox">
+      <input v-on:change="toggle()" type="checkbox" checked id="role-checkbox" />
       <span class="toggle-text">1669</span>
       <!-- Add for attribute that matches id of check input -->
       <label class="switch" for="role-checkbox">
@@ -31,7 +28,17 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+      // window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
+    },
+    toggle(){
+      this.$store.dispatch("data/toggleMapStyle")
+
+}
+  },
 };
 </script>
 
@@ -45,37 +52,37 @@ export default {
 }
 
 .button {
-  background-color: #3B3F54;
+  background-color: #3b3f54;
   height: 50px;
 }
 .button:hover {
-  background-color: #30988A;
+  background-color: #30988a;
 }
 
 /* TOGGLE */
-input { 
+input {
   display: none;
 }
 
 /* Color labels green by default */
-.role-selector input+span {
-  color: #30988A;
+.role-selector input + span {
+  color: #30988a;
 }
-.role-selector input+*+*+span {
-  color: #3B3F54;
+.role-selector input + * + * + span {
+  color: #3b3f54;
 }
 
 /* Color labels when input is checked */
-.role-selector input:checked+span {
-  color: #3B3F54;
+.role-selector input:checked + span {
+  color: #3b3f54;
 }
-.role-selector input:checked+*+*+span {
-  color: #30988A;
+.role-selector input:checked + * + * + span {
+  color: #30988a;
 }
 
 .role-selector {
   display: inline-flex;
-  background-color: #DACBB2;
+  background-color: #dacbb2;
   align-items: center;
   height: 50px;
 }
@@ -98,9 +105,9 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #3B3F54;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #3b3f54;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -110,20 +117,20 @@ input {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #30988A;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #30988a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked+span+.switch .slider {
-  background-color: #3B3F54;
+input:checked + span + .switch .slider {
+  background-color: #3b3f54;
 }
 
-input:focus+span+.switch .slider {
+input:focus + span + .switch .slider {
   box-shadow: 0 0 1px #ffffff;
 }
 
-input:checked+span+.switch .slider:before {
+input:checked + span + .switch .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -138,5 +145,4 @@ input:checked+span+.switch .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 </style>

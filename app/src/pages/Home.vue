@@ -6,7 +6,7 @@
         <button v-if="this.$route.name !== 'Colofon'" class="button">Colofon</button>
       </router-link>
     </div>
-    
+
     <div class="stylingBalk" id="stylingBalk1"></div>
     <Panorama></Panorama>
     <div class="stylingBalk" id="stylingBalk2"></div>
@@ -24,8 +24,33 @@ export default {
   components: {
     Panorama,
     Header,
-    Footer
-  }
+    Footer,
+  },
+  created() {
+    this.$store.commit("data/setGekozenGebouwId", "");
+    this.$store.commit("data/setGekozenGebouw", {});
+  },
+  watch: {
+    gekozenGebouwId() {
+      if (this.gekozenGebouwId) {
+        this.$store.dispatch("data/getGekozenGebouwWiki");
+        this.$store.dispatch("data/getGekozenGebouwImages");
+        this.$router.push({
+          name: "DrieLuik",
+          params: { gebouw: `${this.gekozenGebouwId}` },
+        });
+      }
+    },
+  },
+  computed: {
+    gekozenGebouwId() {
+      if (this.$store.getters["data/getGekozenGebouwId"]) {
+        return this.$store.getters["data/getGekozenGebouwId"];
+      } else {
+        return "";
+      }
+    },
+  },
 };
 </script>
 
@@ -55,14 +80,14 @@ export default {
 }
 
 #stylingBalk1 {
-  background: #3B3F54;
+  background: #3b3f54;
   mix-blend-mode: overlay;
   z-index: 2;
   grid-row: 2 / 2;
   grid-column: 2 / 2;
 }
 #stylingBalk2 {
-  background: #30988A;
+  background: #30988a;
   mix-blend-mode: overlay;
   z-index: 2;
   grid-row: 4 / 4;
@@ -78,13 +103,11 @@ export default {
 }
 
 .button {
-  background-color: #3B3F54;
+  background-color: #3b3f54;
   margin: 0 5px 5px 5px;
 }
 
 .button:hover {
-  background-color: #30988A 
+  background-color: #30988a;
 }
-
-
 </style>

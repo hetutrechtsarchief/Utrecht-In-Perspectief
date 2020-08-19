@@ -4,8 +4,8 @@
     "sources": {
         "ua": {
             "type": "raster",
-            "url": "http://maps.georeferencer.com/georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map.json?key=mpUE8UJCeHr5LXgVR1cW",
-            "tileSize": 265
+            "url": "http://maps.georeferencer.com/georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+            "tileSize": 256
         },
         "3dbag": {
             "type": "vector",

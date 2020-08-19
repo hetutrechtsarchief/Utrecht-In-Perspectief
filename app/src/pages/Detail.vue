@@ -1,9 +1,9 @@
 <template>
   <div class="Detail">
     <Header></Header>
-    <div class="Afb" v-bind:style="{backgroundImage: 'url(' + gebouw.properties.image+')'}"></div>
+    <div class="Afb" v-bind:style="{backgroundImage: 'url(' + gekozenGebouw.properties.image+')'}"></div>
     <div class="info">
-      <h1>{{this.$route.params.id}}</h1>
+      <h1>{{gekozenGebouwId}}</h1>
       <p>
         <span v-html="wiki.extract"></span>
       </p>
@@ -29,20 +29,26 @@ import Header from "../components/Header.vue";
 export default {
   name: "Detail",
   components: {
-    Header
+    Header,
   },
   state: {
     wiki: {},
-    gebouw: {}
+    gebouw: {},
   },
   computed: {
-    gebouw() {
+    gekozenGebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
+    },
+    gekozenGebouwId() {
+      return this.$store.getters["data/getGekozenGebouwId"];
     },
     wiki() {
       return this.$store.getters["data/getGekozenGebouwWiki"];
-    }
-  }
+    },
+    images() {
+      return this.$store.getters["data/getImages"];
+    },
+  },
 };
 </script>
 
@@ -78,7 +84,7 @@ export default {
 }
 
 h1 {
-  color: #30988A;
+  color: #30988a;
 }
 
 span {
@@ -86,7 +92,7 @@ span {
 }
 
 #wiki {
-  background-color: #30988A;
+  background-color: #30988a;
 }
 #archief {
   background-color: #455dc7;

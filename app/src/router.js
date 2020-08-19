@@ -7,11 +7,9 @@ import Colofon from '@/pages/Colofon'
 
 Vue.use(Router)
 
-// const Building = {
-//     template: '<div>Building</div'
-// }
 
 export default new Router({
+    
     routes: [
         {
             path: '/',
@@ -19,12 +17,13 @@ export default new Router({
             component: HomePage
         },
         {
-            path: '/DrieLuik/:id',
+            path: '/DrieLuik/:gebouw',
             name: 'DrieLuik',
-            component: DrieLuik
+            component: DrieLuik,
+           
         },
         {
-            path: '/Detail/:id',
+            path: '/Detail/:gebouw',
             name: 'Detail',
             component: Detail
         },
