@@ -1,8 +1,8 @@
 import lijst from '../../assets/gebouwen_1684.json';
 import lijst2 from '../../assets/gebouwen_1684.json';
 
-import Bleau from "../../assets/mapStyle.json";
-import Specht from "../../assets/mapStyleSpecht.json";
+import Bleau from "../../assets/mapStyleBleau_1669.json";
+import Specht from "../../assets/mapStyleSpecht_1684.json";
 
 let datas = {
   "Bleau": lijst2,
@@ -19,6 +19,8 @@ let panoramas = {
 export default {
   namespaced: true,
   state: {
+    data: datas["Bleau"],
+    panorama:  panoramas["Bleau"],
     mapStyle: styles["Bleau"],
     gebouwen: lijst,
     gekozenGebouwId: "",
