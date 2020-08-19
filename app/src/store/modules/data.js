@@ -1,10 +1,20 @@
 import lijst from '../../assets/gebouwen_1684.json';
+import lijst2 from '../../assets/gebouwen_1684.json';
+
 import Bleau from "../../assets/mapStyle.json";
 import Specht from "../../assets/mapStyleSpecht.json";
 
+let datas = {
+  "Bleau": lijst2,
+  "Specht": lijst
+}
 let styles = {
   "Bleau": Bleau,
   "Specht": Specht
+}
+let panoramas = {
+  "Bleau": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1669.jpg/info.json",
+  "Specht": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json"
 }
 export default {
   namespaced: true,
