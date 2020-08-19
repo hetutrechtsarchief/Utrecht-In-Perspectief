@@ -6,12 +6,13 @@
       :maxZoom="6"
       :zoom="this.$route.name === 'DrieLuik' ? 2: 4"
       :crs="crs"
-      :center="[-37, 165]"
+      :center="[0, 0]"
       :options="{
         attributionControl: false,
         zoomControl: false,
       }"
       @ready="onLoad"
+      @mousemove="showCoordinates"
     >
       <l-iiif :url="iiifUrl" :options="iiifOpts" />
       <l-control-zoom position="topright"></l-control-zoom>
@@ -58,6 +59,8 @@ export default {
       iiifOpts: {
         tileFormat: "jpg",
         tileSize: 512,
+        fitBounds: true,
+        setMaxBounds: true,
       },
     };
   },
@@ -94,6 +97,9 @@ export default {
     },
   },
   methods: {
+    showCoordinates: function (e) {
+      console.log(e.latlng);
+    },
     onLoad(event) {
       this.map = event.map;
       // On Drieluik zoom in to chosen building
