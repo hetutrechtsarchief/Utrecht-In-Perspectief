@@ -861,7 +861,7 @@
          }
     },
 
-    "Hieronymuskerk": {
+    "Hi\u00ebronymuskapel": {
         "id": "85090947",
         "geometry":{
             "type":"Point",
@@ -1505,7 +1505,7 @@
         }
     },
 
-    "Bartholomeigasthuis": {
+    "Bartholome\u00efgasthuis": {
         "id": "2174025",
         "geometry":{
             "type":"Point",
@@ -1787,7 +1787,7 @@
         }
     },
 
-    "Nicolaikerk": {
+    "Nicola\u00efkerk": {
         "id": "2372424",
         "geometry":{
             "type":"Point",

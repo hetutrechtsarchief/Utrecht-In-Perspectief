@@ -10,12 +10,17 @@
       <p v-if="gebouw.properties.users">Gebruikt door {{gebouw.properties.users}}</p>
       <p v-if="gebouw.properties.uses">Gebruikt voor {{gebouw.properties.uses}}</p>-->
 
-      <router-link :to="{name: 'Detail', params:{ id:$route.params.id}}">
+      <router-link v-if="wiki" :to="{name: 'Detail', params:{ id:$route.params.id}}">
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link>
     </div>
 
-    <carousel id="right" :per-page="3" paginationActiveColor="#30988A" :atuoplay="true">
+    <carousel 
+    id="right" 
+    :per-page="3" 
+    paginationActiveColor="#30988A"
+    :atuoplay="true"
+    >
       <slide v-for="item in images" :key="item.catnr.value">
         <img :src="item.img.value" :alt="item.description.value" />
         <p>{{item.description.value}}</p>
@@ -34,17 +39,20 @@ export default {
     Slide,
   },
   state: {
-    wiki: {},
     gebouw: {},
   },
   computed: {
     gebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
     },
-    wiki() {
+    images() {
+      return this.$store.getters["data/getImages"];
+    },
+     wiki() {
       return this.$store.getters["data/getGekozenGebouwWiki"];
     },
   },
+  watch: {},
 };
 </script>
 

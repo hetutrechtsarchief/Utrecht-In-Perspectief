@@ -7,23 +7,26 @@
       :zoom="this.$route.name === 'DrieLuik' ? 2: 4"
       :crs="crs"
       :center="[-37, 165]"
-      :options="mapOptions"
+      :options="{
+        attributionControl: false,
+        zoomControl: false,
+      }"
       @ready="onLoad"
     >
       <l-iiif :url="iiifUrl" :options="iiifOpts" />
       <l-control-zoom position="topright"></l-control-zoom>
       <l-rectangle
-        v-for="(building, name) in buildings"
+        v-for="(gebouw, name) in this.gebouwen"
         :interactive="true"
-        :bounds="building.bounds"
-        v-bind:fillColor=" name === gebouw.properties.label ?  'rgb(48, 152, 138)'  : building.style.fillColor "
-        v-bind:fillOpacity=" name === gebouw.properties.label ?  0.6  : building.style.fillOpacity "
-        :stroke="building.style.stroke"
+        :bounds="gebouw.bounds"
+        v-bind:fillColor=" name === gekozenGebouwId ?  'rgb(48, 152, 138)'  : gebouw.style.fillColor "
+        v-bind:fillOpacity=" name === gekozenGebouwId ?  0.6  : gebouw.style.fillOpacity "
+        :stroke="gebouw.style.stroke"
         :key="name"
-        @click="doRouting(name)"
+        @click="handleClick(name)"
         @mouseover="mouseover"
         @mouseout="mouseout"
-        :attribution="building.properties.label"
+        :attribution="gebouw.properties.label"
       >
         <l-tooltip :content="name" :options="{sticky: true}" />
       </l-rectangle>
@@ -50,31 +53,59 @@ export default {
   },
   data() {
     return {
-      mapOptions: {
-        attributionControl: false,
-        zoomControl: false,
-      },
       crs: CRS.Simple,
       opacity: 0.8,
       iiifOpts: {
         tileFormat: "jpg",
         tileSize: 512,
       },
-      iiifUrl:
-        "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json",
     };
+  },
+  mounted() {
+    const map = this.$refs.map.mapObject;
+    map.addControl(new window.L.Control.Fullscreen({ position: "topright" }));
+  },
+  created() {},
+  computed: {
+    gebouwen() {
+      return this.$store.getters["data/getDataSet"];
+    },
+    iiifUrl() {
+      return this.$store.getters["data/getPanormaUrl"];
+    },
+    gekozenGebouwId() {
+      if (this.$store.getters["data/getGekozenGebouwId"]) {
+        return this.$store.getters["data/getGekozenGebouwId"];
+      } else {
+        return "";
+      }
+    },
+    gekozenGebouw() {
+      if (this.$store.getters["data/getGekozenGebouw"]) {
+        return this.$store.getters["data/getGekozenGebouw"];
+      } else {
+        return "";
+      }
+    },
+  },
+  watch: {
+    gekozenGebouw() {
+      this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
+    },
   },
   methods: {
     onLoad(event) {
       this.map = event.map;
-      if (this.gebouw.bounds && this.$route.name !== "HomePage")
-        this.$refs.map.fitBounds(this.gebouw.bounds);
+      // On Drieluik zoom in to chosen building
+      if (this.gekozenGebouw.bounds && this.$route.name !== "HomePage") {
+        this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
+      }
     },
-    doRouting(name) {
-      if (name) {
+    handleClick(name) {
+      // Prevent from routing when chosenbuilding is same as click.
+      if (name && name !== this.gekozenGebouwId) {
+        this.$store.commit("data/setGekozenGebouwId", name);
         this.$store.commit("data/setGekozenGebouw", name);
-        this.$router.push(`/Drieluik/${name}`);
-        this.$store.dispatch("data/setGekozenGebouwWiki");
       }
     },
     mouseover: function (e) {
@@ -84,7 +115,7 @@ export default {
       this.doReset(e.target);
     },
     doHighlight(layer) {
-      if (layer.options.attribution !== this.gebouw.properties.label) {
+      if (layer.options.attribution !== this.gekozenGebouwId) {
         layer.setStyle({
           fillColor: "rgb(48, 152, 138)",
           fillOpacity: 0.6,
@@ -92,45 +123,13 @@ export default {
       }
     },
     doReset(layer) {
-      if (layer.options.attribution !== this.gebouw.properties.label) {
+      if (layer.options.attribution !== this.gekozenGebouwId) {
         layer.setStyle({
           fillColor: "#455DC7",
           fillOpacity: 0.4,
         });
       }
     },
-  },
-  created() {
-    this.buildings = this.$store.getters["data/getGebouwen"];
-  },
-  computed: {
-    gebouw() {
-      return this.$store.getters["data/getGekozenGebouw"];
-    },
-  },
-  watch: {
-    gebouw() {
-      // const map = this.$refs.map.mapObject;
-
-      this.$refs.map.fitBounds(this.gebouw.bounds);
-      // map.
-      // buildings.onEachFeature(function (layer) {
-      //   console.log(layer)
-      //   if (layer.feature.properties.name === this.gebouw.name) {
-      //     console.log(layer);
-      //     this.doHighlight(layer);
-      //   }
-      // });
-      // var match = featureGroup.eachLayer(function (layer) {
-      //   if (layer.feature.properties.ID == uniqueID) {
-      //     return layer;
-      //   }
-      // });
-    },
-  },
-  mounted() {
-    const map = this.$refs.map.mapObject;
-    map.addControl(new window.L.Control.Fullscreen({ position: "topright" }));
   },
 };
 </script>
