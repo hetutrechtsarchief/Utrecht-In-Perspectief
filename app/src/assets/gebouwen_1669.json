@@ -811,7 +811,7 @@
          }
     },
 
-    "Hieronymuskerk": {
+    "Hi\u00ebronymuskapel": {
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1437,7 +1437,7 @@
         }
     },
 
-    "Bartholomeigasthuis": {
+    "Bartholome\u00efgasthuis": {
         "geometry":{
             "type":"Point",
             "coordinates":[
@@ -1714,7 +1714,7 @@
         }
     },
 
-    "Nicolaikerk": {
+    "Nicola\u00efkerk": {
         "geometry":{
             "type":"Point",
             "coordinates":[
