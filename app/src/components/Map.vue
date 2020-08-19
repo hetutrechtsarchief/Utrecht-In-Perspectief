@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import geojson from "../assets/saftleven.json";
 import Mapbox from "mapbox-gl";
 import PitchToggle from "./../pitchtogglecontrol";
 import {
@@ -86,7 +85,7 @@ export default {
         }),
         "top-left"
       );
-      geojson.features.forEach((item) => {
+      this.geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouw.properties.label) {
           event.map.flyTo({ center: item.geometry.coordinates });
         }
@@ -148,10 +147,28 @@ export default {
     gekozenGebouw() {
       return this.$store.getters["data/getGekozenGebouw"];
     },
+    geojson() {
+      let json = this.$store.getters["data/getDataSet"];
+      // Create valid geojson from json file
+      let geojson = {
+        type: "FeatureCollection",
+        features: [],
+      };
+      Object.keys(json).forEach((key) => {
+        let build = json[key];
+        geojson.features.push({
+          type: "Feature",
+          id: build.id,
+          geometry: build.geometry,
+          properties: build.properties,
+        });
+      });
+      return geojson;
+    },
     geojsonSource() {
       return {
         type: "geojson",
-        data: geojson,
+        data: this.geojson,
       };
     },
     geojsonLayer() {
@@ -186,7 +203,7 @@ export default {
   },
   watch: {
     gekozenGebouwId() {
-      geojson.features.forEach((item) => {
+      this.geojson.features.forEach((item) => {
         if (item.properties.label === this.gekozenGebouwId) {
           this.map.flyTo({ center: item.geometry.coordinates, curve: 1 });
         }

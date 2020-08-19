@@ -1,12 +1,12 @@
-import lijst from '../../assets/gebouwen_1684.json';
-import lijst2 from '../../assets/gebouwen_1684.json';
+import lijst69 from '../../assets/gebouwen_1669.json';
+import lijst84 from '../../assets/gebouwen_1684.json';
 
 import Bleau from "../../assets/mapStyleBleau_1669.json";
 import Specht from "../../assets/mapStyleSpecht_1684.json";
 
 let datas = {
-  "Bleau": lijst2,
-  "Specht": lijst
+  "Bleau": lijst69,
+  "Specht": lijst84
 }
 let styles = {
   "Bleau": Bleau,
@@ -19,10 +19,9 @@ let panoramas = {
 export default {
   namespaced: true,
   state: {
-    data: datas["Bleau"],
-    panorama:  panoramas["Bleau"],
-    mapStyle: styles["Bleau"],
-    gebouwen: lijst,
+    data: datas["Specht"],
+    panorama:  panoramas["Specht"],
+    mapStyle: styles["Specht"],
     gekozenGebouwId: "",
     gekozenGebouw: {
       properties: ""
@@ -36,7 +35,7 @@ export default {
   mutations: {
 
     setGekozenGebouw(state, gekozen) {
-      state.gekozenGebouw = state.gebouwen[gekozen];
+      state.gekozenGebouw = state.data[gekozen];
     },
     setGekozenGebouwId(state, gekozen) {
       state.gekozenGebouwId = gekozen;
@@ -53,17 +52,20 @@ export default {
     },
     setPanorama(state,panorama){
       state.panorama = panorama
+    },
+    setDataset(state,data){
+      state.data = data
     }
   },
   getters: {
+    getDataSet : state => {
+      return state.data
+    },
     getPanormaUrl: state =>{
       return state.panorama
     },
     getMapStyle: state => {
       return state.mapStyle
-    },
-    getGebouwen: state => {
-      return state.gebouwen
     },
     getGekozenGebouwId: state => {
       return state.gekozenGebouwId
@@ -83,9 +85,13 @@ export default {
       if (state.mapStyle === styles["Bleau"]) {
         commit("setMapStyle", styles["Specht"])
         commit("setPanorama", panoramas["Specht"])
+        commit("setDataset", datas["Specht"])
+
       } else if (state.mapStyle === styles["Specht"]) {
         commit("setMapStyle", styles["Bleau"])
         commit("setPanorama", panoramas["Bleau"])
+        commit("setDataset", datas["Bleau"])
+
       }
     },
     getGekozenGebouwImages({ commit, state }) {
