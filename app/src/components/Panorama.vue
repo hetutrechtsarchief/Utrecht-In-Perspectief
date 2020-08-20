@@ -12,7 +12,6 @@
         zoomControl: false,
       }"
       @ready="onLoad"
-      @click="showCoordinates"
     >
       <l-iiif :url="iiifUrl" :options="iiifOpts" />
       <l-control-zoom position="topright"></l-control-zoom>
@@ -101,9 +100,7 @@ export default {
     },
   },
   methods: {
-    showCoordinates: function (e) {
-      console.log(e.latlng);
-    },
+
     onLoad(event) {
       this.map = event.map;
       // On Drieluik zoom in to chosen building
