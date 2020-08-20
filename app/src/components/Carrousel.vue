@@ -32,9 +32,8 @@
           <img
             :src="item.img.value"
             :alt="item.description.value"
-            v-tooltip="{ content: 'Afbl. : ' + item.description.value }"
+            v-tooltip.top="'Afbl. : ' + item.description.value "
           />
-          <span class="label">{{item.description.value.substring(0,80) + "... "}}</span>
         </Slide>
       </Carousel>
     </div>
