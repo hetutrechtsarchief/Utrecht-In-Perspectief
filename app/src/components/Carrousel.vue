@@ -86,7 +86,7 @@ export default {
       if (this.$store.getters["data/getImages"].length >= 1) {
         let all = this.$store.getters["data/getImages"];
         all.forEach((element) => {
-          list.push(element.img.value);
+          list.push(element.img.value.replace("thumb", "download"));
         });
       }
 
