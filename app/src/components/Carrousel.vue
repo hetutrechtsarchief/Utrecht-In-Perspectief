@@ -16,6 +16,7 @@
     </div>
     <div id="right">
       <Carousel
+        v-if="images.length >=1"
         :scrollPerPage="true"
         :perPageCustom="[[480, 3], [768, 4], [1000,6]]"
         paginationActiveColor="#30988A"
@@ -36,6 +37,7 @@
           />
         </Slide>
       </Carousel>
+      <div v-else class="replacement">No images available</div>
     </div>
   </div>
 </template>
@@ -154,5 +156,4 @@ img {
   width: auto;
   /* max-width: 10vw; */
 }
-
 </style>
