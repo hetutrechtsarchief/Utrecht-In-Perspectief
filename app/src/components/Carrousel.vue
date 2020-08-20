@@ -17,13 +17,15 @@
     <div id="right">
       <CoolLightBox
         :items="imagesList"
-        srcName
         :fullScreen="true"
         :index="index"
         @close="index = null"
+        title="title"
+        srcName="src"
       ></CoolLightBox>
 
       <Carousel
+        class="images-wrapper"
         v-if="images.length >=1"
         :scrollPerPage="true"
         :perPageCustom="[[480, 3], [768, 4], [1000,6]]"
@@ -33,7 +35,6 @@
         :paginationPadding="2"
       >
         <Slide
-          class="images-wrapper"
           v-for="(item, itemIndex) in images"
           :key="'slide'+itemIndex"
           :data-index="item.catnr.value"
@@ -86,7 +87,10 @@ export default {
       if (this.$store.getters["data/getImages"].length >= 1) {
         let all = this.$store.getters["data/getImages"];
         all.forEach((element) => {
-          list.push(element.img.value.replace("thumb", "download"));
+          list.push({
+            src: element.img.value.replace("thumb", "download"),
+            title: element.description.value,
+          });
         });
       }
 
@@ -112,7 +116,7 @@ export default {
   grid-template-rows: 1fr;
   color: #3b3f54;
   background-color: #dacbb2;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 #left {
@@ -180,7 +184,10 @@ ul#gebouwfuncties li:first-child {
   text-align: center;
   height: 20vh;
 }
-
+.images-wrapper{
+  padding: 0;
+  margin:0;
+}
 #meer {
   background-color: #30988a;
 }
