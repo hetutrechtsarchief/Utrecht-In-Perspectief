@@ -15,6 +15,14 @@
       </router-link>
     </div>
     <div id="right">
+      <CoolLightBox
+        :items="imagesList"
+        srcName
+        :fullScreen="true"
+        :index="index"
+        @close="index = null"
+      ></CoolLightBox>
+
       <Carousel
         v-if="images.length >=1"
         :scrollPerPage="true"
@@ -25,15 +33,20 @@
         :paginationPadding="2"
       >
         <Slide
-          v-for="item in images"
-          :key="item.catnr.value"
+          class="images-wrapper"
+          v-for="(item, itemIndex) in images"
+          :key="'slide'+itemIndex"
           :data-index="item.catnr.value"
           :data-name="item.catnr.value"
+          :src="item.img.value"
         >
           <img
+            class="image"
             :src="item.img.value"
+            :key="itemIndex"
             :alt="item.description.value"
             v-tooltip.top="'Afbl. : ' + item.description.value "
+            @click="setIndex(itemIndex)"
           />
         </Slide>
       </Carousel>
@@ -44,15 +57,20 @@
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import CoolLightBox from "vue-cool-lightbox";
+import "vue-cool-lightbox/dist/vue-cool-lightbox.min.css";
 
 export default {
   name: "Carrousel",
   components: {
     Carousel,
     Slide,
+    CoolLightBox,
   },
-  state: {
-    gebouw: {},
+  data() {
+    return {
+      index: null,
+    };
   },
   computed: {
     gebouw() {
@@ -61,8 +79,26 @@ export default {
     images() {
       return this.$store.getters["data/getImages"];
     },
+    imagesList() {
+      // Specific list for CoolLightBox
+      let list = [];
+
+      if (this.$store.getters["data/getImages"].length >= 1) {
+        let all = this.$store.getters["data/getImages"];
+        all.forEach((element) => {
+          list.push(element.img.value);
+        });
+      }
+
+      return list;
+    },
     wiki() {
       return this.$store.getters["data/getGekozenGebouwWiki"];
+    },
+  },
+  methods: {
+    setIndex(index) {
+      this.index = index;
     },
   },
   watch: {},
