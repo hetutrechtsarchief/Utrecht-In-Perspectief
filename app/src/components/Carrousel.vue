@@ -17,16 +17,24 @@
     <div id="right">
       <Carousel
         :scrollPerPage="true"
-        :perPageCustom="[[480, 2], [768, 3]]"
-        :per-page="3"
+        :perPageCustom="[[480, 3], [768, 4], [1000,6]]"
         paginationActiveColor="#30988A"
         :atuoplay="true"
+        :centerMode="true"
+        :paginationPadding="2"
       >
-        <Slide v-for="item in images" :key="item.catnr.value">
-          <img :src="item.img.value" :alt="item.description.value" />
-          <span class="label">{{item.description.value.substring(0,100) + "... "}}</span>
-
-          <p>{{item.rights.value}}</p>
+        <Slide
+          v-for="item in images"
+          :key="item.catnr.value"
+          :data-index="item.catnr.value"
+          :data-name="item.catnr.value"
+        >
+          <img
+            :src="item.img.value"
+            :alt="item.description.value"
+            v-tooltip="{ content: 'Afbl. : ' + item.description.value }"
+          />
+          <span class="label">{{item.description.value.substring(0,80) + "... "}}</span>
         </Slide>
       </Carousel>
     </div>
@@ -35,6 +43,7 @@
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
+
 export default {
   name: "Carrousel",
   components: {
@@ -115,20 +124,19 @@ ul#gebouwfuncties li:first-child {
   padding-left: 0px;
 }
 
-
-.VueCarousel-wrapper{
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-
+.VueCarousel {
+}
+.VueCarousel-pagination {
+  bottom: 0;
+}
+.VueCarousel-dot-container {
+  margin-top: 0 !important;
+}
+.VueCarousel-dot {
+  margin: 0px !important;
 }
 
-.VueCarousel-pagination{
-    grid-row: 2;
-
-}
-.VueCarousel-inner{
-    grid-row: 1;
-
+.VueCarousel-inner {
 }
 
 .VueCarousel-slide {
@@ -136,14 +144,16 @@ ul#gebouwfuncties li:first-child {
   height: 20vh;
 }
 
-
 #meer {
   background-color: #30988a;
 }
 
 img {
   margin: 6px;
-  /* height: 20vh; */
-  max-width: 10vw;
+  /* min-height: 10vh; */
+  max-height: 20vh;
+  width: auto;
+  /* max-width: 10vw; */
 }
+
 </style>
