@@ -92,15 +92,14 @@ export default {
     },
   },
   watch: {
-    iiifUrl(){
-      this.center = [-22,98]
+    iiifUrl() {
+      this.center = [-22, 98];
     },
     gekozenGebouw() {
       this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
     },
   },
   methods: {
-
     onLoad(event) {
       this.map = event.map;
       // On Drieluik zoom in to chosen building
@@ -188,6 +187,46 @@ export default {
 
 .leaflet-fullscreen-on .leaflet-control-fullscreen a:hover {
   background-position: 0 -39px !important;
+}
+
+path.leaflet-interactive:nth-child(22) {
+  animation: blinkingBorder 15s;
+  /* animation-delay: 1s; */
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  stroke-width: 5px;
+}
+
+path.leaflet-interactive:nth-child(29) {
+  animation: blinkingBorder 15s;
+  animation-delay: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  stroke-width: 5px;
+}
+
+@keyframes blinkingBorder {
+  0% {
+    stroke: transparent;
+  }
+  24% {
+    stroke: transparent;
+  }
+  25% {
+    stroke: #f00;
+  }
+  30% {
+    stroke: transparent;
+  }
+  35% {
+    stroke: #f00;
+  }
+  40% {
+    stroke: transparent;
+  }
+  100% {
+    stroke: transparent;
+  }
 }
 
 @media (min-width: 3000px) {
