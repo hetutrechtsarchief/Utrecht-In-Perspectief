@@ -15,7 +15,17 @@
       </router-link>
     </div>
     <div id="right">
+      <CoolLightBox
+        :items="imagesList"
+        :fullScreen="true"
+        :index="index"
+        @close="index = null"
+        title="title"
+        srcName="src"
+      ></CoolLightBox>
+
       <Carousel
+        class="images-wrapper"
         v-if="images.length >=1"
         :scrollPerPage="true"
         :perPageCustom="[[480, 3], [768, 4], [1000,6]]"
@@ -25,15 +35,19 @@
         :paginationPadding="2"
       >
         <Slide
-          v-for="item in images"
-          :key="item.catnr.value"
+          v-for="(item, itemIndex) in images"
+          :key="'slide'+itemIndex"
           :data-index="item.catnr.value"
           :data-name="item.catnr.value"
+          :src="item.img.value"
         >
           <img
+            class="image"
             :src="item.img.value"
+            :key="itemIndex"
             :alt="item.description.value"
             v-tooltip.top="'Afbl. : ' + item.description.value "
+            @click="setIndex(itemIndex)"
           />
         </Slide>
       </Carousel>
@@ -44,15 +58,20 @@
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import CoolLightBox from "vue-cool-lightbox";
+import "vue-cool-lightbox/dist/vue-cool-lightbox.min.css";
 
 export default {
   name: "Carrousel",
   components: {
     Carousel,
     Slide,
+    CoolLightBox,
   },
-  state: {
-    gebouw: {},
+  data() {
+    return {
+      index: null,
+    };
   },
   computed: {
     gebouw() {
@@ -61,8 +80,29 @@ export default {
     images() {
       return this.$store.getters["data/getImages"];
     },
+    imagesList() {
+      // Specific list for CoolLightBox
+      let list = [];
+
+      if (this.$store.getters["data/getImages"].length >= 1) {
+        let all = this.$store.getters["data/getImages"];
+        all.forEach((element) => {
+          list.push({
+            src: element.img.value.replace("thumb", "download"),
+            title: element.description.value,
+          });
+        });
+      }
+
+      return list;
+    },
     wiki() {
       return this.$store.getters["data/getGekozenGebouwWiki"];
+    },
+  },
+  methods: {
+    setIndex(index) {
+      this.index = index;
     },
   },
   watch: {},
@@ -76,7 +116,7 @@ export default {
   grid-template-rows: 1fr;
   color: #3b3f54;
   background-color: #dacbb2;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 #left {
@@ -144,7 +184,10 @@ ul#gebouwfuncties li:first-child {
   text-align: center;
   height: 20vh;
 }
-
+.images-wrapper{
+  padding: 0;
+  margin:0;
+}
 #meer {
   background-color: #30988a;
 }
