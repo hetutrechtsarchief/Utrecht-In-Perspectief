@@ -1,20 +1,21 @@
 {   
-    "Plompetoren": {
+    "Catharijnepoort": {
+        "id": "1904062",
         "geometry":{
             "type":"Point",
             "coordinates":[
-               5.12411,
-               52.09675
+               5.11167,
+               52.09278
             ]
         },
         "bounds": [
             [
-            -29.5,
-            7.7
+            -32.9,
+            3.3
             ],
             [
-            -27.3,
-            8.9
+            -26.8,
+            5.6
             ]
         ],
         "style": {
@@ -23,11 +24,11 @@
             "fillOpacity": 0.4
         },
         "properties":{
-            "wdid":"Q2593115",
-            "label":"Plompetoren",
-            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Plompetoren_(Utrecht)",
+            "wdid":"Q1904062",
+            "label":"Catharijnepoort",
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Catharijnepoort_(Utrecht)",
             "types":[
-               "bouwwerk"
+               "stadspoort"
             ],
             "users":[
 
@@ -35,11 +36,11 @@
             "uses":[
 
             ],
-            "built_in":"1150",
-            "built_in_precision":"century",
-            "demolished_in":"1832",
-            "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Stadswal%20utrecht%20ca%201615%20met%20oa%20Plompetoren.jpg"
+            "built_in":"1621",
+            "built_in_precision":"year",
+            "demolished_in":"1845",
+            "demolished_in_precision":"decade",
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Catharijnepoort-Hardenbergh.jpg"
         }
     },
 
@@ -229,12 +230,12 @@
         },
         "bounds": [
             [
-            -29.5,
-            46.9
+            -29.2,
+            44.4
             ],
             [
-            -28.3,
-            47.9
+            -27.2,
+            46.3
             ]
         ],
         "style": {
@@ -312,6 +313,51 @@
             "demolished_in":"",
             "demolished_in_precision":"",
             "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Janskerk%20Utrecht%20P1000149.jpg"
+        }
+    },
+
+    "Putruwiel": {
+        "id": "2347538",
+        "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.117294,
+               52.092156
+            ]
+        },
+        "bounds": [
+            [
+            -29.3,
+            50.1
+            ],
+            [
+            -28.5,
+            51.1
+            ]
+        ],
+        "style": {
+            "stroke": false,
+            "fillColor": "#455DC7",
+            "fillOpacity": 0.4
+        },
+        "properties":{
+            "wdid":"Q2347538",
+            "label":"Putruwiel",
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Putruwiel_(Utrecht)",
+            "types":[
+               "stadskasteel"
+            ],
+            "users":[
+
+            ],
+            "uses":[
+
+            ],
+            "built_in":"1250",
+            "built_in_precision":"century",
+            "demolished_in":"",
+            "demolished_in_precision":"",
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20134.JPG"
         }
     },
 
@@ -547,6 +593,51 @@
             "demolished_in":"",
             "demolished_in_precision":"",
             "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/St.%20Hieronymuskerk%20Utrecht.jpg"
+        }
+    },
+
+    "Pieterskerk": {
+        "id": "2094317",
+        "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.124444,
+               52.091389
+            ]
+        },
+        "bounds": [
+            [
+            -30.8,
+            78.3
+            ],
+            [
+            -22.8,
+            81.1
+            ]
+        ],
+        "style": {
+            "stroke": false,
+            "fillColor": "#455DC7",
+            "fillOpacity": 0.4
+        },
+        "properties":{
+            "wdid":"Q2094317",
+            "label":"Pieterskerk",
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Pieterskerk_(Utrecht)",
+            "types":[
+               "kerkgebouw"
+            ],
+            "users":[
+
+            ],
+            "uses":[
+
+            ],
+            "built_in":"1001",
+            "built_in_precision":"century",
+            "demolished_in":"",
+            "demolished_in_precision":"",
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/18297-Pieterskerk.JPG"
         }
     },
 
