@@ -6,6 +6,7 @@
       :zoom="16"
       :maxZoom="17"
       :minZoom="14"
+      :maxBounds="maxBounds"
       :pitchWithRotate="false"
       :dragRotate="false"
       :attributionControl="false"
@@ -68,6 +69,10 @@ export default {
         content: "Title will go here.",
       },
       center: [5.121044, 52.09031],
+      maxBounds: [ 
+        [5.073492, 52.050002], 
+        [5.166531, 52.125824] 
+      ],
     };
   },
   created() {
