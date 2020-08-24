@@ -1,4 +1,4 @@
-{   "Sint Jobsgasthuis": {
+{   "St. Jobsgasthuis": {
         "id": "84356543",
         "geometry":{
             "type":"Point",
@@ -40,7 +40,8 @@
             "built_in_precision":"year",
             "demolished_in":"1818",
             "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Het%20Jobs-gasthuis%20te%20Utrecht%2C%20RP-T-1895-A-3055.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Het%20Jobs-gasthuis%20te%20Utrecht%2C%20RP-T-1895-A-3055.jpg",
+            "description":"In 1504 gesticht voor het verplegen van syffilislijders, later voor alle arme zieken en passanten. In de 17e eeuwe werd het een oudemannen huis."
         }
     },
 
@@ -85,7 +86,8 @@
             "built_in_precision":"year",
             "demolished_in":"1850",
             "demolished_in_precision":"century",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Sint-maartensgasthuis-utrecht.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Sint-maartensgasthuis-utrecht.jpg",
+            "description":"Vòòr 1459 ingericht als gasthuis voor pelgrims en bedelaars; vanaf 1615 bestemd voor oude mannen."
         }
     },
 
@@ -130,7 +132,8 @@
             "built_in_precision":"century",
             "demolished_in":"1862",
             "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Gezicht%20op%20de%20Weerdpoort%20in%20Utrecht%20Centraal%20Museum%2030427.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Gezicht%20op%20de%20Weerdpoort%20in%20Utrecht%20Centraal%20Museum%2030427.jpg",
+            "description":"Een van de vier middeleeuwse stadspoorten aan de noordzijde van de huidige binnenstad."
         }
     },
 
@@ -182,7 +185,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Jacobikerk%20Utrecht.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Jacobikerk%20Utrecht.JPG",
+            "description":"Parochiekerk die in 1173 voor het eerst werd genoemd. De torenspits woei om tijdens de grote storm van 1674."
         }
     },
 
@@ -227,7 +231,8 @@
             "built_in_precision":"century",
             "demolished_in":"1832",
             "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Stadswal%20utrecht%20ca%201615%20met%20oa%20Plompetoren.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Stadswal%20utrecht%20ca%201615%20met%20oa%20Plompetoren.jpg",
+            "description":"Deze 12e-eeuwse tufstenen toren was een van de verdedigingswerken in het noorden van de oude stad."
         }
     },
 
@@ -272,7 +277,8 @@
             "built_in_precision":"year",
             "demolished_in":"1845",
             "demolished_in_precision":"decade",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Catharijnepoort-Hardenbergh.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Catharijnepoort-Hardenbergh.jpg",
+            "description":"Een van de vier middeleeuwse stadspoorten aan de westzijde van de huidige binnenstad."
         }
     },
 
@@ -332,7 +338,8 @@
             "built_in_precision":"century",
             "demolished_in":"1820",
             "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Wittevrouwenklooster%20te%20Utrecht.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Wittevrouwenklooster%20te%20Utrecht.jpg",
+            "description":"In de 13e eeuw opgericht als klooster voor boetvaardige ex-prostituees. Een eeuw later ging het klooster over tot de orde der Norbertijnen en traden vooral vrouwen van adel toe; de nonnen gingen in het wit gekleed."
         }
     },
 
@@ -377,7 +384,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Huis%20met%20hert.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Huis%20met%20hert.JPG",
+            "description":"Eerste vermelding van dit stadskasteel aan de Oudegracht 86 dateert uit 1316 met als bewoner Beernt ten Hert."
         }
     },
 
@@ -422,7 +430,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Kasteel%20Oudaen.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Kasteel%20Oudaen.JPG",
+            "description":"Kort na 1276 gebouwd als stadskasteel aan de Oudegracht 99, eerst van de familie Zoudenbalch, later in het bezit van de familie Oudaen. In de 18e eeuw werd het een oude mannen- en vrouwenhuis."
         }
     },
     "Drakenburg": {
@@ -467,7 +476,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20114.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20114.JPG",
+            "description":"Dit stadskasteel aan de Oudegracht 114 stamt uit de 12e eeuw."
         }
     },
 
@@ -512,7 +522,8 @@
             "built_in_precision":"year",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20113.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20113.JPG",
+            "description":"Dit stadskasteel aan de Oudegracht 113 dateert uit de 13e eeuw."
          }
     },
 
@@ -558,7 +569,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20121.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20121.JPG",
+            "description":"In dit stadskasteel uit de 13e eeuw aan de Oudegracht 121 was ooit een chocloadefabriek en boekhandel De Slegte."
         }         
     },
 
