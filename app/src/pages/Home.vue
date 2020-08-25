@@ -72,6 +72,7 @@ export default {
   grid-row: 1 / 1;
   grid-column: 2 / span 1;
   z-index: 2;
+  justify-content: center;
 }
 .Footer {
   grid-row: 5 / 5;

@@ -7,7 +7,7 @@
       v-if="this.$route.name === 'Detail' ||this.$route.name === 'Colofon' "
       class="button"
       v-on:click="goBack()"
-    ><img src="../assets/images/icon_terug.svg"/> <br> terug</button>
+    ><img src="../assets/images/icon_terug.svg"/></button>
 
     <div class="role-selector">
       <!-- Move input outside of .switch label -->
@@ -47,8 +47,9 @@ export default {
   display: inline-flex;
   color: #fff;
   background-color: #3b3f54;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 50px;
 }
 
 .button {
@@ -69,20 +70,21 @@ input {
   color: #30988a;
 }
 .role-selector input + * + * + span {
-  color: #3b3f54;
+  color: #ffffff;
 }
 
 /* Color labels when input is checked */
 .role-selector input:checked + span {
-  color: #3b3f54;
+  color: #ffffff;
 }
 .role-selector input:checked + * + * + span {
   color: #30988a;
+  font-weight: bold;
 }
 
 .role-selector {
   display: inline-flex;
-  background-color: #dacbb2;
+  background-color: #3b3f54;
   align-items: center;
   height: 50px;
 }
@@ -105,7 +107,7 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #3b3f54;
+  background-color: #DACBB2;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -123,7 +125,7 @@ input {
 }
 
 input:checked + span + .switch .slider {
-  background-color: #3b3f54;
+  background-color: #DACBB2;
 }
 
 input:focus + span + .switch .slider {
