@@ -190,6 +190,10 @@ export default {
   background-position: 0 -39px !important;
 }
 
+.leaflet-tooltip {
+  font-family: "Ropa Sans", "Lato", Helvetica, Arial, sans-serif !important;
+}
+
 @media (min-width: 3000px) {
   /* PANORAMA */
   .leaflet-bar a,
