@@ -71,13 +71,13 @@ a {
 }
 
 .home .Panorama .leaflet-control-container {
-  visibility: hidden;
+  display: none;
 }
 .home .Header button {
-  visibility: hidden;
+  display: none;
 }
 .home .Header .role-selector {
-  visibility: hidden;
+  display: none;
 }
 .Colofon .Header .role-selector {
   visibility: hidden;
