@@ -95,7 +95,7 @@ export default {
       }
     },
     getGekozenGebouwImages({ commit, state }) {
-      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
+      let sparqlQuery = `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
       PREFIX dct: <http://purl.org/dc/terms/> \
       PREFIX wd: <http://www.wikidata.org/entity/> \
       PREFIX edm: <http://www.europeana.eu/schemas/edm/> \
@@ -103,6 +103,7 @@ export default {
       SELECT * WHERE { \
         ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} . \
         ?bb edm:isShownBy ?img . \
+        <https://hetutrechtsarchief.nl/id/utrecht-in-perspectief> <https://schema.org/hasPart> ?bb . \
         ?bb dc:description ?description . \
         ?bb dc:rights ?rights . \
         ?bb sem:hasBeginTimeStamp ?begin . \
@@ -111,7 +112,11 @@ export default {
         ?bb dc:identifier ?catnr . \
       } \
       ORDER BY ?begin \
-      LIMIT 15 ` ,
+      LIMIT 15 `;
+
+      console.log(sparqlQuery);
+
+      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + sparqlQuery ,
         {
           "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
         })
