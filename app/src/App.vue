@@ -21,6 +21,17 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+  font-family: "Ropa Sans";
+  src: url("assets/fonts/RopaSans-Regular.otf") format("opentype"),
+    url("assets/fonts/RopaSans-Regular.ttf") format("truetype"),
+    url("assets/fonts/RopaSans-Regular.woff") format("woff"),
+    url("assets/fonts/RopaSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
