@@ -3,7 +3,7 @@
     <Header></Header>
     <div class="colofonbutton">
       <router-link :to="{name: 'Colofon', params:{ id: this.$route.params.id}}">
-        <button v-if="this.$route.name !== 'Colofon'" class="button">Colofon</button>
+        <button v-if="this.$route.name !== 'Colofon'" class="button"><img src="../assets/images/icon_info.svg"/></button>
       </router-link>
     </div>
 

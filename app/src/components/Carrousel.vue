@@ -169,8 +169,6 @@ ul#gebouwfuncties li:first-child {
   padding-left: 0px;
 }
 
-.VueCarousel {
-}
 .VueCarousel-pagination {
   bottom: 0;
 }
@@ -179,9 +177,6 @@ ul#gebouwfuncties li:first-child {
 }
 .VueCarousel-dot {
   margin: 0px !important;
-}
-
-.VueCarousel-inner {
 }
 
 .VueCarousel-slide {
