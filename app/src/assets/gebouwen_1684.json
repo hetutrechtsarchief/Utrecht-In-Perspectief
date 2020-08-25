@@ -622,7 +622,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Janskerk%20Utrecht%20P1000149.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Janskerk%20Utrecht%20P1000149.jpg",
+            "description":"Deze kerk werd kort na 1040 gesticht door bisschop Bernold. Het was een van de vijf kapittelkerken in Utrecht en onderdeel van het zogenaamde kerkenkruis. "
         }
     },
 
@@ -667,7 +668,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20134.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20134.JPG",
+            "description":"De aanleg van dit stadskasteel aan de Oudegracht 134 wordt gedateerd tussen 1175 en 1350. Het herbergde ooit een Hanzekantoor."
         }
     },
 
@@ -712,11 +714,12 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Gezicht%20op%20markt%20op%20huis%20%22Keyserrijk%22%2C%20achterzijde%20de%20houten%20huizen%20Snippenvlucht%20en%20Groenewoude%2C%20tekening%20in%20sepia%20zonder%20naam%2C%201650%2C%20catalogus%20topografische%20atlas%20nummer%20110%20-%20Utrecht%20-%2020235658%20-%20RCE.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Gezicht%20op%20markt%20op%20huis%20%22Keyserrijk%22%2C%20achterzijde%20de%20houten%20huizen%20Snippenvlucht%20en%20Groenewoude%2C%20tekening%20in%20sepia%20zonder%20naam%2C%201650%2C%20catalogus%20topografische%20atlas%20nummer%20110%20-%20Utrecht%20-%2020235658%20-%20RCE.jpg",
+            "description":"In 1614 werd het grote middeleeuwse pand Keyserrijk op de hoek van de Oudegracht 160 en de Ganzenmarkt ingericht als waag."
         }
     },
 
-    "Groenewoude": {
+    "Groot Groenewoude": {
         "id": "1988915",
         "geometry":{
             "type":"Point",
@@ -757,7 +760,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20151.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20151.JPG",
+            "description":"In de 13e eeuw gebouwd stadskasteel aan de Oudegracht 151."
         }
     },
 
@@ -803,7 +807,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Lichtenberg-Utrecht.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Lichtenberg-Utrecht.jpg",
+            "description":"Dit stadskasteel werd in de 13e eeuw gebouwd en op last van keizer karel V in de 16e eeuw samen met het buurhuis Hasenberg verbouwd tot stadhuis."
         }
     },
 
@@ -869,11 +874,12 @@
             "built_in_precision":"century",
             "demolished_in":"1830",
             "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Stadhuis%20van%20Utrecht%20waar%20het%20vredescongres%20werd%20gehouden%2C%201712%20Stadhuis%20van%20Utrecht%2C%20alwaar%20het%20congres%20van%20een%20generale%20vreden%2C%20door%20de%20plenipotentiares%20werd%20gehouden%20La%20Maison%20de%20Ville%20d%27Utrecht%2C%20%2C%20RP-P-OB-83.344.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Stadhuis%20van%20Utrecht%20waar%20het%20vredescongres%20werd%20gehouden%2C%201712%20Stadhuis%20van%20Utrecht%2C%20alwaar%20het%20congres%20van%20een%20generale%20vreden%2C%20door%20de%20plenipotentiares%20werd%20gehouden%20La%20Maison%20de%20Ville%20d%27Utrecht%2C%20%2C%20RP-P-OB-83.344.jpg",
+            "description":"Huis Hasenberg werd in de 16e eeuw  samen met het buurhuis Lichtenberg op last van keizer Karel V verbouwd tot stadhuis."
          }
     },
 
-    "Hi\u00ebronymuskapel": {
+    "St. Hi\u00ebronymushuis": {
         "id": "85090947",
         "geometry":{
             "type":"Point",
@@ -950,7 +956,8 @@
             "built_in_precision":"year",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/St.%20Hieronymuskerk%20Utrecht.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/St.%20Hieronymuskerk%20Utrecht.jpg",
+            "description":"Fraterhuis en school aan de Kromme Nieuwegracht in de 15e eeuw gesticht door de Broeders des gemeenen leven. De school was de voorloper van het Stedelijk Gymnasium."
         }
     },
 
