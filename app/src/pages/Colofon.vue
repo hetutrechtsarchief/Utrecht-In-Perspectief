@@ -4,8 +4,13 @@
     <div class="Afb"></div>
     <div class="info">
       <h1>Colofon</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus impedit vero sunt hic deleniti accusantium libero fugit eum labore, excepturi doloremque asperiores consequuntur. Nemo ea perspiciatis voluptas sapiente est alias.<br><br></p>
-      
+      <h2>Ontwerp en realisatie</h2>
+      <ul>
+        <li><a href="https://www.hicsuntleones.nl/">Hic Sunt Leones</a></li>
+        <li><a href="https://www.uu.nl/bijzondere-collecties">Marco van Egmond, conservator Universiteitsbibliotheek Utrecht, Bijzondere Collecties</a></li>
+        <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
+      </ul>
+      <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a></p>
       <div>
         <h2>Cookies voor webstatistieken en onderzoek</h2>
         <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
@@ -42,8 +47,6 @@
           </table>
         </p>
         <p>Google kan deze informatie aan derden verschaffen als Google hiertoe wettelijk wordt verplicht, of voor zover derden de informatie namens Google verwerken. Wij hebben hier geen invloed op.</p>
-        <h2>Surveystatus</h2>
-        <p>Af en toe vindt op deze website onderzoek plaats onder de bezoekers van de website. In dat geval wordt de cookie surveystatus gebruikt.</p>
         <h2>Geen trackingcookies</h2>
         <p>Trackingcookies zijn cookies die bezoekers tijdens het surfen over andere websites volgen. Deze website gebruikt geen trackingcookies. De website biedt daarom geen ondersteuning voor de DoNotTrack-instelling van browsers. Deze site houdt zich aan de in Nederland geldende wetgeving.</p>
         <h2>Hebt u bezwaar tegen cookies?</h2>
