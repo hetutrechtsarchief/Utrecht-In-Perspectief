@@ -40,7 +40,8 @@
             "built_in_precision":"year",
             "demolished_in":"1845",
             "demolished_in_precision":"decade",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Catharijnepoort-Hardenbergh.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Catharijnepoort-Hardenbergh.jpg",
+            "description":"Een van de vier middeleeuwse stadspoorten aan de westzijde van de huidige binnenstad."
         }
     },
 
@@ -84,7 +85,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Huis%20met%20hert.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Huis%20met%20hert.JPG",
+            "description":"Eerste vermelding van dit stadskasteel aan de Oudegracht 86 dateert uit 1316 met als bewoner Beernt ten Hert."
         }
     },
 
@@ -128,9 +130,11 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Kasteel%20Oudaen.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Kasteel%20Oudaen.JPG",
+            "description":"Kort na 1276 gebouwd als stadskasteel aan de Oudegracht 99, eerst van de familie Zoudenbalch, later in het bezit van de familie Oudaen. In de 18e eeuw werd het een oude mannen- en vrouwenhuis."
         }
     },
+
     "Drakenburg": {
         "geometry":{
             "type":"Point",
@@ -172,7 +176,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20114.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20114.JPG",
+            "description":"Dit stadskasteel aan de Oudegracht 114 stamt uit de 12e eeuw."
         }
     },
 
@@ -216,7 +221,8 @@
             "built_in_precision":"year",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20113.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20113.JPG",
+            "description":"Dit stadskasteel aan de Oudegracht 113 dateert uit de 13e eeuw."
          }
     },
 
@@ -261,7 +267,8 @@
             "built_in_precision":"century",
             "demolished_in":"",
             "demolished_in_precision":"",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20121.JPG"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20121.JPG",
+            "description":"In dit stadskasteel uit de 13e eeuw aan de Oudegracht 121 was ooit een chocloadefabriek en boekhandel De Slegte."
         }         
     },
 

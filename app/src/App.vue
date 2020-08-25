@@ -50,7 +50,7 @@ button {
   border: none;
   cursor: pointer;
   padding: 15px;
-  margin: 5px;
+  margin: 5px 5px 5px 0px;
   color: white;
 }
 

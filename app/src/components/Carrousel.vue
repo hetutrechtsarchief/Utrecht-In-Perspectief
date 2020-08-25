@@ -2,11 +2,14 @@
   <div class="Carrousel">
     <div id="left">
       <h1>{{gebouw.properties.label}}</h1>
-      <ul id="gebouwfuncties">
+      <p>{{gebouw.properties.description}}</p>
+      
+      <!-- 
+        <ul id="gebouwfuncties">
         <li v-for="type in gebouw.properties.types" :key="type">{{ type }}</li>
-      </ul>
+        </ul>
       <p>Gebouwd in {{gebouw.properties.built_in}}</p>
-      <!-- <p v-if="gebouw.properties.demolished_in">Verdwenen in {{gebouw.properties.demolished_in}}</p>
+      <p v-if="gebouw.properties.demolished_in">Verdwenen in {{gebouw.properties.demolished_in}}</p>
       <p v-if="gebouw.properties.users">Gebruikt door {{gebouw.properties.users}}</p>
       <p v-if="gebouw.properties.uses">Gebruikt voor {{gebouw.properties.uses}}</p>-->
 
@@ -142,6 +145,7 @@ h1 {
 }
 
 p {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
