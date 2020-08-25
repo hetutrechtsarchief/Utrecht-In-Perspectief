@@ -1,19 +1,19 @@
 import lijst69 from '../../assets/gebouwen_1669.json';
 import lijst84 from '../../assets/gebouwen_1684.json';
 
-import Bleau from "../../assets/mapStyleBleau_1669.json";
+import Blaeu from "../../assets/mapStyleBlaeu_1669.json";
 import Specht from "../../assets/mapStyleSpecht_1684.json";
 
 let datas = {
-  "Bleau": lijst69,
+  "Blaeu": lijst69,
   "Specht": lijst84
 }
 let styles = {
-  "Bleau": Bleau,
+  "Blaeu": Blaeu,
   "Specht": Specht
 }
 let panoramas = {
-  "Bleau": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1669.jpg/info.json",
+  "Blaeu": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1669.jpg/info.json",
   "Specht": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json"
 }
 export default {
@@ -82,15 +82,15 @@ export default {
   },
   actions: {
     toggleMapStyle({ state, commit }) {
-      if (state.mapStyle === styles["Bleau"]) {
+      if (state.mapStyle === styles["Blaeu"]) {
         commit("setMapStyle", styles["Specht"])
         commit("setPanorama", panoramas["Specht"])
         commit("setDataset", datas["Specht"])
 
       } else if (state.mapStyle === styles["Specht"]) {
-        commit("setMapStyle", styles["Bleau"])
-        commit("setPanorama", panoramas["Bleau"])
-        commit("setDataset", datas["Bleau"])
+        commit("setMapStyle", styles["Blaeu"])
+        commit("setPanorama", panoramas["Blaeu"])
+        commit("setDataset", datas["Blaeu"])
 
       }
     },
