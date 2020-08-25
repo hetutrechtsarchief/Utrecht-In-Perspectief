@@ -111,10 +111,10 @@ a {
 }
 
 .tooltip .tooltip-inner {
-  background: #3b3f54;
-  color: #30988a;
+  background: #ffffff;
+  color: #4B4B4B;
   border-radius: 5px;
-  padding: 5px 10px 4px;
+  padding: 14px;
 }
 
 .tooltip .tooltip-arrow {
@@ -123,7 +123,7 @@ a {
   border-style: solid;
   position: absolute;
   margin: 5px;
-  border-color: #3b3f54;
+  border-color: #ffffff;
   z-index: 1;
 }
 tooltip[x-placement^="top"] {
