@@ -6,10 +6,10 @@
             "type": "raster",
             "scheme": "xyz",
             "tiles": [
-                "http://maps-0.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
-                "http://maps-1.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
-                "http://maps-2.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
-                "http://maps-3.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW"
+                "https://maps-0.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+                "https://maps-1.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+                "https://maps-2.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+                "https://maps-3.georeferencer.com//georeferences/e004cbea-e4f7-5b19-bf6d-54035c9a2b14/2018-04-05T14:45:19.127121Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW"
             ],
             "minzoom": 0,
             "maxzoom": 17,
