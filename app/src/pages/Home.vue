@@ -18,7 +18,7 @@
 import Panorama from "../components/Panorama.vue";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
-import lijst84 from '../assets/gebouwen_1684.json';
+import lijst84 from '../assets/data/gebouwen_1684.json';
 
 export default {
   name: "HomePage",

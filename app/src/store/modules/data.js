@@ -1,8 +1,8 @@
-import lijst69 from '../../assets/gebouwen_1669.json';
-import lijst84 from '../../assets/gebouwen_1684.json';
+import lijst69 from '../../assets/data/gebouwen_1669.json';
+import lijst84 from '../../assets/data/gebouwen_1684.json';
 
-import Blaeu from "../../assets/mapStyleBlaeu_1669.json";
-import Specht from "../../assets/mapStyleSpecht_1684.json";
+import Blaeu from "../../assets/data/mapStyleBlaeu_1669.json";
+import Specht from "../../assets/data/mapStyleSpecht_1684.json";
 
 let datas = {
   "Blaeu": lijst69,
