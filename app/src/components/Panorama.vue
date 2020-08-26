@@ -56,6 +56,9 @@ export default {
       center: [-30, 156.3],
       crs: CRS.Simple,
       opacity: 0.8,
+      touchZoom: true,
+      inertia: true,
+      fadeAnimation: true,
       iiifOpts: {
         tileFormat: "jpg",
         tileSize: 512,

@@ -67,18 +67,21 @@ input {
 
 /* Color labels green by default */
 .role-selector input + span {
-  color: #30988a;
+  color: #ffffff;
+  font-weight: bold;
 }
 .role-selector input + * + * + span {
   color: #ffffff;
+  font-weight: normal;
 }
 
 /* Color labels when input is checked */
 .role-selector input:checked + span {
   color: #ffffff;
+  font-weight: normal;
 }
 .role-selector input:checked + * + * + span {
-  color: #30988a;
+  color: #ffffff;
   font-weight: bold;
 }
 
