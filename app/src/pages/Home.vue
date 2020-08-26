@@ -18,6 +18,7 @@
 import Panorama from "../components/Panorama.vue";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import lijst84 from '../assets/gebouwen_1684.json';
 
 export default {
   name: "HomePage",
@@ -29,6 +30,8 @@ export default {
   created() {
     this.$store.commit("data/setGekozenGebouwId", "");
     this.$store.commit("data/setGekozenGebouw", {});
+    this.$store.commit("data/setPanorama", "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json");
+    this.$store.commit("data/setDataset", lijst84);
   },
   watch: {
     gekozenGebouwId() {
