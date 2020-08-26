@@ -4,14 +4,13 @@
     <div class="Afb"></div>
     <div class="info">
       <h1>Colofon</h1>
-      <h2>Ontwerp en realisatie</h2>
+      <p>Ontwerp en realisatie:</p>
       <ul>
         <li><a href="https://www.hicsuntleones.nl/">Hic Sunt Leones</a></li>
         <li><a href="https://www.uu.nl/bijzondere-collecties">Marco van Egmond, conservator Universiteitsbibliotheek Utrecht, Bijzondere Collecties</a></li>
         <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
       </ul>
       <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a></p>
-      <div>
         <h2>Cookies voor webstatistieken en onderzoek</h2>
         <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
         <h2>Google Analytics</h2>
@@ -51,7 +50,6 @@
         <p>Trackingcookies zijn cookies die bezoekers tijdens het surfen over andere websites volgen. Deze website gebruikt geen trackingcookies. De website biedt daarom geen ondersteuning voor de DoNotTrack-instelling van browsers. Deze site houdt zich aan de in Nederland geldende wetgeving.</p>
         <h2>Hebt u bezwaar tegen cookies?</h2>
         <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
-      </div>
 
       <button
         class="button"
@@ -96,8 +94,16 @@ export default {
   grid-column: 2 / span 1;
   text-align: left;
   padding: 50px;
-  line-height: normal;
 }
+
+.info li {
+  margin-left: 20px;
+}
+
+a {
+  color: #30988A;
+}
+
 .button {
   display: block;
 }
