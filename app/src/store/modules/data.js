@@ -95,28 +95,28 @@ export default {
       }
     },
     getGekozenGebouwImages({ commit, state }) {
-      let sparqlQuery = `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
-      PREFIX dct: <http://purl.org/dc/terms/> \
-      PREFIX wd: <http://www.wikidata.org/entity/> \
-      PREFIX edm: <http://www.europeana.eu/schemas/edm/> \
-      PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> \
-      SELECT * WHERE { \
-        ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} . \
-        ?bb edm:isShownBy ?img . \
-        <https://hetutrechtsarchief.nl/id/utrecht-in-perspectief> <https://schema.org/hasPart> ?bb . \
-        ?bb dc:description ?description . \
-        ?bb dc:rights ?rights . \
-        ?bb sem:hasBeginTimeStamp ?begin . \
-        BIND(year(?begin) AS ?year) . \
-        ?bb sem:hasEndTimeStamp ?end . \
-        ?bb dc:identifier ?catnr . \
-      } \
-      ORDER BY ?begin \
-      LIMIT 15 `;
+      console.log("wikidataID",state.gekozenGebouw.properties.wdid);
+      
+      let sparqlQuery = `
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX dct: <http://purl.org/dc/terms/>
+        PREFIX dct: <http://purl.org/dc/terms/>   
+        PREFIX wd: <http://www.wikidata.org/entity/> 
+        SELECT DISTINCT * WHERE {
+          <https://hetutrechtsarchief.nl/id/utrecht-in-perspectief> <https://schema.org/hasPart> ?bb .
+          ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} .
+          ?bb foaf:depiction ?img .
+          ?bb rdfs:label ?description .
+          ?bb dct:identifier ?catnr .
+          ?bb dct:date ?date .
 
-      console.log(sparqlQuery);
-
-      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + sparqlQuery ,
+        }
+        ORDER BY ?date
+        LIMIT 15
+      `
+      
+      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Dataset/sparql/Dataset?query=" + encodeURIComponent(sparqlQuery) ,
         {
           "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
         })
