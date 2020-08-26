@@ -2,6 +2,8 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix id: <https://hetutrechtsarchief.nl/id/> .
 
+# handmatige toevoegingen door rick op 26 aug 2020
+
 # images St.-Jobsgasthuis:
 
 id:44CB01C4B83F5923A6928889BBC7C8FB dct:spatial wd:Q84356543 .
