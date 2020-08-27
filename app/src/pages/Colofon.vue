@@ -1,10 +1,12 @@
 <template>
   <div class="Colofon">
     <Header></Header>
+    <div class="paarseBalk" id="paarseBalk1"></div>
     <div class="Afb"></div>
     <div class="info">
-      <h1>Colofon</h1>
-      <p>Ontwerp en realisatie:</p>
+      <h1>Over dit project</h1>
+      <p></p>
+      <h2>Ontwerp en realisatie:</h2>
       <ul>
         <li><a href="https://www.hicsuntleones.nl/">Hic Sunt Leones</a></li>
         <li><a href="https://www.uu.nl/bijzondere-collecties">Marco van Egmond, conservator Universiteitsbibliotheek Utrecht, Bijzondere Collecties</a></li>
@@ -77,21 +79,33 @@ export default {
 .Colofon {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 50px 1fr;
+  grid-template-columns: 320px repeat(2, 1fr);;
+  grid-template-rows: 56px repeat(2, 8px);
+  overflow-x: hidden;
 }
 .Header {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 3;
+}
+.paarseBalk {
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 2;
+  background: #455dc7;
+  z-index: 10;
+  justify-self: stretch;
+  align-self: stretch;
 }
 .Afb {
-  grid-row: 2 / 2;
+  grid-row: 3 / span 4;
   grid-column: 1 / span 1;
   background-color: white;
+  background-image: url("../assets/images/saftleven_1684_crop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .info {
-  grid-row: 2 / 2;
-  grid-column: 2 / span 1;
+  grid-row: 4 / 3;
+  grid-column: 2 / span 2;
   text-align: left;
   padding: 50px;
 }
@@ -103,12 +117,27 @@ export default {
 a {
   color: #30988A;
 }
+p {
+  margin: 10px;
+}
+h2 {
+  margin-top: 24px;
+}
 
 .button {
   display: block;
+  margin: 0px;
 }
 
 #github {
   background-color: #30988A;
+}
+
+/* RESPONSIVENESS */
+
+@media (min-width: 3000px) {
+  .Afb {
+  background-repeat: repeat;
+  }
 }
 </style>
