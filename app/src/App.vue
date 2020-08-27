@@ -80,10 +80,10 @@ a {
   display: none;
 }
 .Colofon .Header .role-selector {
-  visibility: hidden;
+  display: none;
 }
 .Detail .Header .role-selector {
-  visibility: hidden;
+  display: none;
 }
 
 /* COOKIE STYLING */
