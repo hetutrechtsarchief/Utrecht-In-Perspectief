@@ -2,12 +2,13 @@
   <div class="Carrousel">
     <div id="left">
       <h1>{{gebouw.properties.label}}</h1>
-      <p>{{gebouw.properties.description}}</p>
-      
-      <!-- 
-        <ul id="gebouwfuncties">
+      <!--
+      <ul v-if="gebouw.properties.types" id="gebouwfuncties">
         <li v-for="type in gebouw.properties.types" :key="type">{{ type }}</li>
-        </ul>
+      </ul> -->
+      <p>{{gebouw.properties.description}}</p>
+      <!--
+      v-if built_in_precision
       <p>Gebouwd in {{gebouw.properties.built_in}}</p>
       <p v-if="gebouw.properties.demolished_in">Verdwenen in {{gebouw.properties.demolished_in}}</p>
       <p v-if="gebouw.properties.users">Gebruikt door {{gebouw.properties.users}}</p>
@@ -17,12 +18,7 @@
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link> -->
 
-      <button
-        class="button"
-        id="meer"
-        type="button"
-        onclick="location.href='https://nl.wikipedia.org/wiki/Het_Utrechts_Archief'"
-      >Ontdek meer over dit gebouw</button>
+<p v-if="gebouw.properties.wikipedia" class="wikilink"><a :href="gebouw.properties.wikipedia" target="_blank" >Ontdek meer over dit gebouw op Wikipedia</a></p>
 
     </div>
     <div id="right">
@@ -122,20 +118,36 @@ export default {
 </script>
 
 <style scoped>
+
+.wikilink {
+  padding-top: 20px;
+}
+
+.wikilink a,
+.wikilink a:visited,
+.wikilink a:hover,
+.wikilink a:active  {
+  color: #fff;
+  font-weight: bold;
+  background-color: #30988a;
+  padding: 10px;
+}
+
 .Carrousel {
   display: grid;
   grid-template-columns: 35vw 65vw;
   grid-template-rows: 1fr;
-  color: #3b3f54;
-  background-color: #dacbb2;
+  /*color: #3b3f54;
+  background-color: #dacbb2;*/
+  color: #ffffff;
+  background-color: #3b3f54;
   overflow: hidden;
 }
 
 #left {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  align-self: center; 
-  margin: 0px 50px;
+  margin: 50px 50px;
   text-align: left;
 }
 
@@ -154,7 +166,7 @@ h1 {
 
 p {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /*ul#gebouwfuncties {
@@ -177,6 +189,10 @@ ul#gebouwfuncties li:first-child {
   padding-left: 0px;
 } */
 
+.images-wrapper {
+  margin-top: 20px !important;
+}
+
 .VueCarousel-pagination {
   bottom: 0;
 }
@@ -194,10 +210,6 @@ ul#gebouwfuncties li:first-child {
 .images-wrapper{
   padding: 0;
   margin:0;
-}
-#meer {
-  background-color: #30988a;
-  margin: 20px 0px 0px 0px;
 }
 
 img {
@@ -223,17 +235,14 @@ img {
   
   #left {
     font-size: 2em;
-    margin: 0px 156px;
   }
 
-  /* .button {
+  .button {
     font-size: 0.9em;
     margin: 50px 0px 0px 0px;
-  } */
-
-  #meer {
+  }
+  .wikilink {
     display: none;
   }
-
 }
 </style>
