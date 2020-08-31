@@ -32,17 +32,17 @@
             </tr>
             <tr>
               <td>_ga</td>
-              <td>.-.nl</td>
+              <td>.utrechtinperspectief.nl</td>
               <td>2 jaar</td>
             </tr>
             <tr>
               <td>_gid</td>
-              <td>.-.nl</td>
+              <td>.utrechtinperspectief.nl</td>
               <td>1 dag</td>
             </tr>
             <tr>
-              <td>_gat_UA-26882017-1</td>
-              <td>.-.nl</td>
+              <td>_gat_gtag_UA_176820831_1</td>
+              <td>.utrechtinperspectief.nl</td>
               <td>sessie</td>
             </tr>
           </table>
@@ -54,7 +54,6 @@
         <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
         <h2>GitHub</h2>
         <p>Dit project is gebouwd met open source software.</p>
-
         <button
           class="button"
           id="github"
