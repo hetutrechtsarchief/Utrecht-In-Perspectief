@@ -119,4 +119,15 @@ export default {
   justify-self: stretch;
   align-self: stretch;
 }
+
+/* RESPONSIVENESS */
+
+@media (min-width: 3000px) {
+  
+  .Header {
+    padding-right: 20px;
+  }
+
+}
+
 </style>

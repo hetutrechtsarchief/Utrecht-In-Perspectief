@@ -58,6 +58,8 @@ body {
 
 button {
   text-align: center;
+  font-family: "Ropa Sans", "Lato", Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
   border: none;
   cursor: pointer;
   padding: 15px;
