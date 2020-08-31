@@ -100,14 +100,14 @@ export default {
 .Afb {
   grid-row: 3 / span 4;
   grid-column: 1 / span 1;
-  background-image: url("../assets/images/saftleven_1684_crop.jpg");
-  background-position: center;
+  background: url("../assets/images/saftleven_1684_crop.jpg") no-repeat center;
+  background-size: cover;
 }
 .info {
-  grid-row: 4 / 3;
+  grid-row: 4 / span 3;
   grid-column: 2 / span 2;
   text-align: left;
-  padding: 70px 70px;
+  padding: 70px 320px 70px 70px;
 }
 
 .info li {
@@ -136,10 +136,6 @@ h2 {
 /* RESPONSIVENESS */
 
 @media (min-width: 3000px) {
-  
-  .Afb {
-  background-repeat: repeat;
-  }
 
   .info {
     font-size: 2em;
