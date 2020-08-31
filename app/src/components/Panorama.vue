@@ -4,7 +4,7 @@
       ref="map"
       :minZoom="this.$route.name === 'DrieLuik' ? 2: 4"
       :maxZoom="6"
-      :zoom="this.$route.name === 'DrieLuik' ? 2: 4"
+      :zoom="this.$route.name === 'DrieLuik' ? null : 4"
       :crs="crs"
       :center="center"
       :options="{
