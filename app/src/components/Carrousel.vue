@@ -41,6 +41,7 @@
         :scrollPerPage="true"
         :perPageCustom="[[480, 3], [768, 4], [1000,6]]"
         paginationActiveColor="#30988A"
+        paginationColor="#dacbb2"
         :atuoplay="true"
         :centerMode="true"
         :paginationPadding="2"
@@ -217,6 +218,15 @@ img {
 
   img {
   height: 28vh;
+  }
+  
+  #left {
+    font-size: 2em;
+  }
+
+  .button {
+    font-size: 0.9em;
+    margin: 50px 0px 0px 0px;
   }
 
 }
