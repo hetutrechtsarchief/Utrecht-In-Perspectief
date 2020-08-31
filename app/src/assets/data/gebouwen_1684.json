@@ -700,7 +700,7 @@
         "properties":{
             "wdid":"Q84357528",
             "label":"Keyserrijk",
-            "wikipedia":null,
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Stadhuis_van_Utrecht",
             "types":[
                "stadskasteel"
             ],
@@ -839,7 +839,7 @@
         "properties":{
             "wdid":"Q84750926",
             "label":"Hasenberg",
-            "wikipedia":null,
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Stadhuis_van_Utrecht",
             "types":[
                "schepenhuis",
                "voormalig bouwwerk"
@@ -906,7 +906,7 @@
         "properties":{
             "wdid":"Q85090947",
             "label":"St. Hi\u00ebronymushuis",
-            "wikipedia":null,
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Hi%C3%ABronymushuis",
             "types":[
                "kerkgebouw"
             ],
@@ -1401,7 +1401,7 @@
         "properties":{
             "wdid":"Q84475989",
             "label":"Kapel Duitse Huis",
-            "wikipedia":null,
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Duitse_Huis",
             "types":[
                "kapel"
             ],
@@ -1446,7 +1446,7 @@
         "properties":{
             "wdid":"Q84549114",
             "label":"Regulierenkerk",
-            "wikipedia":null,
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Tivolicomplex",
             "types":[
                "kloosterkerk"
             ],
@@ -1655,7 +1655,7 @@
         "properties":{
             "wdid":"Q84543792",
             "label":"Sint-Servaaskerk",
-            "wikipedia":null,
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Sint-Servaasabdij_(Utrecht)",
             "types":[
                "kloosterkerk"
             ],
@@ -1781,7 +1781,7 @@
         "properties":{
             "wdid":"Q84509500",
             "label":"Kapel van het Agnietenklooster",
-            "wikipedia":null,
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Agnietenklooster_(Utrecht)",
             "types":[
                "Dubbelkapel (architectuur)"
             ],
