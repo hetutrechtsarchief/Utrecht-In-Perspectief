@@ -95,7 +95,6 @@ export default {
       }
     },
     getGekozenGebouwImages({ commit, state }) {
-      console.log("wikidataID",state.gekozenGebouw.properties.wdid);
       
       let sparqlQuery = `
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
