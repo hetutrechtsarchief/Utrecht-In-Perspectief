@@ -223,11 +223,16 @@ img {
   
   #left {
     font-size: 2em;
+    margin: 0px 156px;
   }
 
-  .button {
+  /* .button {
     font-size: 0.9em;
     margin: 50px 0px 0px 0px;
+  } */
+
+  #meer {
+    display: none;
   }
 
 }
