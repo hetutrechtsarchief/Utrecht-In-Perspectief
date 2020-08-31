@@ -77,7 +77,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .Colofon {
   height: 100vh;
   display: grid;
@@ -88,6 +88,10 @@ export default {
 .Header {
   grid-row: 1 / span 2;
   grid-column: 1 / span 3;
+}
+
+.Colofon .Header .router-link-exact-active.router-link-active {
+  display: none;
 }
 .paarseBalk {
   grid-row: 2 / span 2;
@@ -114,10 +118,15 @@ export default {
   margin-left: 20px;
 }
 
+.Header a {
+  color: #fff;
+}
+
 a {
   color: #30988A;
 }
-p, ul {
+
+p, ul, table {
   margin: 10px 0px;
 }
 h2 {
@@ -142,14 +151,14 @@ h2 {
     padding: 120px 320px 120px 120px;
   }
   .info li {
-  margin-left: 60px;
+    margin-left: 60px;
   }
 
   p, ul {
-  margin: 24px 0px;
+    margin: 24px 0px;
   }
   h2 {
-  margin-top: 48px;
+    margin-top: 48px;
   }
   .button {
     font-size: 0.9em;
