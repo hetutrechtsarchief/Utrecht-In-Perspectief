@@ -133,9 +133,8 @@ export default {
 #left {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  justify-self: center;
-  align-self: center;
-  margin: 50px;
+  align-self: center; 
+  margin: 0px 50px;
   text-align: left;
 }
 
