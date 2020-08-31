@@ -2,13 +2,11 @@
   <div class="Carrousel">
     <div id="left">
       <h1>{{gebouw.properties.label}}</h1>
+      <p>{{gebouw.properties.description}}</p>
       <!--
       <ul v-if="gebouw.properties.types" id="gebouwfuncties">
         <li v-for="type in gebouw.properties.types" :key="type">{{ type }}</li>
-      </ul> -->
-      <p>{{gebouw.properties.description}}</p>
-      <!--
-      v-if built_in_precision
+      </ul>
       <p>Gebouwd in {{gebouw.properties.built_in}}</p>
       <p v-if="gebouw.properties.demolished_in">Verdwenen in {{gebouw.properties.demolished_in}}</p>
       <p v-if="gebouw.properties.users">Gebruikt door {{gebouw.properties.users}}</p>
@@ -17,9 +15,7 @@
       <!-- <router-link v-if="wiki" :to="{name: 'Detail', params:{ id:$route.params.id}}">
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link> -->
-
-<p v-if="gebouw.properties.wikipedia" class="wikilink"><a :href="gebouw.properties.wikipedia" target="_blank" >Ontdek meer over dit gebouw op Wikipedia</a></p>
-
+      <p v-if="gebouw.properties.wikipedia" class="wikilink"><a :href="gebouw.properties.wikipedia" target="_blank" >Ontdek meer over dit gebouw op Wikipedia</a></p>
     </div>
     <div id="right">
       <CoolLightBox
