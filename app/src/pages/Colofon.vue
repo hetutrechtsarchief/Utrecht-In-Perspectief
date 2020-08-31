@@ -5,14 +5,14 @@
     <div class="Afb"></div>
     <div class="info">
       <h1>Over dit project</h1>
-      <p></p>
+      <p>In de zomer van 2020 stroomt in Utrecht weer water door de hele Stadsbuitengracht, waarmee het aangezicht van Utrecht verandert. Wist je dat in de korte periode tussen 1669 en 1684 die skyline óók al drastisch veranderde? Dat had alles te maken met de desastreuze storm die in de zomer van 1674 over de stad raasde.</p>
       <h2>Ontwerp en realisatie:</h2>
       <ul>
         <li><a href="https://www.hicsuntleones.nl/">Hic Sunt Leones</a></li>
         <li><a href="https://www.uu.nl/bijzondere-collecties">Marco van Egmond, conservator Universiteitsbibliotheek Utrecht, Bijzondere Collecties</a></li>
         <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
       </ul>
-      <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a></p>
+      <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a>.</p>
         <h2>Cookies voor webstatistieken en onderzoek</h2>
         <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
         <h2>Google Analytics</h2>
@@ -52,13 +52,15 @@
         <p>Trackingcookies zijn cookies die bezoekers tijdens het surfen over andere websites volgen. Deze website gebruikt geen trackingcookies. De website biedt daarom geen ondersteuning voor de DoNotTrack-instelling van browsers. Deze site houdt zich aan de in Nederland geldende wetgeving.</p>
         <h2>Hebt u bezwaar tegen cookies?</h2>
         <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
+        <h2>GitHub</h2>
+        <p>Dit project is gebouwd met open source software.</p>
 
-      <button
-        class="button"
-        id="github"
-        type="button"
-        onclick="location.href='https://github.com/hetutrechtsarchief/Utrecht-Skyline'"
-      >Naar de GitHub Repro</button>
+        <button
+          class="button"
+          id="github"
+          type="button"
+          onclick="location.href='https://github.com/hetutrechtsarchief/Utrecht-Skyline'"
+        >Bekijk op GitHub</button>
     </div>
   </div>
 </template>
@@ -98,16 +100,14 @@ export default {
 .Afb {
   grid-row: 3 / span 4;
   grid-column: 1 / span 1;
-  background-color: white;
   background-image: url("../assets/images/saftleven_1684_crop.jpg");
   background-position: center;
-  background-repeat: no-repeat;
 }
 .info {
   grid-row: 4 / 3;
   grid-column: 2 / span 2;
   text-align: left;
-  padding: 50px;
+  padding: 70px 70px;
 }
 
 .info li {
@@ -117,8 +117,8 @@ export default {
 a {
   color: #30988A;
 }
-p {
-  margin: 10px;
+p, ul {
+  margin: 10px 0px;
 }
 h2 {
   margin-top: 24px;
@@ -126,7 +126,7 @@ h2 {
 
 .button {
   display: block;
-  margin: 0px;
+  margin: 20px 0px;
 }
 
 #github {
@@ -136,8 +136,28 @@ h2 {
 /* RESPONSIVENESS */
 
 @media (min-width: 3000px) {
+  
   .Afb {
   background-repeat: repeat;
+  }
+
+  .info {
+    font-size: 2em;
+    padding: 120px 320px 120px 120px;
+  }
+  .info li {
+  margin-left: 60px;
+  }
+
+  p, ul {
+  margin: 24px 0px;
+  }
+  h2 {
+  margin-top: 48px;
+  }
+  .button {
+    font-size: 0.9em;
+    margin: 40px 0px;
   }
 }
 </style>
