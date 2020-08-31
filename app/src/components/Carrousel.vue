@@ -197,6 +197,7 @@ ul#gebouwfuncties li:first-child {
 }
 #meer {
   background-color: #30988a;
+  margin: 20px 0px 0px 0px;
 }
 
 img {
