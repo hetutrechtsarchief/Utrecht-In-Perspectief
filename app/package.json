@@ -10,6 +10,7 @@
   "dependencies": {
     "@types/leaflet": "^1.5.17",
     "core-js": "^3.6.4",
+    "es6-promise": "^4.2.8",
     "leaflet": "git+ssh://git@github.com/webmapper/Leaflet.git",
     "leaflet-fullscreen": "^1.0.2",
     "mapbox-gl": "^1.12.0",
@@ -23,7 +24,8 @@
     "vue-router": "^3.4.3",
     "vue2-leaflet": "^2.5.2",
     "vue2-leaflet-iiif": "git+https://github.com/webmapper/vue2-leaflet-iiif.git",
-    "vuex": "^3.5.1"
+    "vuex": "^3.5.1",
+    "whatwg-fetch": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
@@ -49,8 +51,8 @@
     "rules": {}
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
+    ">0.25%",
+    "ie >= 11",
+    "not op_mini all"
   ]
 }

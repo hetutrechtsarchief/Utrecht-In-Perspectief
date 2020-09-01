@@ -1,7 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router.js'
-import store from './store'
+import 'core-js/stable';
+import "whatwg-fetch";
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router.js";
+import store from "./store";
 import VueMapbox from "vue-mapbox";
 import Mapbox from "mapbox-gl";
 import VTooltip from "v-tooltip";
