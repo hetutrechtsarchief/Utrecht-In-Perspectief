@@ -53,7 +53,7 @@
         <h2>Hebt u bezwaar tegen cookies?</h2>
         <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
         <h2>GitHub</h2>
-        <p>Dit project is gebouwd met open source software.</p>
+        <p>Dit project is gebouwd met open source software en te bekijken op de GitHub pagina van Het Utrechts Archief.</p>
         <button
           class="button"
           id="github"
