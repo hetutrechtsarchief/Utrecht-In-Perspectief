@@ -1170,7 +1170,7 @@
         "properties":{
             "wdid":"Q84595778",
             "label":"Bisschopshof",
-            "wikipedia":null,
+            "wikipedia": "https:\/\/nl.wikipedia.org\/wiki\/Servetstraat_(Utrecht)",
             "types":[
                "bisschoppelijk paleis"
             ],
@@ -1191,7 +1191,8 @@
             "built_in_precision":"century",
             "demolished_in":"1803",
             "demolished_in_precision":"year",
-            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Bisschopshof-Joannes-van-Liefland-1854.jpg"
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Bisschopshof-Joannes-van-Liefland-1854.jpg",
+            "description":"In dit bisschoppelijk paleis gebouwd in de veertiende eeuw verbleven de bisschoppen van Utrecht. Het verloor zijn functie na de Reformatie en heeft daarna verschillende functies en bewoners gehad tot het in 1803 werd afgebroken."
         }
     },
 
