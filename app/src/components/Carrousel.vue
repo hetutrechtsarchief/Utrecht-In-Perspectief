@@ -143,7 +143,7 @@ export default {
 #left {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  margin: 50px 50px;
+  margin: 25px 50px;
   text-align: left;
 }
 
@@ -186,7 +186,7 @@ ul#gebouwfuncties li:first-child {
 } */
 
 .images-wrapper {
-  margin-top: 20px !important;
+  margin-top: 8px !important;
 }
 
 .VueCarousel-pagination {
@@ -209,7 +209,7 @@ ul#gebouwfuncties li:first-child {
 }
 
 img {
-  margin: 6px 12px 0px 0px;
+  margin: 8px 8px 0px 0px;
   /* min-height: 10vh; */
   height: 25vh;
   width: auto;
@@ -231,6 +231,7 @@ img {
   
   #left {
     font-size: 2em;
+    margin: 50px;
   }
 
   .button {
