@@ -15,7 +15,7 @@
       <!-- <router-link v-if="wiki" :to="{name: 'Detail', params:{ id:$route.params.id}}">
         <button class="button" id="meer">Ontdek meer over dit gebouw</button>
       </router-link> -->
-      <p v-if="gebouw.properties.wikipedia" class="wikilink"><a :href="gebouw.properties.wikipedia" target="_blank" >Ontdek meer over dit gebouw op Wikipedia</a></p>
+      <p v-if="gebouw.properties.wikipedia" class="wikilink"><a :href="gebouw.properties.wikipedia" target="_blank" >Ontdek meer op Wikipedia</a></p>
     </div>
     <div id="right">
       <CoolLightBox
@@ -116,7 +116,8 @@ export default {
 <style scoped>
 
 .wikilink {
-  padding-top: 20px;
+  line-height: 24px;
+  padding-top: 10px;
 }
 
 .wikilink a,
@@ -137,13 +138,13 @@ export default {
   background-color: #dacbb2;*/
   color: #ffffff;
   background-color: #3b3f54;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #left {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  margin: 25px 50px;
+  margin: 25px 50px 0px;
   text-align: left;
 }
 
