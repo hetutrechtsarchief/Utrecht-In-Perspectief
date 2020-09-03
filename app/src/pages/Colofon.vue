@@ -13,7 +13,7 @@
         <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
       </ul>
       <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a>.</p>
-      <h2>Panorama's en kaartmateriaal</h2>
+      <span id="specht"><h2>Panorama's en kaartmateriaal</h2></span>
       <p>In deze applicatie worden heden en verleden aan elkaar gekoppeld door middel van historisch beeldmateriaal uit de 17e eeuw in een digitale omgeving. Het gedetailleerde panorama van Saftleven uit 1684 (collectie van Het Utrechts Archief) is gekoppeld aan een kaart van C. Specht uit 1695 (Universiteitsbibliotheek Utrecht). Om nog verder terug te kijken op de veranderende skyline van de stad Utrecht is ook het panorama van Saftleven uit 1669 te zien, samen met een kaart van Blaeu uit 1649.</p>
       <h2>Cookies voor webstatistieken en onderzoek</h2>
       <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
