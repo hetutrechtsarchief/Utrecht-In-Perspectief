@@ -192,7 +192,7 @@ export default {
   background-position: 0 -39px !important;
 }
 
-path.leaflet-interactive:nth-child(22) {
+path.leaflet-interactive:nth-child(15) {
   animation: blinkingBorder 15s;
   /* animation-delay: 1s; */
   animation-iteration-count: infinite;
@@ -200,7 +200,7 @@ path.leaflet-interactive:nth-child(22) {
   stroke-width: 5px;
 }
 
-path.leaflet-interactive:nth-child(29) {
+path.leaflet-interactive:nth-child(22) {
   animation: blinkingBorder 15s;
   animation-delay: 8s;
   animation-iteration-count: infinite;
@@ -216,13 +216,13 @@ path.leaflet-interactive:nth-child(29) {
     stroke: transparent;
   }
   25% {
-    stroke: #f00;
+    stroke:#455DC7;
   }
   30% {
     stroke: transparent;
   }
   35% {
-    stroke: #f00;
+    stroke: #455DC7;
   }
   40% {
     stroke: transparent;
