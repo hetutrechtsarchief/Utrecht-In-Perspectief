@@ -138,7 +138,8 @@ export default {
   background-color: #dacbb2;*/
   color: #ffffff;
   background-color: #3b3f54;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #left {
