@@ -125,7 +125,7 @@ export default {
 @media (min-width: 3000px) {
   
   .Header {
-    padding-right: 20px;
+    padding-right: 25px;
   }
 
 }

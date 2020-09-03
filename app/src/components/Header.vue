@@ -50,6 +50,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding-left: 50px;
+  padding-right: 5px;
 }
 
 .button {
