@@ -216,13 +216,13 @@ path.leaflet-interactive:nth-child(22) {
     stroke: transparent;
   }
   25% {
-    stroke:#455DC7;
+    stroke:#30988a;
   }
   30% {
     stroke: transparent;
   }
   35% {
-    stroke: #455DC7;
+    stroke: #30988a
   }
   40% {
     stroke: transparent;
