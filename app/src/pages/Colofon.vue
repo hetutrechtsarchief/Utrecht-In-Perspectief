@@ -13,53 +13,55 @@
         <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
       </ul>
       <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a>.</p>
-        <h2>Cookies voor webstatistieken en onderzoek</h2>
-        <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
-        <h2>Google Analytics</h2>
-        <p>Wij gebruiken Google Analytics, een webanalyse-service die wordt aangeboden door Google Inc. (Google). Wij hebben Google Analytics privacyvriendelijk ingesteld conform de “Handleiding privacyvriendelijk instellen van Google Analytics” van de Autoriteit Persoonsgegevens van 6 maart 2018. Dit betekent dat wij een verwerkersovereenkomst met Google hebben gesloten. Daarbij zijn wij overeengekomen dat:
-          <ul>
-            <li>het laatste octet van het IP-adres wordt verwijderd voordat het wordt opgeslagen;</li>
-            <li>de instelling “gegevens delen” is uitgezet, en</li>
-            <li>wij geen gebruik maken van andere Google-diensten in combinatie met de Google Analytics-cookies.</li>
-          </ul>
-        </p>
-        <p>Deze website gebruikt de volgende analytische cookies:
-          <table>
-            <tr>
-              <th>Naam</th>
-              <th>Geplaatst door</th>
-              <th>Tijdsduur</th>
-            </tr>
-            <tr>
-              <td>_ga</td>
-              <td>.utrechtinperspectief.nl</td>
-              <td>2 jaar</td>
-            </tr>
-            <tr>
-              <td>_gid</td>
-              <td>.utrechtinperspectief.nl</td>
-              <td>1 dag</td>
-            </tr>
-            <tr>
-              <td>_gat_gtag_UA_176820831_1</td>
-              <td>.utrechtinperspectief.nl</td>
-              <td>sessie</td>
-            </tr>
-          </table>
-        </p>
-        <p>Google kan deze informatie aan derden verschaffen als Google hiertoe wettelijk wordt verplicht, of voor zover derden de informatie namens Google verwerken. Wij hebben hier geen invloed op.</p>
-        <h2>Geen trackingcookies</h2>
-        <p>Trackingcookies zijn cookies die bezoekers tijdens het surfen over andere websites volgen. Deze website gebruikt geen trackingcookies. De website biedt daarom geen ondersteuning voor de DoNotTrack-instelling van browsers. Deze site houdt zich aan de in Nederland geldende wetgeving.</p>
-        <h2>Hebt u bezwaar tegen cookies?</h2>
-        <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
-        <h2>GitHub</h2>
-        <p>Dit project is gebouwd met open source software en te bekijken op de GitHub pagina van Het Utrechts Archief.</p>
-        <button
-          class="button"
-          id="github"
-          type="button"
-          onclick="location.href='https://github.com/hetutrechtsarchief/Utrecht-Skyline'"
-        >Bekijk op GitHub</button>
+      <h2>Panorama's en kaartmateriaal</h2>
+      <p>In deze applicatie worden heden en verleden aan elkaar gekoppeld door middel van historisch beeldmateriaal uit de 17e eeuw in een digitale omgeving. Het gedetailleerde panorama van Saftleven uit 1684 (collectie van Het Utrechts Archief) is gekoppeld aan een kaart van C. Specht uit 1695 (Universiteitsbibliotheek Utrecht). Om nog verder terug te kijken op de veranderende skyline van de stad Utrecht is ook het panorama van Saftleven uit 1669 te zien, samen met een kaart van Blaeu uit 1649.</p>
+      <h2>Cookies voor webstatistieken en onderzoek</h2>
+      <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
+      <h2>Google Analytics</h2>
+      <p>Wij gebruiken Google Analytics, een webanalyse-service die wordt aangeboden door Google Inc. (Google). Wij hebben Google Analytics privacyvriendelijk ingesteld conform de “Handleiding privacyvriendelijk instellen van Google Analytics” van de Autoriteit Persoonsgegevens van 6 maart 2018. Dit betekent dat wij een verwerkersovereenkomst met Google hebben gesloten. Daarbij zijn wij overeengekomen dat:
+        <ul>
+          <li>het laatste octet van het IP-adres wordt verwijderd voordat het wordt opgeslagen;</li>
+          <li>de instelling “gegevens delen” is uitgezet, en</li>
+          <li>wij geen gebruik maken van andere Google-diensten in combinatie met de Google Analytics-cookies.</li>
+        </ul>
+      </p>
+      <p>Deze website gebruikt de volgende analytische cookies:
+        <table>
+          <tr>
+            <th>Naam</th>
+            <th>Geplaatst door</th>
+            <th>Tijdsduur</th>
+          </tr>
+          <tr>
+            <td>_ga</td>
+            <td>.utrechtinperspectief.nl</td>
+            <td>2 jaar</td>
+          </tr>
+          <tr>
+            <td>_gid</td>
+            <td>.utrechtinperspectief.nl</td>
+            <td>1 dag</td>
+          </tr>
+          <tr>
+            <td>_gat_gtag_UA_176820831_1</td>
+            <td>.utrechtinperspectief.nl</td>
+            <td>sessie</td>
+          </tr>
+        </table>
+      </p>
+      <p>Google kan deze informatie aan derden verschaffen als Google hiertoe wettelijk wordt verplicht, of voor zover derden de informatie namens Google verwerken. Wij hebben hier geen invloed op.</p>
+      <h2>Geen trackingcookies</h2>
+      <p>Trackingcookies zijn cookies die bezoekers tijdens het surfen over andere websites volgen. Deze website gebruikt geen trackingcookies. De website biedt daarom geen ondersteuning voor de DoNotTrack-instelling van browsers. Deze site houdt zich aan de in Nederland geldende wetgeving.</p>
+      <h2>Hebt u bezwaar tegen cookies?</h2>
+      <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
+      <h2>GitHub</h2>
+      <p>Dit project is gebouwd met open source software en te bekijken op de GitHub pagina van Het Utrechts Archief.</p>
+      <button
+        class="button"
+        id="github"
+        type="button"
+        onclick="location.href='https://github.com/hetutrechtsarchief/Utrecht-Skyline'"
+      >Bekijk op GitHub</button>
     </div>
   </div>
 </template>
