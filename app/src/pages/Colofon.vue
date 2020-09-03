@@ -131,6 +131,9 @@ p, ul, table {
 h2 {
   margin-top: 24px;
 }
+td {
+  padding-right: 30px;
+}
 
 .button {
   display: block;
