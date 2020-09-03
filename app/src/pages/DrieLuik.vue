@@ -5,6 +5,7 @@
     <Panorama></Panorama>
     <div class="paarseBalk" id="paarseBalk2"></div>
     <Map></Map>
+    <div class="paarseBalk" id="paarseBalk3"></div>
     <Carrousel></Carrousel>
   </div>
 </template>
@@ -69,13 +70,12 @@ export default {
   grid-template-rows: 56px repeat(2, 8px) 1fr repeat(2, 8px) 1fr repeat(2, 8px) 1fr;
 }
 .paarseBalk {
-  background: #dacbb2;
+  background: #455dc7;
   z-index: 10;
   justify-self: stretch;
   align-self: stretch;
 }
 #paarseBalk1 {
-  background: #455dc7;
   grid-row: 2 / span 2;
   grid-column: 2 / span 2;
   justify-self: stretch;
@@ -119,4 +119,15 @@ export default {
   justify-self: stretch;
   align-self: stretch;
 }
+
+/* RESPONSIVENESS */
+
+@media (min-width: 3000px) {
+  
+  .Header {
+    padding-right: 25px;
+  }
+
+}
+
 </style>

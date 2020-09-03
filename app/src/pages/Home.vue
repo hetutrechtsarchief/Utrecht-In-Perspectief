@@ -3,7 +3,7 @@
     <Header></Header>
     <div class="colofonbutton">
       <router-link :to="{name: 'Colofon', params:{ id: this.$route.params.id}}">
-        <button v-if="this.$route.name !== 'Colofon'" class="button">Colofon</button>
+        <button v-if="this.$route.name !== 'Colofon'" class="button"><img src="../assets/images/icon_info.svg"/></button>
       </router-link>
     </div>
 
@@ -18,6 +18,7 @@
 import Panorama from "../components/Panorama.vue";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import lijst84 from '../assets/data/gebouwen_1684.json';
 
 export default {
   name: "HomePage",
@@ -29,6 +30,8 @@ export default {
   created() {
     this.$store.commit("data/setGekozenGebouwId", "");
     this.$store.commit("data/setGekozenGebouw", {});
+    this.$store.commit("data/setPanorama", "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json");
+    this.$store.commit("data/setDataset", lijst84);
   },
   watch: {
     gekozenGebouwId() {
@@ -72,6 +75,8 @@ export default {
   grid-row: 1 / 1;
   grid-column: 2 / span 1;
   z-index: 2;
+  justify-content: center;
+  padding: 0px;
 }
 .Footer {
   grid-row: 5 / 5;

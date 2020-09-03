@@ -1,12 +1,18 @@
 <template>
   <div class="Colofon">
     <Header></Header>
+    <div class="paarseBalk" id="paarseBalk1"></div>
     <div class="Afb"></div>
     <div class="info">
-      <h1>Colofon</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus impedit vero sunt hic deleniti accusantium libero fugit eum labore, excepturi doloremque asperiores consequuntur. Nemo ea perspiciatis voluptas sapiente est alias.<br><br></p>
-      
-      <div>
+      <h1>Over dit project</h1>
+      <p>In de zomer van 2020 stroomt in Utrecht weer water door de hele Stadsbuitengracht, waarmee het aangezicht van Utrecht verandert. Wist je dat in de korte periode tussen 1669 en 1684 die skyline óók al drastisch veranderde? Dat had alles te maken met de desastreuze storm die in de zomer van 1674 over de stad raasde.</p>
+      <h2>Ontwerp en realisatie:</h2>
+      <ul>
+        <li><a href="https://www.hicsuntleones.nl/">Hic Sunt Leones</a></li>
+        <li><a href="https://www.uu.nl/bijzondere-collecties">Marco van Egmond, conservator Universiteitsbibliotheek Utrecht, Bijzondere Collecties</a></li>
+        <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
+      </ul>
+      <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a>.</p>
         <h2>Cookies voor webstatistieken en onderzoek</h2>
         <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
         <h2>Google Analytics</h2>
@@ -26,36 +32,34 @@
             </tr>
             <tr>
               <td>_ga</td>
-              <td>.-.nl</td>
+              <td>.utrechtinperspectief.nl</td>
               <td>2 jaar</td>
             </tr>
             <tr>
               <td>_gid</td>
-              <td>.-.nl</td>
+              <td>.utrechtinperspectief.nl</td>
               <td>1 dag</td>
             </tr>
             <tr>
-              <td>_gat_UA-26882017-1</td>
-              <td>.-.nl</td>
+              <td>_gat_gtag_UA_176820831_1</td>
+              <td>.utrechtinperspectief.nl</td>
               <td>sessie</td>
             </tr>
           </table>
         </p>
         <p>Google kan deze informatie aan derden verschaffen als Google hiertoe wettelijk wordt verplicht, of voor zover derden de informatie namens Google verwerken. Wij hebben hier geen invloed op.</p>
-        <h2>Surveystatus</h2>
-        <p>Af en toe vindt op deze website onderzoek plaats onder de bezoekers van de website. In dat geval wordt de cookie surveystatus gebruikt.</p>
         <h2>Geen trackingcookies</h2>
         <p>Trackingcookies zijn cookies die bezoekers tijdens het surfen over andere websites volgen. Deze website gebruikt geen trackingcookies. De website biedt daarom geen ondersteuning voor de DoNotTrack-instelling van browsers. Deze site houdt zich aan de in Nederland geldende wetgeving.</p>
         <h2>Hebt u bezwaar tegen cookies?</h2>
         <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
-      </div>
-
-      <button
-        class="button"
-        id="github"
-        type="button"
-        onclick="location.href='https://github.com/hetutrechtsarchief/Utrecht-Skyline'"
-      >Naar de GitHub Repro</button>
+        <h2>GitHub</h2>
+        <p>Dit project is gebouwd met open source software en te bekijken op de GitHub pagina van Het Utrechts Archief.</p>
+        <button
+          class="button"
+          id="github"
+          type="button"
+          onclick="location.href='https://github.com/hetutrechtsarchief/Utrecht-Skyline'"
+        >Bekijk op GitHub</button>
     </div>
   </div>
 </template>
@@ -72,34 +76,95 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .Colofon {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 50px 1fr;
+  grid-template-columns: 320px repeat(2, 1fr);;
+  grid-template-rows: 56px repeat(2, 8px);
+  overflow-x: hidden;
 }
 .Header {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 3;
+}
+
+.Colofon .Header .router-link-exact-active.router-link-active {
+  display: none;
+}
+.paarseBalk {
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 2;
+  background: #455dc7;
+  z-index: 10;
+  justify-self: stretch;
+  align-self: stretch;
 }
 .Afb {
-  grid-row: 2 / 2;
+  grid-row: 3 / span 4;
   grid-column: 1 / span 1;
-  background-color: white;
+  background: url("../assets/images/saftleven_1684_crop.jpg") no-repeat center;
+  background-size: cover;
 }
 .info {
-  grid-row: 2 / 2;
-  grid-column: 2 / span 1;
+  grid-row: 4 / span 3;
+  grid-column: 2 / span 2;
   text-align: left;
-  padding: 50px;
-  line-height: normal;
+  padding: 70px 320px 70px 70px;
 }
+
+.info li {
+  margin-left: 20px;
+}
+
+.Header a {
+  color: #fff;
+}
+
+a {
+  color: #30988A;
+}
+
+p, ul, table {
+  margin: 10px 0px;
+}
+h2 {
+  margin-top: 24px;
+}
+td {
+  padding-right: 30px;
+}
+
 .button {
   display: block;
+  margin: 20px 0px;
 }
 
 #github {
   background-color: #30988A;
+}
+
+/* RESPONSIVENESS */
+
+@media (min-width: 3000px) {
+
+  .info {
+    font-size: 2em;
+    padding: 120px 320px 120px 120px;
+  }
+  .info li {
+    margin-left: 60px;
+  }
+
+  p, ul {
+    margin: 24px 0px;
+  }
+  h2 {
+    margin-top: 48px;
+  }
+  .button {
+    font-size: 0.9em;
+    margin: 40px 0px;
+  }
 }
 </style>

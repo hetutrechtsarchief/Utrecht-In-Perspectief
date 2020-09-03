@@ -4,7 +4,7 @@
       ref="map"
       :minZoom="this.$route.name === 'DrieLuik' ? 2: 4"
       :maxZoom="6"
-      :zoom="this.$route.name === 'DrieLuik' ? 2: 4"
+      :zoom="this.$route.name === 'DrieLuik' ? null : 4"
       :crs="crs"
       :center="center"
       :options="{
@@ -56,6 +56,9 @@ export default {
       center: [-30, 156.3],
       crs: CRS.Simple,
       opacity: 0.8,
+      touchZoom: true,
+      inertia: true,
+      fadeAnimation: true,
       iiifOpts: {
         tileFormat: "jpg",
         tileSize: 512,
@@ -227,6 +230,9 @@ path.leaflet-interactive:nth-child(29) {
   100% {
     stroke: transparent;
   }
+}
+.leaflet-tooltip {
+  font-family: "Ropa Sans", "Lato", Helvetica, Arial, sans-serif !important;
 }
 
 @media (min-width: 3000px) {

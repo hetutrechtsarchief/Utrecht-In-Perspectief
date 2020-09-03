@@ -1,19 +1,19 @@
-import lijst69 from '../../assets/gebouwen_1669.json';
-import lijst84 from '../../assets/gebouwen_1684.json';
+import lijst69 from '../../assets/data/gebouwen_1669.json';
+import lijst84 from '../../assets/data/gebouwen_1684.json';
 
-import Bleau from "../../assets/mapStyleBleau_1669.json";
-import Specht from "../../assets/mapStyleSpecht_1684.json";
+import Blaeu from "../../assets/data/mapStyleBlaeu_1669.json";
+import Specht from "../../assets/data/mapStyleSpecht_1684.json";
 
 let datas = {
-  "Bleau": lijst69,
+  "Blaeu": lijst69,
   "Specht": lijst84
 }
 let styles = {
-  "Bleau": Bleau,
+  "Blaeu": Blaeu,
   "Specht": Specht
 }
 let panoramas = {
-  "Bleau": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1669.jpg/info.json",
+  "Blaeu": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1669.jpg/info.json",
   "Specht": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json"
 }
 export default {
@@ -82,36 +82,40 @@ export default {
   },
   actions: {
     toggleMapStyle({ state, commit }) {
-      if (state.mapStyle === styles["Bleau"]) {
+      if (state.mapStyle === styles["Blaeu"]) {
         commit("setMapStyle", styles["Specht"])
         commit("setPanorama", panoramas["Specht"])
         commit("setDataset", datas["Specht"])
 
       } else if (state.mapStyle === styles["Specht"]) {
-        commit("setMapStyle", styles["Bleau"])
-        commit("setPanorama", panoramas["Bleau"])
-        commit("setDataset", datas["Bleau"])
+        commit("setMapStyle", styles["Blaeu"])
+        commit("setPanorama", panoramas["Blaeu"])
+        commit("setDataset", datas["Blaeu"])
 
       }
     },
     getGekozenGebouwImages({ commit, state }) {
-      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Beeldbank/sparql/Beeldbank?query=" + `PREFIX dc: <http://purl.org/dc/elements/1.1/>  \
-      PREFIX dct: <http://purl.org/dc/terms/> \
-      PREFIX wd: <http://www.wikidata.org/entity/> \
-      PREFIX edm: <http://www.europeana.eu/schemas/edm/> \
-      PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> \
-      SELECT * WHERE { \
-        ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} . \
-        ?bb edm:isShownBy ?img . \
-        ?bb dc:description ?description . \
-        ?bb dc:rights ?rights . \
-        ?bb sem:hasBeginTimeStamp ?begin . \
-        BIND(year(?begin) AS ?year) . \
-        ?bb sem:hasEndTimeStamp ?end . \
-        ?bb dc:identifier ?catnr . \
-      } \
-      ORDER BY ?begin \
-      LIMIT 15 ` ,
+      
+      let sparqlQuery = `
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX dct: <http://purl.org/dc/terms/>
+        PREFIX dct: <http://purl.org/dc/terms/>   
+        PREFIX wd: <http://www.wikidata.org/entity/> 
+        SELECT DISTINCT * WHERE {
+          <https://hetutrechtsarchief.nl/id/utrecht-in-perspectief> <https://schema.org/hasPart> ?bb .
+          ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} .
+          ?bb foaf:depiction ?img .
+          ?bb rdfs:label ?description .
+          ?bb dct:identifier ?catnr .
+          ?bb dct:date ?date .
+
+        }
+        ORDER BY ?date
+        LIMIT 15
+      `
+      
+      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Dataset/sparql/Dataset?query=" + encodeURIComponent(sparqlQuery) ,
         {
           "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
         })

@@ -14,5 +14,10 @@ export default {
 .Footer {
   color: #fff;
   background-color: #30988a;
+  display: inline-flex;
+}
+
+h1 {
+  margin: auto;
 }
 </style>

@@ -21,6 +21,17 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+  font-family: "Ropa Sans";
+  src: url("assets/fonts/RopaSans-Regular.otf") format("opentype"),
+    url("assets/fonts/RopaSans-Regular.ttf") format("truetype"),
+    url("assets/fonts/RopaSans-Regular.woff") format("woff"),
+    url("assets/fonts/RopaSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -47,10 +58,12 @@ body {
 
 button {
   text-align: center;
+  font-family: "Ropa Sans", "Lato", Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
   border: none;
   cursor: pointer;
   padding: 15px;
-  margin: 5px;
+  margin: 5px 5px 5px 0px;
   color: white;
 }
 
@@ -60,19 +73,19 @@ a {
 }
 
 .home .Panorama .leaflet-control-container {
-  visibility: hidden;
+  display: none;
 }
 .home .Header button {
-  visibility: hidden;
+  display: none;
 }
 .home .Header .role-selector {
-  visibility: hidden;
+  display: none;
 }
 .Colofon .Header .role-selector {
-  visibility: hidden;
+  display: none;
 }
 .Detail .Header .role-selector {
-  visibility: hidden;
+  display: none;
 }
 
 /* COOKIE STYLING */
@@ -111,10 +124,10 @@ a {
 }
 
 .tooltip .tooltip-inner {
-  background: #3b3f54;
-  color: #30988a;
+  background: #ffffff;
+  color: #4B4B4B;
   border-radius: 5px;
-  padding: 5px 10px 4px;
+  padding: 14px;
 }
 
 .tooltip .tooltip-arrow {
@@ -123,7 +136,7 @@ a {
   border-style: solid;
   position: absolute;
   margin: 5px;
-  border-color: #3b3f54;
+  border-color: #ffffff;
   z-index: 1;
 }
 tooltip[x-placement^="top"] {
