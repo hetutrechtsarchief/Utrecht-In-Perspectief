@@ -26,7 +26,7 @@
         @click="handleClick(name)"
         @mouseover="mouseover"
         @mouseout="mouseout"
-        :attribution="gebouw.properties.label"
+        :className="gebouw.properties.label"
       >
         <l-tooltip :content="name" :options="{sticky: true}" />
       </l-rectangle>
@@ -124,7 +124,7 @@ export default {
       this.doReset(e.target);
     },
     doHighlight(layer) {
-      if (layer.options.attribution !== this.gekozenGebouwId) {
+      if (layer.options.className !== this.gekozenGebouwId) {
         layer.setStyle({
           fillColor: "rgb(48, 152, 138)",
           fillOpacity: 0.6,
@@ -132,7 +132,7 @@ export default {
       }
     },
     doReset(layer) {
-      if (layer.options.attribution !== this.gekozenGebouwId) {
+      if (layer.options.className !== this.gekozenGebouwId) {
         layer.setStyle({
           fillColor: "#455DC7",
           fillOpacity: 0.4,
