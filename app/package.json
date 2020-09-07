@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@types/leaflet": "^1.5.17",
-    "core-js": "^3.6.4",
-    "es6-promise": "^4.2.8",
+    "core-js": "^3.6.5",
+    "current-script-polyfill": "^1.0.0",
     "leaflet": "git+ssh://git@github.com/webmapper/Leaflet.git",
     "leaflet-fullscreen": "^1.0.2",
     "mapbox-gl": "^1.12.0",

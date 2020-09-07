@@ -1,4 +1,6 @@
+import 'current-script-polyfill'
 import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import "whatwg-fetch";
 import Vue from "vue";
 import App from "./App.vue";
