@@ -74,29 +74,34 @@ export default {
 .Header {
   grid-row: 1 / 1;
   grid-column: 2 / span 1;
-  z-index: 2;
+  z-index: 500;
   justify-content: center;
   padding: 0px;
+  position: relative;
 }
 .Footer {
   grid-row: 5 / 5;
   grid-column: 2 / span 1;
-  z-index: 2;
+  position: relative;
+  z-index: 500;
 }
 
 #stylingBalk1 {
   background: #3b3f54;
   mix-blend-mode: overlay;
-  z-index: 2;
+  z-index: 500;
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
+  position: relative;
 }
+
 #stylingBalk2 {
   background: #30988a;
   mix-blend-mode: overlay;
-  z-index: 2;
+  z-index: 500;
   grid-row: 4 / 4;
   grid-column: 2 / 2;
+  position: relative;
 }
 
 .colofonbutton {
@@ -115,4 +120,18 @@ export default {
 .button:hover {
   background-color: #30988a;
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #stylingBalk1,
+  #stylingBalk2 {
+      opacity: 0.5;
+  } 
+}
+@supports (-ms-ime-align:auto) {
+  #stylingBalk1,
+  #stylingBalk2 {
+      opacity: 0.3;
+  } 
+}
+
 </style>

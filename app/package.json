@@ -11,7 +11,7 @@
     "@types/leaflet": "^1.5.17",
     "core-js": "^3.6.5",
     "current-script-polyfill": "^1.0.0",
-    "leaflet": "git+ssh://git@github.com/webmapper/Leaflet.git",
+    "leaflet": "^1.7.1",
     "leaflet-fullscreen": "^1.0.2",
     "mapbox-gl": "^1.12.0",
     "v-tooltip": "^2.0.3",
@@ -19,13 +19,13 @@
     "vue-carousel": "^0.18.0",
     "vue-cookie-law": "^1.13.3",
     "vue-cool-lightbox": "^2.5.1",
-    "vue-gtag": "^1.8.0",
+    "vue-gtag": "^1.9.0",
     "vue-mapbox": "git+https://github.com/soal/vue-mapbox.git",
     "vue-router": "^3.4.3",
     "vue2-leaflet": "^2.5.2",
     "vue2-leaflet-iiif": "git+https://github.com/webmapper/vue2-leaflet-iiif.git",
     "vuex": "^3.5.1",
-    "whatwg-fetch": "^3.4.0"
+    "whatwg-fetch": "^3.4.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
