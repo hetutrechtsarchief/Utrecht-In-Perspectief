@@ -8,11 +8,17 @@
       <p>In de zomer van 2020 stroomt in Utrecht weer water door de hele Stadsbuitengracht, waarmee het aangezicht van Utrecht verandert. Sinds het midden van de 16de eeuw figureert deze singel op vele Utrechtse stadsprofielen. Zij bieden een treffend beeld van de ontwikkeling van de skyline van de Domstad. Wist je dat in de korte periode tussen 1669 en 1684 die skyline óók al drastisch veranderde? Dat had alles te maken met de desastreuze storm die in de zomer van 1674 over de stad raasde. Ontdek de verschillen aan de hand van de stadspanorama’s van Herman Saftleven.</p>
       <h2>Ontwerp en realisatie:</h2>
       <ul>
-        <li><a href="https://www.hicsuntleones.nl/">Hic Sunt Leones</a></li>
-        <li><a href="https://www.uu.nl/bijzondere-collecties">Marco van Egmond, conservator Universiteitsbibliotheek Utrecht, Bijzondere Collecties</a></li>
-        <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
+        <li><a href="https://www.hicsuntleones.nl/" target="_blank">Hic Sunt Leones</a></li>
+        <li><a href="https://www.uu.nl/bijzondere-collecties" target="_blank">Marco van Egmond, conservator Universiteitsbibliotheek Utrecht, Bijzondere Collecties</a></li>
+        <li><a href="https://hetutrechtsarchief.nl/" target="_blank">Het Utrechts Archief</a></li>
       </ul>
-      <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a>.</p>
+      <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/" target="_blank">Mondriaanfonds</a>.</p>
+      <div>
+        <img src="../assets/images/HSL_logo.svg" class="logos" alt="Logo van Hic Sunt Leones">
+        <img src="../assets/images/UU_logo.svg" class="logos" alt="Logo van de Universiteit Utrecht">
+        <img src="../assets/images/HUA_logo.svg" class="logos" alt="Logo van Het Utrechts Archief"> 
+        <img src="../assets/images/Mondriaanfonds_logo.png" class="logos" alt="Logo van het Mondriaanfonds">
+      </div>
       <h2>Panorama's en kaartmateriaal</h2>
       <p>In deze applicatie worden heden en verleden aan elkaar gekoppeld door middel van historisch beeldmateriaal uit de 17e eeuw in een digitale omgeving.</p>
       <div class="text-styling">
@@ -157,6 +163,10 @@ td {
 
 #github {
   background-color: #30988A;
+}
+
+.logos {
+  margin: 36px 20px 12px 20px;  
 }
 
 /* RESPONSIVENESS */
