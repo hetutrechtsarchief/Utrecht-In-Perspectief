@@ -5,7 +5,7 @@
     <div class="Afb"></div>
     <div class="info">
       <h1>Over dit project</h1>
-      <p>In de zomer van 2020 stroomt in Utrecht weer water door de hele Stadsbuitengracht, waarmee het aangezicht van Utrecht verandert. Wist je dat in de korte periode tussen 1669 en 1684 die skyline óók al drastisch veranderde? Dat had alles te maken met de desastreuze storm die in de zomer van 1674 over de stad raasde.</p>
+      <p>In de zomer van 2020 stroomt in Utrecht weer water door de hele Stadsbuitengracht, waarmee het aangezicht van Utrecht verandert. Sinds het midden van de 16de eeuw figureert deze singel op vele Utrechtse stadsprofielen. Zij bieden een treffend beeld van de ontwikkeling van de skyline van de Domstad. Wist je dat in de korte periode tussen 1669 en 1684 die skyline óók al drastisch veranderde? Dat had alles te maken met de desastreuze storm die in de zomer van 1674 over de stad raasde. Ontdek de verschillen aan de hand van de stadspanorama’s van Herman Saftleven.</p>
       <h2>Ontwerp en realisatie:</h2>
       <ul>
         <li><a href="https://www.hicsuntleones.nl/">Hic Sunt Leones</a></li>
@@ -13,8 +13,18 @@
         <li><a href="https://hetutrechtsarchief.nl/">Het Utrechts Archief</a></li>
       </ul>
       <p>De applicatie is mede mogelijk gemaakt door het <a href="https://www.mondriaanfonds.nl/">Mondriaanfonds</a>.</p>
-      <span id="specht"><h2>Panorama's en kaartmateriaal</h2></span>
-      <p>In deze applicatie worden heden en verleden aan elkaar gekoppeld door middel van historisch beeldmateriaal uit de 17e eeuw in een digitale omgeving. Het gedetailleerde panorama van Saftleven uit 1684 (collectie van Het Utrechts Archief) is gekoppeld aan een kaart van C. Specht uit 1695 (Universiteitsbibliotheek Utrecht). Om nog verder terug te kijken op de veranderende skyline van de stad Utrecht is ook het panorama van Saftleven uit 1669 te zien, samen met een kaart van Blaeu uit 1649.</p>
+      <h2>Panorama's en kaartmateriaal</h2>
+      <p>In deze applicatie worden heden en verleden aan elkaar gekoppeld door middel van historisch beeldmateriaal uit de 17e eeuw in een digitale omgeving.</p>
+      <div class="text-styling">
+      <h3>Panorama van Saftleven, 1684</h3>
+        <p>Profiel in vier bladen van de stad Utrecht vanuit het westen, vervaardigd door Herman Saftleven en gepubliceerd in of na 1684. Dit gedrukte profiel is gebaseerd op Saftlevens getekende panorama uit 1669, maar bijgewerkt naar aanleiding van veranderingen die de storm van 1674 aan de skyline van Utrecht had toegebracht. Herkomst: <a href="https://hetutrechtsarchief.nl/beeld/0D8909ECD3135C22AFBB4634413B548B" target="_blank">Utrechts Archief, Catalogusnummers 28386-28389</a>.</p>
+        <h3>Plattegrond Specht (bij het panorama uit 1684)</h3>
+        <p>Plattegrond van Utrecht, <em>Urbis Traiecti ad Rhenum novissima et accuratissima delineatio</em>, vervaardigd door C. Specht, gegraveerd door Jan van Vianen en uitgegeven bij de Amsterdamse firma Ottens rond 1740. Het betreft de tweede, cartografisch ongewijzigde, uitgave. De eerste uitgave dateert uit 1695. Deze plattegrond is de eerste gedrukte kaart van Utrecht die op een meetkundige basis steunt. Herkomst: <a href="https://www.uu.nl/bijzondere-collecties/over-bijzondere-collecties/kaarten-en-atlassen/plattegrond-van-utrecht-door-specht" target="_blank">Universiteitsbibliotheek Utrecht, Kaart: VIII.B.h.30</a>.</p>
+        <h3>Plattegrond van Saftleven, 1669</h3>
+        <p>Getekend profiel in zes bladen van de stad Utrecht vanuit het westen, vervaardigd door Herman Saftleven in 1669. Herkomst: <a href="https://hetutrechtsarchief.nl/beeld/E351EEEFA5A05E0C9629FA720BDFDE9E" target="_blank">Utrechts Archief, Catalogusnummer 27570</a>.</p>
+        <h3>Plattegrond Bleau (bij het panorama uit 1669)</h3>
+        <p>Plattegrond van Utrecht, <em>Traiectum Wttrecht</em>, uitgegeven door Joan Blaeu en onder andere opgenomen in diens Toonneel der steden uit circa 1652. De plattegrond steunt niet op geometrisch veldwerk en is meetkundig niet overal betrouwbaar. Herkomst: <a href="https://www.uu.nl/bijzondere-collecties/over-bijzondere-collecties/kaarten-en-atlassen/toonneel-der-steden-van-joan-blaeu" target="_blank">Universiteitsbibliotheek Utrecht, Kaart: VIII.B.h.42</a>.</p>
+      </div>
       <h2>Cookies voor webstatistieken en onderzoek</h2>
       <p>Deze website gebruikt cookies voor onderzoek en webstatistieken. Dat doen we om te begrijpen hoe bezoekers de website gebruiken. Deze informatie helpt ons de site te verbeteren. Bijvoorbeeld door informatie aan te vullen of door het gebruikersgemak te verbeteren. Dit soort cookies heeft geen impact op uw privacy. Ze vallen daarom onder de uitzondering van de cookiebepaling in de Telecommunicatiewet. Als gevolg daarvan vragen wij geen toestemming voor het plaatsen van deze cookies.</p>
       <h2>Google Analytics</h2>
@@ -55,7 +65,7 @@
       <h2>Hebt u bezwaar tegen cookies?</h2>
       <p>Wilt u cookies helemaal uitsluiten? Dat kan via de instellingen van uw browser (internetprogramma). Meer informatie over cookies en het uitschakelen van cookies vindt u op de website <a href="https://veiliginternetten.nl/" class="link_text" target="blank">Veiliginternetten.nl</a>.</p>
       <h2>GitHub</h2>
-      <p>Dit project is gebouwd met open source software en te bekijken op de GitHub pagina van Het Utrechts Archief.</p>
+      <p>Dit project is gebouwd met open source software en te bekijken op de GitHub pagina van Het Utrechts Archief. Op deze manier kunnen naast het archief, ook andere ontwikkelaars en erfgoedinstellingen er gebruik van maken.</p>
       <button
         class="button"
         id="github"
@@ -135,6 +145,9 @@ h2 {
 }
 td {
   padding-right: 30px;
+}
+.text-styling, table, ul {
+  margin-left: 20px;
 }
 
 .button {
