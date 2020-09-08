@@ -71,7 +71,8 @@ export default {
 }
 .paarseBalk {
   background: #455dc7;
-  z-index: 10;
+  position: relative;
+  z-index: 500;
   justify-self: stretch;
   align-self: stretch;
 }
