@@ -17,6 +17,7 @@
       :pitch="0"
       :bearing="71"
     >
+      <MglAttributionControl position="bottom-left" :compact="false" />
       <MglFullscreenControl position="top-right" />
       <MglNavigationControl :showCompass="false" position="top-right" />
       <MglGeojsonLayer
@@ -40,6 +41,7 @@ import Mapbox from "mapbox-gl";
 import PitchToggle from "./../pitchtogglecontrol";
 import {
   MglMap,
+  MglAttributionControl,
   MglNavigationControl,
   MglFullscreenControl,
   MglGeojsonLayer,
@@ -52,6 +54,7 @@ export default {
   name: "Map",
   components: {
     MglMap,
+    MglAttributionControl,
     MglNavigationControl,
     MglFullscreenControl,
     MglGeojsonLayer,
