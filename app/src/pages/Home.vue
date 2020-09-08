@@ -130,7 +130,7 @@ export default {
 @supports (-ms-ime-align:auto) {
   #stylingBalk1,
   #stylingBalk2 {
-      opacity: 0.5;
+      opacity: 0.3;
   } 
 }
 
