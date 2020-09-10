@@ -138,7 +138,7 @@ export default {
   background-color: #dacbb2;*/
   color: #ffffff;
   background-color: #3b3f54;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
