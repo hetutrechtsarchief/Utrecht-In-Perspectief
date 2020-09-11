@@ -82,6 +82,8 @@ export default {
   methods: {
     onLoad(event) {
       this.map = event.map;
+      this.map.touchZoomRotate.disableRotation();
+      this.map.touchPitch = false;
       this.map.addControl(
         new PitchToggle({
           bearing: 71,
