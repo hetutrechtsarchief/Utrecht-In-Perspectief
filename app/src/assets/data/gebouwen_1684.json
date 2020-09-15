@@ -1238,7 +1238,7 @@
             "demolished_in":"1816",
             "demolished_in_precision":"decade",
             "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Pieter%20Jansz.%20Saenredam%20St.%20Mary%27s%20Square%20and%20St.%20Mary%27s%20Church%20at%20Utrecht%201663.jpg",
-            "description":"De Mariakerk was een van de vijf kapittelkerken van Utrecht. De kerk afgebroken in de eerste helft van de 19e eeuw. Tegenwoordig resteert alleen nog de kloostergang aan de Mariaplaats."
+            "description":"De Mariakerk was een van de vijf kapittelkerken van Utrecht. De kerk is afgebroken in de eerste helft van de 19e eeuw. Tegenwoordig resteert alleen nog de kloostergang aan de Mariaplaats."
         }
     },
 
@@ -1320,7 +1320,7 @@
             "description":"De Sint-Paulusabdij is een voormalige benedictijner abdij. Gesticht rond 1050 en opgeheven in 1580. Het was het op een na oudste klooster van Nederland. Tegenwoordig biedt het ruimte aan o.a. Het Utrechts Archief."
         }
     },
-    "Lutherse Kerk": {
+    "Kerk Abraham Doleklooster": {
         "id": "7476534",
         "geometry":{
             "type":"Point",
@@ -1346,7 +1346,7 @@
         },
         "properties":{
             "wdid":"Q7476534",
-            "label":"Lutherse Kerk",
+            "label":"Kerk Abraham Doleklooster",
             "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Lutherse_Kerk_(Utrecht)",
             "types":[
                "kerkgebouw"
@@ -1381,7 +1381,7 @@
         }
     },
 
-    "Kapel Duitse Huis": {
+    "Duitse Huis": {
         "id": "84475989",
         "geometry":{
             "type":"Point",
@@ -1407,7 +1407,7 @@
         },
         "properties":{
             "wdid":"Q84475989",
-            "label":"Kapel Duitse Huis",
+            "label":"Duitse Huis",
             "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Duitse_Huis",
             "types":[
                "kapel"
@@ -1768,7 +1768,7 @@
         }
     },
 
-    "Kapel van het Agnietenklooster": {
+    "Agnietenklooster": {
         "id": "84509500",
         "geometry":{
             "type":"Point",
@@ -1794,7 +1794,7 @@
         },
         "properties":{
             "wdid":"Q84509500",
-            "label":"Kapel van het Agnietenklooster",
+            "label":"Agnietenklooster",
             "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Agnietenklooster_(Utrecht)",
             "types":[
                "Dubbelkapel (architectuur)"
