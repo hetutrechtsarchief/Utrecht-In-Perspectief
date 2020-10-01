@@ -528,6 +528,52 @@
          }
     },
 
+    "Groot Groenewoude": {
+        "id": "1988915",
+        "geometry":{
+            "type":"Point",
+            "coordinates":[
+               5.118289,
+               52.09145
+            ]
+        },
+        "bounds": [
+            [
+            -30.2,
+            63.3
+            ],
+            [
+            -27.4,
+            68.1
+            ]
+        ],
+        "style": {
+            "stroke": false,
+            "fillColor": "#455DC7",
+            "fillOpacity": 0.4
+        },
+        "properties":{
+            "wdid":"Q1988915",
+            "label":"Groot Groenewoude",
+            "wikipedia":"https:\/\/nl.wikipedia.org\/wiki\/Groenewoude_(Utrecht)",
+            "types":[
+               "stadskasteel"
+            ],
+            "users":[
+
+            ],
+            "uses":[
+
+            ],
+            "built_in":"1250",
+            "built_in_precision":"century",
+            "demolished_in":"",
+            "demolished_in_precision":"",
+            "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Oudegracht%20151.JPG",
+            "description":"In de 13e eeuw gebouwd stadskasteel aan de Oudegracht 151."
+        }
+    },
+
     "St. Hi\u00ebronymushuis": {
         "geometry":{
             "type":"Point",
@@ -1125,7 +1171,7 @@
             "demolished_in":"1864",
             "demolished_in_precision":"year",
             "image":"http:\/\/commons.wikimedia.org\/wiki\/Special:FilePath\/Gezicht%20op%20het%20Burgerweeshuis%2C%20de%20Regulierskerk%20en%20de%20Korenmarkt%20te%20Utrecht%20Het%20Burger%20Weeshuis%2C%20de%20Reguliers%20Kerk%20en%20de%20Hooge%20Kooren%20Markt%20te%20Utrecht%20%28titel%20op%20object%29%2C%20RP-P-AO-5-28-1.jpg",
-            "description":"Tussen 1248 en 1267 werd het Regulierenklooster gesticht door de Zakbroeders. In 1274 werd deze bedelorde opgeheven waarna de Reguliere Kanunniken van St. Augustinus het klooster overnamen."
+            "description":"Tussen 1248 en 1267 werd het Regulierenklooster gesticht door de Zakbroeders. Na opheffing in 1274 namen de Reguliere Kanunniken van St. Augustinus het klooster over. Na relletjes werd dit gebouw in 1981 gekraakt voor poppodium Tivoli."
         }
     },
 
