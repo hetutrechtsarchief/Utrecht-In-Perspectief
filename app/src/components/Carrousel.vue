@@ -23,7 +23,6 @@
         :fullScreen="true"
         :index="index"
         @close="index = null"
-        title="title"
         srcName="src"
       ></CoolLightBox>
 
@@ -34,7 +33,6 @@
         :perPageCustom="[[480, 3], [768, 4], [1000,6]]"
         paginationActiveColor="#30988A"
         paginationColor="#dacbb2"
-        :atuoplay="true"
         :centerMode="true"
         :paginationPadding="2"
       >
@@ -55,7 +53,7 @@
           />
         </Slide>
       </Carousel>
-      <div v-else class="replacement">No images available</div>
+      <div v-else class="replacement">Geen afbeeldingen beschikbaar</div>
     </div>
   </div>
 </template>
