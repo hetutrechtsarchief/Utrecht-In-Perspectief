@@ -2,7 +2,7 @@
 
 ## Concept afbeelding
 
-![Screenshot concept](diversen/screenshot-concept.png)
+![Screenshot concept](doc/screenshot-concept.png)
 
 ## Aanleiding
 
