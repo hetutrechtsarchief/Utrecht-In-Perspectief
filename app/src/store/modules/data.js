@@ -13,8 +13,8 @@ let styles = {
   "Specht": Specht
 }
 let panoramas = {
-  "Blaeu": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1669.jpg/info.json",
-  "Specht": "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json"
+  "Blaeu": "http://iiif2.hualab.nl/iiif/2/saftleven-panorama-1669.jpg/info.json",
+  "Specht": "http://iiif2.hualab.nl/iiif/2/saftleven-panorama-1684.jpg/info.json"
 }
 export default {
   namespaced: true,
