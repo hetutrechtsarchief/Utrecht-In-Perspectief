@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "upload": "rsync -av dist/ hualab.nl:/var/www/utrechtinperspectief.nl/public_html/"
   },
   "dependencies": {
     "@types/leaflet": "^1.5.17",
