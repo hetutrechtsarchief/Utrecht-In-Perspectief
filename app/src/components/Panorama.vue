@@ -53,7 +53,7 @@ export default {
   },
   data() {
     return {
-      center: [-30, 156.3],
+      center: [0, 0],
       crs: CRS.Simple,
       opacity: 0.8,
       touchZoom: true,
