@@ -1,1 +1,0 @@
-rsync -av dist/ hualab.nl:/home/rick/sites/utrechtinperspectief.nl/
