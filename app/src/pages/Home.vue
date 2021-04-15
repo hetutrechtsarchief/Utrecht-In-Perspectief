@@ -30,7 +30,7 @@ export default {
   created() {
     this.$store.commit("data/setGekozenGebouwId", "");
     this.$store.commit("data/setGekozenGebouw", {});
-    this.$store.commit("data/setPanorama", "http://iiif.hualab.nl:8080/iiif/2/saftleven-panorama-1684.jpg/info.json");
+    this.$store.commit("data/setPanorama", "https://iiif2.hualab.nl/iiif/2/saftleven-panorama-1684.jpg/info.json");
     this.$store.commit("data/setDataset", lijst84);
   },
   watch: {
