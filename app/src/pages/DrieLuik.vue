@@ -45,6 +45,7 @@ export default {
     if (this.$route.params.gebouw) {
       this.$store.commit("data/setGekozenGebouwId", this.$route.params.gebouw);
       this.$store.commit("data/setGekozenGebouw", this.$route.params.gebouw);
+      this.$store.dispatch("data/getGekozenGebouwImages");
     } else {
       this.$store.commit("data/setGekozenGebouwId", "");
       this.$store.commit("data/setGekozenGebouw", "");
