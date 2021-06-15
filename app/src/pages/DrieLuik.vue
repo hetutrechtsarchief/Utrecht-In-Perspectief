@@ -44,8 +44,10 @@ export default {
   created() {
     if (this.$route.params.gebouw) {
       this.$store.commit("data/setGekozenGebouwId", this.$route.params.gebouw);
+      this.$store.commit("data/setGekozenGebouw", this.$route.params.gebouw);
     } else {
       this.$store.commit("data/setGekozenGebouwId", "");
+      this.$store.commit("data/setGekozenGebouw", "");
     }
   },
   computed: {
