@@ -80,15 +80,15 @@ export default {
       return this.$store.getters["data/getPanormaUrl"];
     },
     gekozenGebouwId() {
-      if (this.$store.getters["data/getGekozenGebouwId"]) {
+      if (this.$route.name !== "HomePage") {
         return this.$store.getters["data/getGekozenGebouwId"];
       } else {
         return "";
       }
     },
     gekozenGebouw() {
-      if (this.$store.getters["data/getGekozenGebouw"]) {
-        return this.$store.getters["data/getGekozenGebouw"];
+      if (this.$route.name !== "HomePage") {
+          return this.$store.getters["data/getGekozenGebouw"];
       } else {
         return "";
       }
@@ -99,15 +99,19 @@ export default {
       this.center = [-22, 98];
     },
     gekozenGebouw() {
-      this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
+      if (this.$route.name !== "HomePage") {
+        this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
+      }
     },
   },
   methods: {
     onLoad(event) {
       this.map = event.map;
       // On Drieluik zoom in to chosen building
-      if (this.gekozenGebouw.bounds && this.$route.name !== "HomePage") {
-        this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
+      if (this.$route.name !== "HomePage") {
+        if (this.gekozenGebouw.bounds) {
+          this.$refs.map.fitBounds(this.gekozenGebouw.bounds);
+        }
       }
     },
     handleClick(name) {
