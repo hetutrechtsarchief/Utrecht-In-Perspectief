@@ -31,7 +31,7 @@ export default {
         this.$router.push({
           name: "DrieLuik",
           params: { gebouw: `${this.gekozenGebouwId}` },
-        });
+        },() => {});
       }
     },
     $route(to, from) {
