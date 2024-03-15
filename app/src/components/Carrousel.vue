@@ -39,8 +39,8 @@
         <Slide
           v-for="(item, itemIndex) in images"
           :key="'slide'+itemIndex"
-          :data-index="item.catnr.value"
-          :data-name="item.catnr.value"
+          :data-index="item.catnr ? item.catnr.value : ''"
+          :data-name="item.catnr ? item.catnr.value: ''"
           :src="item.img.value"
         >
           <img
