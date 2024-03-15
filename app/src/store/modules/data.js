@@ -105,10 +105,10 @@ export default {
         SELECT DISTINCT * WHERE {
           <https://hetutrechtsarchief.nl/id/utrecht-in-perspectief> <https://schema.org/hasPart> ?bb .
           ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} .
-          ?bb foaf:depiction ?img .
-          ?bb rdfs:label ?description .
-          ?bb dct:identifier ?catnr .
-          ?bb dct:date ?date .
+          OPTIONAL { ?bb foaf:depiction ?img }
+          OPTIONAL { ?bb rdfs:label ?description }
+          OPTIONAL { ?bb dct:identifier ?catnr }
+          OPTIONAL { ?bb dct:date ?date }
 
         }
         ORDER BY ?date
