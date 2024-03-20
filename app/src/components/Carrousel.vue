@@ -50,6 +50,7 @@
             :alt="item.description.value"
             v-tooltip.top="'Afbl. : ' + item.description.value "
             @click="setIndex(itemIndex)"
+            @error="hideImage(itemIndex)"
           />
         </Slide>
       </Carousel>
@@ -106,6 +107,9 @@ export default {
     setIndex(index) {
       this.index = index;
     },
+    hideImage(itemIndex) {
+      this.$store.commit("data/hideImage", itemIndex);
+    }
   },
   watch: {},
 };
