@@ -37,6 +37,9 @@ export default {
     setGekozenGebouw(state, gekozen) {
       state.gekozenGebouw = state.data[gekozen];
     },
+    hideImage(state, itemIndex) {
+      state.imageList.splice(itemIndex, 1);
+    },
     setGekozenGebouwId(state, gekozen) {
       state.gekozenGebouwId = gekozen;
     },
