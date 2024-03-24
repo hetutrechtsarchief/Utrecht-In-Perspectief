@@ -48,8 +48,7 @@ export default {
     },
     fillImageList(state, list) {
       state.imageList = list
-    }
-    ,
+    },
     setMapStyle(state, mapStyle) {
       state.mapStyle = mapStyle
     },

@@ -41,14 +41,14 @@
           :key="'slide'+itemIndex"
           :data-index="item.catnr ? item.catnr.value : ''"
           :data-name="item.catnr ? item.catnr.value: ''"
-          :src="item.img.value"
+          :src="item.img ? item.img.value : ''"
         >
           <img
             class="image"
-            :src="item.img.value"
+            :src="item.img ? item.img.value : ''"
             :key="itemIndex"
-            :alt="item.description.value"
-            v-tooltip.top="'Afbl. : ' + item.description.value "
+            :alt="item.description ? item.description.value : ''"
+            v-tooltip.top="'Afbl. : ' + (item.description ? item.description.value : '') "
             @click="setIndex(itemIndex)"
             @error="hideImage(itemIndex)"
           />
@@ -91,8 +91,8 @@ export default {
         let all = this.$store.getters["data/getImages"];
         all.forEach((element) => {
           list.push({
-            src: element.img.value.replace("thumb", "download"),
-            title: element.description.value,
+            src: element.img ? element.img.value.replace("thumb", "download") : '',
+            title: element.description ? element.description.value : '',
           });
         });
       }
