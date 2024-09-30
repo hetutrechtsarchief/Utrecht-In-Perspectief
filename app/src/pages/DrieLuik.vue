@@ -11,6 +11,11 @@
 </template>
 
 <script>
+// "https://maps-0.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+// "https://maps-1.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+// "https://maps-2.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
+// "https://maps-3.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW"
+
 import Panorama from "../components/Panorama.vue";
 import Header from "../components/Header.vue";
 import Map from "../components/Map.vue";

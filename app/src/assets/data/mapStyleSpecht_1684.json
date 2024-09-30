@@ -6,10 +6,7 @@
             "type": "raster",
             "scheme": "xyz",
             "tiles": [
-                "https://maps-0.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
-                "https://maps-1.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
-                "https://maps-2.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW",
-                "https://maps-3.georeferencer.com//georeferences/87079bbe-1741-5a83-96ce-ff86d0426d69/2020-09-08T07:22:24.718166Z/map/{z}/{x}/{y}.png?key=mpUE8UJCeHr5LXgVR1cW"
+                "https://allmaps.xyz/maps/1e7a542d188698a7/{z}/{x}/{y}.png"
             ],
             "minzoom": 0,
             "maxzoom": 17,
