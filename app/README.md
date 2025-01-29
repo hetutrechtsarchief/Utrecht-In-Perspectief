@@ -2,7 +2,8 @@
 
 ## Project setup
 ```
-npm install
+npm install --legacy-peer-deps
+nvm use 16
 ```
 
 ### Compiles and hot-reloads for development
