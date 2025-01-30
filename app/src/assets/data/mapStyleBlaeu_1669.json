@@ -1,44 +1,40 @@
 {
-    "version": 8,
-    "name": "Utrechts Archief",
-    "sources": {
-        "ua": {
-            "type": "raster",
-            "scheme": "xyz",
-            "tiles": [
-                "https://allmaps.xyz/maps/d9e617c92b987711/{z}/{x}/{y}.png"
-            ],
-            "minzoom": 0,
-            "maxzoom": 17,
-            "bounds": [
-                5.089250,
-                52.068846,
-                5.152839,
-                52.111774
-            ],
-            "attribution": "<b>Blaeu (1649)</b>, Utrecht University Library",
-            "attribution_link": "http://uu.georeferencer.com/",
-            "tileSize": 256
-        },
-        "3dbag": {
-            "type": "vector",
-            "tiles": [
-                "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}",
-                "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}",
-                "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}"
-            ],
-            "minzoom": 8,
-            "maxzoom": 17
-        }
+  "version": 8,
+  "name": "Utrechts Archief",
+  "sources": {
+    "ua": {
+      "type": "raster",
+      "scheme": "xyz",
+      "tiles": [
+        "https://allmaps.xyz/{z}/{x}/{y}.png?url=https://annotations.allmaps.org/maps/d9e617c92b987711@715fd5355fdd3ada"
+      ],
+      "iiifManifest": "https://objects.library.uu.nl/manifest/iiif/v3/1874-416655",
+      "minzoom": 0,
+      "maxzoom": 17,
+      "bounds": [5.08925, 52.068846, 5.152839, 52.111774],
+      "attribution": "<b>Blaeu (1649)</b>, <a href=\"https://objects.library.uu.nl/reader/index.php?obj=1874-416655\">Utrecht University Library</a>",
+      "attribution_link": "https://viewer.allmaps.org/?url=https://annotations.allmaps.org/maps/d9e617c92b987711@715fd5355fdd3ada",
+      "tileSize": 256
     },
-    "light": {
-        "anchor": "viewport"
-    },
-    "layers": [
-        {
-            "id": "tegels",
-            "source": "ua",
-            "type": "raster"
-        }
-    ]
+    "3dbag": {
+      "type": "vector",
+      "tiles": [
+        "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}",
+        "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}",
+        "https://ta.webmapper.nl/wm/bag_3d/{z}/{x}/{y}"
+      ],
+      "minzoom": 8,
+      "maxzoom": 17
+    }
+  },
+  "light": {
+    "anchor": "viewport"
+  },
+  "layers": [
+    {
+      "id": "tegels",
+      "source": "ua",
+      "type": "raster"
+    }
+  ]
 }
