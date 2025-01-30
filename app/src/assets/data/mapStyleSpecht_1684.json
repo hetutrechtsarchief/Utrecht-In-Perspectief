@@ -1,34 +1,30 @@
 {
-    "version": 8,
-    "name": "Utrechts Archief",
-    "sources": {
-        "ua": {
-            "type": "raster",
-            "scheme": "xyz",
-            "tiles": [
-                "https://allmaps.xyz/maps/1e7a542d188698a7/{z}/{x}/{y}.png"
-            ],
-            "minzoom": 0,
-            "maxzoom": 17,
-            "bounds": [
-                5.091304,
-                52.069404,
-                5.152974,
-                52.112726
-            ],
-            "attribution": "<b>Specht (1695)</b>, </a>Utrecht University Library",
-            "attribution_link": "http://uu.georeferencer.com/",
-            "tileSize": 256
-        }
-    },
-    "light": {
-        "anchor": "viewport"
-    },
-    "layers": [
-        {
-            "id": "tegels",
-            "source": "ua",
-            "type": "raster"
-        }
-    ]
+  "version": 8,
+  "name": "Utrechts Archief",
+  "sources": {
+    "ua": {
+      "type": "raster",
+      "scheme": "xyz",
+      "tiles": [
+        "https://allmaps.xyz/{z}/{x}/{y}.png?url=https://annotations.allmaps.org/maps/da8b0d51919d33c0@8267337e20e57ff6"
+      ],
+      "iiifManifest": "https://objects.library.uu.nl/manifest/iiif/v3/1874-348748",
+      "minzoom": 0,
+      "maxzoom": 17,
+      "bounds": [5.091304, 52.069404, 5.152974, 52.112726],
+      "attribution": "<b>Specht (1695)</b>,  <a href=\"https://objects.library.uu.nl/reader/index.php?obj=1874-348748\">Utrecht University Library</a>",
+      "attribution_link": "https://viewer.allmaps.org/?url=https://annotations.allmaps.org/maps/da8b0d51919d33c0@8267337e20e57ff6",
+      "tileSize": 256
+    }
+  },
+  "light": {
+    "anchor": "viewport"
+  },
+  "layers": [
+    {
+      "id": "tegels",
+      "source": "ua",
+      "type": "raster"
+    }
+  ]
 }
