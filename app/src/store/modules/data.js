@@ -97,35 +97,35 @@ export default {
       }
     },
     getGekozenGebouwImages({ commit, state }) {
-      
-      let sparqlQuery = `
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX dct: <http://purl.org/dc/terms/>
-        PREFIX dct: <http://purl.org/dc/terms/>   
-        PREFIX wd: <http://www.wikidata.org/entity/> 
-        SELECT DISTINCT * WHERE {
-          <https://hetutrechtsarchief.nl/id/utrecht-in-perspectief> <https://schema.org/hasPart> ?bb .
-          ?bb dct:spatial wd:${state.gekozenGebouw.properties.wdid} .
-          OPTIONAL { ?bb foaf:depiction ?img }
-          OPTIONAL { ?bb rdfs:label ?description }
-          OPTIONAL { ?bb dct:identifier ?catnr }
-          OPTIONAL { ?bb dct:date ?date }
+      const wdid = state.gekozenGebouw && state.gekozenGebouw.properties && state.gekozenGebouw.properties.wdid;
+      if (!wdid) {
+        commit('fillImageList', [])
+        return
+      }
 
-        }
-        ORDER BY ?date
-        LIMIT 15
-      `
-      
-      fetch("https://data.netwerkdigitaalerfgoed.nl/hetutrechtsarchief/Dataset/sparql/Dataset?query=" + encodeURIComponent(sparqlQuery) ,
-        {
-          "headers": { "accept": "application/sparql-results+json" }, "method": "GET"
+      // Fetch the JSON file from the built/served assets.
+      // NOTE: To have these JSON files available at runtime as raw .json files,
+      // place them under `public/assets/data/` so they're copied to the final build.
+      const base = (typeof process !== 'undefined' && process.env && process.env.BASE_URL) ? process.env.BASE_URL : '/'
+      const url = `${base}assets/data/${wdid}.json`
+
+      fetch(url, { cache: 'no-cache' })
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP ${response.status} while fetching ${url}`)
+          return response.json()
         })
-        .then(response => response.json())
-        .then(json => {
-          if (json.results) {
-            commit('fillImageList', json.results.bindings)
+        .then(data => {
+          if (Array.isArray(data)) {
+            commit('fillImageList', data)
+          } else if (data && data.results && data.results.bindings) {
+            commit('fillImageList', data.results.bindings)
+          } else {
+            commit('fillImageList', data)
           }
+        })
+        .catch(err => {
+          console.error('Error fetching local JSON for', wdid, url, err)
+          commit('fillImageList', [])
         })
     },
     getGekozenGebouwWiki({ commit, state }) {
