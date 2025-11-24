@@ -19,3 +19,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore copied json assets (sources live in src/assets/data)
+public/assets/data/
