@@ -39,16 +39,16 @@
         <Slide
           v-for="(item, itemIndex) in images"
           :key="'slide'+itemIndex"
-          :data-index="item.catnr ? item.catnr.value : ''"
-          :data-name="item.catnr ? item.catnr.value: ''"
-          :src="item.img ? item.img.value : ''"
+          :data-index="getCatnr(item)"
+          :data-name="getCatnr(item)"
+          :src="getImgSrc(item)"
         >
           <img
             class="image"
-            :src="item.img ? item.img.value : ''"
+            :src="getImgSrc(item)"
             :key="itemIndex"
-            :alt="item.description ? item.description.value : ''"
-            v-tooltip.top="'Afbl. : ' + (item.description ? item.description.value : '') "
+            :alt="getDescriptionText(item)"
+            v-tooltip.top="'Afbl. : ' + getDescriptionText(item)"
             @click="setIndex(itemIndex)"
             @error="hideImage(itemIndex)"
           />
@@ -81,20 +81,37 @@ export default {
       return this.$store.getters["data/getGekozenGebouw"];
     },
     images() {
-      return this.$store.getters["data/getImages"];
+      const imgs = this.$store.getters["data/getImages"];
+      if (Array.isArray(imgs)) return imgs
+      // support SPARQL-like object with bindings
+      if (imgs && imgs.results && Array.isArray(imgs.results.bindings)) return imgs.results.bindings
+      // support raw object with bindings property
+      if (imgs && Array.isArray(imgs.bindings)) return imgs.bindings
+      return []
     },
     imagesList() {
       // Specific list for CoolLightBox
       let list = [];
 
-      if (this.$store.getters["data/getImages"].length >= 1) {
-        let all = this.$store.getters["data/getImages"];
+      const all = this.images
+      if (all && all.length >= 1) {
         all.forEach((element) => {
-          list.push({
-            src: element.img ? element.img.value.replace("thumb", "download") : '',
-            title: element.description ? element.description.value : '',
-          });
-        });
+          // Support both SPARQL binding style (element.img.value) and plain JSON (element.img as string)
+          let imgVal = ''
+          if (element && element.img) {
+            if (typeof element.img === 'string') imgVal = element.img
+            else if (element.img.value && typeof element.img.value === 'string') imgVal = element.img.value
+          }
+          const src = imgVal ? imgVal.replace('thumb', 'download') : ''
+
+          let title = ''
+          if (element && element.description) {
+            if (typeof element.description === 'string') title = element.description
+            else if (element.description.value && typeof element.description.value === 'string') title = element.description.value
+          }
+
+          list.push({ src, title })
+        })
       }
 
       return list;
@@ -109,6 +126,25 @@ export default {
     },
     hideImage(itemIndex) {
       this.$store.commit("data/hideImage", itemIndex);
+    }
+    ,
+    getImgSrc(item) {
+      if (!item) return ''
+      if (typeof item.img === 'string') return item.img
+      if (item.img && typeof item.img.value === 'string') return item.img.value
+      return ''
+    },
+    getDescriptionText(item) {
+      if (!item) return ''
+      if (typeof item.description === 'string') return item.description
+      if (item.description && typeof item.description.value === 'string') return item.description.value
+      return ''
+    },
+    getCatnr(item) {
+      if (!item) return ''
+      if (typeof item.catnr === 'string') return item.catnr
+      if (item.catnr && typeof item.catnr.value === 'string') return item.catnr.value
+      return ''
     }
   },
   watch: {},

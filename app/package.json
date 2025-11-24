@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preserve": "node scripts/copy-assets.js",
     "serve": "vue-cli-service serve",
+    "prebuild": "node scripts/copy-assets.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "upload": "rsync -av dist/ hualab.nl:/var/www/utrechtinperspectief.nl/public_html/"
