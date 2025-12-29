@@ -241,6 +241,14 @@ export default {
   background-color: #30988a;
 }
 
+/* Remove blue focus ring on map controls/canvas when clicked/focused */
+.mapboxgl-canvas:focus,
+.mapboxgl-ctrl > button:focus,
+.mapboxgl-ctrl > a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .mapboxgl-ctrl > button:disabled {
   background-color: #fff;
 }
@@ -298,6 +306,16 @@ export default {
 }
 .mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
   border-left-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hide/disable popup close button (not visible in design) and remove its focus outline */
+.mapboxgl-popup-close-button {
+  display: none !important;
+  pointer-events: none !important;
+}
+.mapboxgl-popup-close-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* RESPONSIVENESS */

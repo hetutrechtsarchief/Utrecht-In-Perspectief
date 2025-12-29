@@ -26,54 +26,54 @@
         srcName="src"
       ></CoolLightBox>
 
-      <Carousel
-        class="images-wrapper"
-        v-if="images.length >=1"
-        :scrollPerPage="true"
-        :perPageCustom="[[480, 3], [768, 4], [1000,6]]"
-        paginationActiveColor="#30988A"
-        paginationColor="#dacbb2"
-        :centerMode="true"
-        :paginationPadding="2"
+      <div v-if="images.length >= 1" class="native-scroll" ref="nativeScroll"
+        :class="{ grabbing: isDown }"
+        @mousedown.prevent="onMouseDown"
+        @mouseleave="onMouseLeave"
+        @mouseup="onMouseUp"
+        @mousemove.prevent="onMouseMove"
+        @touchstart.passive="onTouchStart"
+        @touchmove.passive="onTouchMove"
+        @touchend="onMouseUp"
       >
-        <Slide
+        <div
+          class="native-slide"
           v-for="(item, itemIndex) in images"
           :key="'slide'+itemIndex"
           :data-index="getCatnr(item)"
           :data-name="getCatnr(item)"
-          :src="getImgSrc(item)"
         >
           <img
             class="image"
             :src="getImgSrc(item)"
-            :key="itemIndex"
             :alt="getDescriptionText(item)"
             v-tooltip.top="'Afbl. : ' + getDescriptionText(item)"
-            @click="setIndex(itemIndex)"
+            @click="onImageClick(itemIndex)"
             @error="hideImage(itemIndex)"
           />
-        </Slide>
-      </Carousel>
+        </div>
+      </div>
       <div v-else class="replacement">Geen afbeeldingen beschikbaar</div>
     </div>
   </div>
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
 import CoolLightBox from "vue-cool-lightbox";
 import "vue-cool-lightbox/dist/vue-cool-lightbox.min.css";
 
 export default {
   name: "Carrousel",
   components: {
-    Carousel,
-    Slide,
     CoolLightBox,
   },
   data() {
     return {
       index: null,
+      isDown: false,
+      startX: 0,
+      scrollStart: 0,
+      wasDragging: false,
     };
   },
   computed: {
@@ -145,6 +145,54 @@ export default {
       if (typeof item.catnr === 'string') return item.catnr
       if (item.catnr && typeof item.catnr.value === 'string') return item.catnr.value
       return ''
+    }
+    ,
+    onMouseDown(e) {
+      this.isDown = true
+      this.startX = e.pageX - this.$refs.nativeScroll.offsetLeft
+      this.scrollStart = this.$refs.nativeScroll.scrollLeft
+      this.wasDragging = false
+      document.body.style.userSelect = 'none'
+    },
+    onMouseMove(e) {
+      if (!this.isDown) return
+      const x = e.pageX - this.$refs.nativeScroll.offsetLeft
+      const dx = x - this.startX
+      if (Math.abs(dx) > 5) this.wasDragging = true
+      const walk = dx * 1
+      this.$refs.nativeScroll.scrollLeft = this.scrollStart - walk
+    },
+    onMouseUp() {
+      this.isDown = false
+      document.body.style.userSelect = ''
+      // keep wasDragging true a short time so click handlers can detect it
+      setTimeout(() => { this.wasDragging = false }, 150)
+    },
+    onMouseLeave() {
+      if (this.isDown) this.onMouseUp()
+    },
+    onTouchStart(e) {
+      if (!e.touches || !e.touches.length) return
+      this.isDown = true
+      const touch = e.touches[0]
+      this.startX = touch.pageX - this.$refs.nativeScroll.offsetLeft
+      this.scrollStart = this.$refs.nativeScroll.scrollLeft
+      this.wasDragging = false
+    },
+    onTouchMove(e) {
+      if (!this.isDown) return
+      const touch = e.touches[0]
+      const x = touch.pageX - this.$refs.nativeScroll.offsetLeft
+      const dx = x - this.startX
+      if (Math.abs(dx) > 5) this.wasDragging = true
+      const walk = dx * 1
+      this.$refs.nativeScroll.scrollLeft = this.scrollStart - walk
+    }
+    ,
+    onImageClick(index) {
+      // Only open image if it was a genuine click/tap, not a drag
+      if (this.wasDragging) return
+      this.setIndex(index)
     }
   },
   watch: {},
@@ -282,4 +330,21 @@ img {
     display: none;
   }
 }
+  /* Native horizontal scroll */
+  .native-scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .native-slide {
+    flex: 0 0 auto;
+  }
+
+  /* hide default scrollbar in WebKit but keep scrolling */
+  .native-scroll::-webkit-scrollbar { height: 8px; }
+  .native-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 4px; }
+
 </style>
